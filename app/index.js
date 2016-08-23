@@ -16,18 +16,38 @@ class RedLion extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('./data.json')
-			.then((res) => {
-				return res.json()
-			})
-			.then((json) => {
-				this.setState({
-					data: json
-				})
-			})
-			.catch((error) => {
-				console.error(`Failed to fetch json`)
-			})
+		// fetch('./data.json')
+		// 	.then((res) => {
+		// 		return res.json()
+		// 	})
+		// 	.then((json) => {
+		// 		this.setState({
+		// 			data: json
+		// 		})
+		// 	})
+		// 	.catch((error) => {
+		// 		console.error(`Failed to fetch json`)
+		// 	})
+		this.setState({
+			data: [
+				{
+					"name": "A",
+					"id": 0
+				},
+				{
+					"name": "B",
+					"id": 1
+				},
+				{
+					"name": "C",
+					"id": 2
+				},
+				{
+					"name": "D",
+					"id": 3
+				}
+			]
+		})
 	}
 
 	deleteListItem(item) {

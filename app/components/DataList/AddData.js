@@ -1,4 +1,5 @@
 import React from 'react'
+require('./AddData.scss')
 
 export class AddData extends React.Component {
   render() {
