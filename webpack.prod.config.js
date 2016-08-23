@@ -3,6 +3,13 @@ var webpack = require('webpack'),
     autoprefixer = require('autoprefixer'),
     precss = require('precss'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
+    WebpackStripLoader = require('strip-loader'),
+    CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin"),
+    stripLoader = {
+     test: [/\.js$/, /\.es6$/],
+     exclude: /node_modules/,
+     loader: WebpackStripLoader.loader('console.log')
+    },
     HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
         template: __dirname + '/app/index.html',
         filename: 'index.html',
@@ -13,12 +20,18 @@ module.exports = {
   entry: [
     './app/index.js'
   ],
+  loaders: [
+    {
+      test: /\.scss$/,
+      loader: "style-loader!css-loader!postcss-loader"
+    },
+    stripLoader
+  ],
   output: {
     path: __dirname + '/dist',
-    filename: "index.compiled.js"
+    filename: "index_bundle.js"
   },
   module: {
-    devtool: "source-map", // or "inline-source-map"
     loaders: [
       {
         test: /\.js$/,
@@ -46,7 +59,16 @@ module.exports = {
     }
   },
   plugins: [
-    HTMLWebpackPluginConfig
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    HTMLWebpackPluginConfig,
+    new CommonsChunkPlugin("commons.chunk.js"),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
   ],
   postcss: function () {
       return [precss, autoprefixer];
