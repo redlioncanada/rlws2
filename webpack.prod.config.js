@@ -18,7 +18,7 @@ var webpack = require('webpack'),
 
 module.exports = {
   entry: [
-    './app/index.js'
+    './app/js/index.js'
   ],
   loaders: [
     {
@@ -29,7 +29,7 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    filename: "index_bundle.js"
+    filename: "index.compiled.js"
   },
   module: {
     loaders: [

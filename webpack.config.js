@@ -11,7 +11,7 @@ var webpack = require('webpack'),
 
 module.exports = {
   entry: [
-    './app/index.js'
+    './app/js/index.js'
   ],
   output: {
     path: __dirname + '/dist',
