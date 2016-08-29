@@ -16,13 +16,13 @@ class RedLion extends React.Component {
 	state = appdata.Data()
 
 	componentDidMount() {
-		fetch('./json/Jobs.json')
+		fetch(this.state.Jobs.endpoint)
 			.then(res => {
 				return res.json()
 			}).then(json => {
 				this.setState({Jobs: {...this.state.Jobs, jobs: json}})
 			}).catch(e => {
-				console.error('Failed to fetch jobs.json',e)
+				console.error('Failed to fetch jobs.json', e)
 			})
 	}
 
