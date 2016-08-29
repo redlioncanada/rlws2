@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+html,body {
+	font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .bold {
+	font-family: 'Rubik Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+#app {
+	width: 100%;
+	font-size: 13pt;
+
+	.component {
+		width: inherit;
+		max-width: $contentMaxWidth;
+		margin: 0 auto;
+		position: relative;
+		box-sizing: border-box;
+
+		* {
+			box-sizing: border-box;
+		}
+	}
+}

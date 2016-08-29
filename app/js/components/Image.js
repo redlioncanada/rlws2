@@ -8,7 +8,7 @@ export class Image extends React.Component {
 
 	render() {
 		return (
-			<img src={this.getSrcUrl()} srcSet={this.getSrcUrl() +", " + this.props.src+ " 600w"} alt={this.props.alt} />
+			<img className="image" src={this.getSrcUrl()} srcSet={this.getSrcUrl() +", " + this.props.src+ " 600w"} alt={this.props.alt} />
 		)
 	}//render
 

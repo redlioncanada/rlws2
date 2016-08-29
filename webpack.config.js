@@ -31,7 +31,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: "style-loader!css-loader!postcss-loader"
+        loader: "style-loader!css-loader!postcss-loader!sass-loader?sourceMap"
+      },
+      {
+        test: /\.jpg|.jpeg|.png|.gif$/,
+        loader: "file?name=images/[name].[ext]"
+      },
+      {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file?name=fonts/[name].[ext]'
       }
     ],
     sassLoader: {

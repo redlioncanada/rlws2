@@ -1,0 +1,21 @@
+@import '../../../css/variables.scss';
+
+.wallpaper {
+	max-width: initial !important;
+	height: 170px;
+	background: url(../../../assets/images/Wallpaper.jpg);
+	background-repeat: repeat-x;
+	background-size: 985px 170px;
+
+	@media only screen and (max-device-width : $tablet) {
+		background: url(../../../assets/images/Wallpaper-Mobile.jpg);
+		background-repeat: repeat-x;
+		background-size: 985px 170px;
+	}
+
+	@media (max-width : 450px) {
+		background: url(../../../assets/images/Wallpaper-Mobile.jpg);
+		background-repeat: repeat-x;
+		background-size: 100%;
+	}
+}
