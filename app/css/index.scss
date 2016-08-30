@@ -1,4 +1,7 @@
 @import './variables.scss';
+@import './fonts.scss';
+@import './normalize.scss';
+@import './util.scss';
 
 html,body {
 	font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7,6 +10,10 @@ html,body {
 h1, h2, h3, h4, h5, h6, .bold {
 	font-family: 'Rubik Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 700;
+}
+
+img {
+	width: 100%;
 }
 
 #app {

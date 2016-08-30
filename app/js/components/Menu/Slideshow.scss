@@ -1,0 +1,25 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.slideshow {
+	> * {
+		position: absolute;
+		@include horizontal-center();
+	}
+
+	.border {
+		top: -38px;
+		width: 21%;
+	}
+
+	.images {
+		top: -29px;
+		width: 19%;
+
+		> div {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}

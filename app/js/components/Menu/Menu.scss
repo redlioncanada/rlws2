@@ -1,0 +1,42 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.menu {
+	margin-top: 70px;
+	
+	.background {
+		width: 100%;
+
+		* {
+			width: inherit;
+		}
+	}
+
+	.links-container {
+		position: absolute;
+		@include center();
+		margin-top: 2%;
+		z-index: 3;
+
+		.menulink {
+			float: left;
+			width: 80px;
+			height: 25px;
+			margin-right: 17px;
+		}
+
+		.menulink .text {
+			width: inherit;
+			height: inherit;
+			font-size: 0.8em;
+			text-align: center;
+			line-height: 23px;
+		}
+
+		.menulink a {
+			width: inherit;
+			height: inherit;
+			display: block;
+		}
+	}
+}

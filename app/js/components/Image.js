@@ -1,29 +1,49 @@
 import React from 'react'
+import Dimensions from 'react-dimensions'
+import LazyImageWrapper from './LazyImage/index'
 
-export class Image extends React.Component {
-	constructor() {
-		super()
-		this.hiresFiletypes = ['jpg', 'png']
-	}
-
-	render() {
-		return (
-			<img className="image" src={this.getSrcUrl()} srcSet={this.getSrcUrl() +", " + this.props.src+ " 600w"} alt={this.props.alt} />
-		)
-	}//render
-
-	getSrcUrl() {
-		if (this.hasHiRes()) {
-			var index = this.props.src.lastIndexOf('.')
-			return this.props.src.slice(0, index) + "@2x" + this.props.src.slice(index)
-		} else {
-			return this.props.src
+class Image extends React.Component {
+	defaultProps() {
+		return {
+			src: '',
+			width: 0,
+			height: 0,
+			style: {}
 		}
 	}
 
-	hasHiRes() {
-		return this.hiresFiletypes.filter((item) => {
-			return this.props.src.indexOf(item) > -1
-		}).length
+	render() {
+		var parent = this.getParentSize()
+		var props = {
+			...this.props,
+			low: this.getLowResUrl(),
+			width: !!parent ? parent.width : this.props.naturalWidth,
+			height: !!parent ? parent.height : this.props.naturalHeight
+		}
+
+		return (
+			<LazyImageWrapper {...props} style={this.props.style} />
+		)
+	}
+
+	getParentSize() {
+		var w = !!this.props.containerWidth ? this.props.containerWidth : undefined
+		var h = !!this.props.containerHeight ? this.props.containerHeight : undefined
+		var aspect = this.props.naturalWidth / this.props.naturalHeight
+
+		if (!w) return false
+		h = w / aspect
+
+		return {
+			width: w,
+			height: h
+		}
+	}
+
+	getLowResUrl() {
+		var index = this.props.src.lastIndexOf('.')
+		return this.props.src.slice(0, index) + "@lowres" + this.props.src.slice(index)
 	}
 }
+
+export default Dimensions()(Image)

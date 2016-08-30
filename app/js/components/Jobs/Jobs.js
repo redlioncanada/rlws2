@@ -22,7 +22,7 @@ export class Jobs extends React.Component {
 				<div className="header">
 					<p>{this.props.title}</p>
 					<div className="divider"></div>
-					<img className="arrow" src={this.props.arrowSrc} />
+					<img className="rotate-sw arrow" src={this.props.arrowSrc} />
 				</div>
 
 				<div className="positions">

@@ -6,10 +6,9 @@ import {appdata} from './appdata.js'
 
 import {Wallpaper} from './components/Wallpaper/Wallpaper'
 import {Jobs} from './components/Jobs/Jobs'
+import {Menu} from './components/Menu/Menu'
 
 require('../../node_modules/normalize.scss/normalize.scss')
-require('../css/normalize.scss')
-require('../css/fonts.scss')
 require('../css/index.scss')
 
 class RedLion extends React.Component {
@@ -31,6 +30,7 @@ class RedLion extends React.Component {
 			<div>
 				<Wallpaper />
 				<Jobs {...this.state.Jobs} />
+				<Menu {...this.state.Menu} />
 			</div>
 		)
 	}
