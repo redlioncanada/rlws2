@@ -5,6 +5,7 @@
 
 html,body {
 	font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	transform: translateZ(0); //activate 3d acceleration
 }
 
 h1, h2, h3, h4, h5, h6, .bold {

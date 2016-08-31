@@ -33,7 +33,7 @@ class LazyImageWrapper extends React.Component {
     var style = {position: 'absolute', zIndex: 2}
 
     return (
-      <div>
+      <div style={this.props.style}>
         <LazyImage
           src={low}
           width={width}

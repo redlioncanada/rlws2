@@ -1,0 +1,89 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.component.slogan {
+	background-color: $sloganBackgroundColour;
+	height: 300px;
+	margin-bottom: 100px;
+
+	.brain-outer {
+		position: relative;
+		top: 80px;
+
+		.brain-container-left {
+			padding-right: 50px;
+
+			.brain {
+				animation: out-in-stop-from-left 5s infinite;
+				float: right;
+
+				img {
+					transform: scale(-1, 1);
+				}
+
+				.text {
+					float: left;
+					margin-right: -15px;
+				}
+			}
+		}
+
+		.brain-container-right {
+			padding-left: 50px;
+
+			.brain {
+				animation: out-in-stop-from-right 5s infinite;
+				float: left;
+
+				.text {
+					float: right;
+					margin-left: -15px;
+				}
+			}
+		}
+
+		.brain-container {
+			width: 50%;
+			float: left;
+		}
+
+		.brain {
+			display: inline-block;
+
+			img {
+				width: 46px;
+			}
+
+			.text {
+				margin-top: 45%;
+				font-size: 0.85em;
+			}
+		}
+	}
+
+	.text-container {
+		color: $sloganTextColor;
+		font-size: 0.6em;
+		background: $sloganTextBackgroundColour;
+		width: 60%;
+		padding: 23px 60px;
+		position: absolute;
+		text-align: center;
+		bottom: -24px;
+		@include horizontal-center();
+	}
+}
+
+@keyframes out-in-stop-from-right {
+	0% {transform: translateX(280%)}
+	70% {transform: translateX(0)}
+	97% {transform: translateX(0)}
+	100% {transform: translateX(280%)}
+}
+
+@keyframes out-in-stop-from-left {
+	0% {transform: translateX(-280%)}
+	70% {transform: translateX(0)}
+	97% {transform: translateX(0)}
+	100% {transform: translateX(-280%)}
+}

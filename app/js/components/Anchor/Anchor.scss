@@ -1,0 +1,30 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.component.anchor {
+	height: 35px;
+
+	$margin: 100px;
+	margin-top:  $margin;
+	margin-bottom: $margin;
+
+	.anchor-container {
+		position: absolute;
+		@include horizontal-center();
+
+		.logo {
+			width: 115px;
+			margin: 0 35px;
+		}
+
+		.arrow {
+			width: 9px;
+			margin-top: 4px;
+		}
+
+		.logo, .arrow {
+			display: block;
+			float: left;
+		}
+	}
+}

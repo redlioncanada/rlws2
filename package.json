@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack && gulp once",
     "prod": "webpack -p --progress --config ./webpack.prod.config.js && gulp once",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "start": "webpack -w"
   },
   "keywords": [],
   "author": "",

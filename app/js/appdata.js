@@ -39,6 +39,7 @@ export class appdata {
 					borderSrc: './images/ChalkboardBorder.png',
 					naturalWidth: 600,
 					naturalHeight: 600,
+					currentSlide: 0,
 					src: [
 						'./images/Chalkboard-1.jpg',
 						'./images/Chalkboard-2.jpg',
@@ -54,6 +55,17 @@ export class appdata {
 						'./images/Chalkboard-12.jpg'
 					]
 				}
+			},
+			Anchor: {
+				logoSrc: './images/Logo-RedLion.svg',
+				arrowSrc: './images/Icon-LongArrow.svg'
+			},
+			Slogan: {
+				brainSrc: './images/Brain.svg',
+				brainMaskSrc: './images/Brain_mask.svg',
+				brainLeftText: 'Capitalist',
+				brainRightText: 'Creative',
+				text: 'Left brain and right brain thinking are no longer that distant from one another. It is our belief that today, creativity and logic are intrinsically linked and each strengthens the other.'
 			}
 		}
 	}
