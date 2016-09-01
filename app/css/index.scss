@@ -2,15 +2,23 @@
 @import './fonts.scss';
 @import './normalize.scss';
 @import './util.scss';
+@import './mixins.scss';
 
 html,body {
-	font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	transform: translateZ(0); //activate 3d acceleration
 }
 
+html,body,.title {
+	@include font-rubik-medium();
+}
+
 h1, h2, h3, h4, h5, h6, .bold {
-	font-family: 'Rubik Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	@include font-rubik-bold();
+}
+
+p {
+	@include font-rubik-light();
+	font-size: 0.6em;
 }
 
 img {

@@ -2,46 +2,26 @@ import React from 'react'
 const StackBlur = require('./stackblur');
 
 class LazyImage extends React.Component {
-  componentDidMount(){
-    this.canvas = this.refs.canvas
-    this.preImg = document.createElement('img');
-    this.preImg.crossOrigin = 'Anonymous';
-    this.preImg.onload = () => {
-      StackBlur(this.preImg, this.refs.canvas, this.props.blurRadius, this.props.width, this.props.height);
-    };
-    this.preImg.src = this.props.src;
-  }
-  componentWillUpdate(nextProps) {
-    if (this.preImg.src !== nextProps.src) {
-      this.preImg.src = nextProps.src;
-    }
-    StackBlur(this.preImg, this.canvas, nextProps.blurRadius, this.props.width, this.props.height);
-  }
-
   render() {
     const { style, width, height } = this.props;
 
+    if (!!this.props.blurRadius) {
+      style.filter = `blur(${this.props.blurRadius}px)`
+      style.WebkitFilter = style.filter
+    }
+    style.width = this.props.width
+    style.height = this.props.height
+
     return (
-      <div style={style} className={this.props.loaded ? 'fadeout' : ''}>
-        <canvas width={width} height={height} style={style} ref="canvas" />
-      </div>
+      <img src={this.props.src} style={style} className={this.props.loaded ? 'fadeout' : ''} />
     )
   }
 }
 
-LazyImage.propTypes = {
-  src: React.PropTypes.string,
-  style: React.PropTypes.object,
-  blurRadius: React.PropTypes.number,
-  width: React.PropTypes.number,
-  height: React.PropTypes.number,
-  loaded: React.PropTypes.bool
-};
-
 LazyImage.defaultProps = {
-  blurRadius: 10,
-  width: 600,
-  height: 190,
+  blurRadius: 4,
+  width: '100%',
+  height: undefined,
   loaded: false
 };
 

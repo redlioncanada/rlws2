@@ -1,0 +1,33 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.component.partners {
+	width: $innerContentMaxWidth;
+	display: inline-block;
+	@include horizontal-center();
+
+	.partner {
+		width: 33.33333333333%;
+		float: left;
+		min-height: 110px;
+		display: inline-block;
+		position: relative;
+
+		img {
+			position: absolute;
+			width: 60%;
+			@include center();
+		}
+	}
+
+	.cadillac img {width: 45%;}
+	.jenn-air img {width: 55%;}
+	.royaltie img {width: 35%;}
+	.drake-general-store img {width: 73%;}
+	.maytag img {width: 47%;}
+	.whirlpool img {width: 55%;}
+	.toronto-silent-film-festival img {width: 36%;}
+	.babsocks img {width: 33%;}
+	.italian-by-night img {width: 37%;}
+	.shangri-la-hotel img {width: 57%;}
+}

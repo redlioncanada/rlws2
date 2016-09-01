@@ -7,8 +7,6 @@ export class Slideshow extends React.Component {
 		return {
 			borderSrc: '',
 			src: [],
-			naturalWidth: 0,
-			naturalHeight: 0,
 			currentSlide: 0
 		}
 	}
@@ -21,8 +19,6 @@ export class Slideshow extends React.Component {
 					key = {key}
 					src = {item}
 					style = {style}
-					naturalWidth = {this.props.naturalWidth}
-					naturalHeight = {this.props.naturalHeight}
 				/>
 			)
 		})

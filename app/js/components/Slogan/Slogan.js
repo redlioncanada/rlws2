@@ -9,18 +9,20 @@ export class Slogan extends React.Component {
 					<div className="brain-container brain-container-left">
 						<span className="brain">
 							<div className="text rotate-e">{this.props.brainLeftText}</div>
-							<img className="" src={this.props.brainSrc} />
+							<img className="img1" src={this.props.brainSrc} />
+							<img className="img2" src={this.props.brainMaskSrc} />
 						</span>
 					</div>
 					<div className="brain-container brain-container-right">
 						<span className="brain">
-							<img src={this.props.brainSrc} />
+							<img className="img1" src={this.props.brainSrc} />
+							<img className="img2" src={this.props.brainMaskSrc} />
 							<div className="text rotate-w">{this.props.brainRightText}</div>
 						</span>
 					</div>
 				</div>
 				<div className="text-container">
-					<div className="text">{this.props.text}</div>
+					<p className="text">{this.props.text}</p>
 				</div>
 			</div>
 		)

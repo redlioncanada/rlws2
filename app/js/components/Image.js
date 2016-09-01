@@ -1,5 +1,4 @@
 import React from 'react'
-import Dimensions from 'react-dimensions'
 import LazyImageWrapper from './LazyImage/index'
 
 class Image extends React.Component {
@@ -20,7 +19,7 @@ class Image extends React.Component {
 			width: !!parent ? parent.width : this.props.naturalWidth,
 			height: !!parent ? parent.height : this.props.naturalHeight
 		}
-
+		
 		return (
 			<LazyImageWrapper {...props} style={this.props.style} />
 		)
@@ -46,4 +45,4 @@ class Image extends React.Component {
 	}
 }
 
-export default Dimensions()(Image)
+export default Image

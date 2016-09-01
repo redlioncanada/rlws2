@@ -21,6 +21,7 @@
 					transform: scale(-1, 1);
 				}
 
+
 				.text {
 					float: left;
 					margin-right: -15px;
@@ -37,7 +38,7 @@
 
 				.text {
 					float: right;
-					margin-left: -15px;
+					margin-right: -1px;
 				}
 			}
 		}
@@ -49,21 +50,31 @@
 
 		.brain {
 			display: inline-block;
+			width: 90px;
+			font-size: 0.8em;
 
 			img {
 				width: 46px;
+				position: absolute;
+			}
+
+			.img1 {
+				z-index: 2;
+			}
+
+			.img2 {
+				z-index: 1;
 			}
 
 			.text {
+				@include font-rubik-medium();
 				margin-top: 45%;
-				font-size: 0.85em;
 			}
 		}
 	}
 
 	.text-container {
 		color: $sloganTextColor;
-		font-size: 0.6em;
 		background: $sloganTextBackgroundColour;
 		width: 60%;
 		padding: 23px 60px;

@@ -9,6 +9,8 @@ import {Jobs} from './components/Jobs/Jobs'
 import {Menu} from './components/Menu/Menu'
 import {Anchor} from './components/Anchor/Anchor'
 import {Slogan} from './components/Slogan/Slogan'
+import {Partners} from './components/Partners/Partners'
+import {Contact} from './components/Contact/Contact'
 
 require('../../node_modules/normalize.scss/normalize.scss')
 require('../css/index.scss')
@@ -47,6 +49,8 @@ class RedLion extends React.Component {
 				<Menu {...this.state.Menu} />
 				<Anchor {...this.state.Anchor} />
 				<Slogan {...this.state.Slogan} />
+				<Partners {...this.state.Partners} />
+				<Contact {...this.state.Contact} />
 			</div>
 		)
 	}

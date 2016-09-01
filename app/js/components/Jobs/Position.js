@@ -20,9 +20,9 @@ export class Position extends React.Component {
 
 		return (
 			<div className="position subcomponent" style={style}>
-				<a href={link}>
+				<a href={link} rel="noopener noreferrer" target="_blank">
 					<div>
-						<p className="title">{this.props.title.replace(/\s/g, '\n')}</p>
+						<div className="title">{this.props.title.replace(/\s/g, '\n')}</div>
 					</div>
 				</a>
 			</div>

@@ -1,12 +1,10 @@
 @import '../../../css/variables.scss';
 @import '../../../css/mixins.scss';
 
-#app div.component.jobs {
+#app div.component.contact {
 	color: white;
-	display: inline-block;
 	margin-top: 50px;
 	width: $innerContentMaxWidth;
-	@include horizontal-center();
 
 	.header {
 		$headerPadding: 15px;
@@ -18,7 +16,7 @@
 		background-color: black;
 		padding: $headerPadding;
 		float: left;
-		margin-right: 10px;
+		margin-right: 5px;
 
 		.divider {
 			width: 100%;
@@ -34,10 +32,43 @@
 			width: 15px;
 		}
 	}
-}
 
-#app div.positions {
-	float: left;
-	min-width: 200px;
-	margin-top: 100px;
+	.methods {
+		float: left;
+		min-width: 200px;
+		margin-top: 102px;
+		width: 66.66666666666%;
+
+		.method {
+			width: 50%;
+			padding: 0 5px 0 5px;
+			height: 70px;
+			cursor: pointer;
+			float: left;
+		}
+
+		.method.address {
+			margin-top: 8px;
+			height: initial;
+
+			.edgy {
+				margin-top: -1px;
+			}
+		}
+
+		.method-wrapper {
+			width:100%;
+			padding: 14px;
+		}
+
+		.method .title {
+			margin-bottom: 6px;
+		}
+	}
+
+	.map img {
+		width: 250%;
+		margin-top: 20px;
+		margin-left: -78%;
+	}
 }

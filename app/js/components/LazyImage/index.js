@@ -30,37 +30,34 @@ class LazyImageWrapper extends React.Component {
       return <img src={src} style={styles} />
     }
 
-    var style = {position: 'absolute', zIndex: 2}
+    var parentStyle = {...this.props.style, overflow: 'hidden'}
+    var lazyStyle = {position: 'absolute'}
+    var fullStyle = {opacity: this.state.loaded ? 1 : 0}
 
     return (
-      <div style={this.props.style}>
-        <LazyImage
+      <div style={parentStyle}>
+        <LazyImage className='lores'
           src={low}
           width={width}
           height={height}
           loaded={this.state.loaded}
-          style={style}
+          style={lazyStyle}
           blurRadius={this.props.blurRadius}
         />
-        <FullImage
+        <FullImage className='hires'
           src={src}
           onLoad={this.handleLoaded}
+          style={fullStyle}
         />
       </div>
     )
   }
 }
 
-LazyImageWrapper.propTypes = {
-  blurRadius: React.PropTypes.number,
-  width: React.PropTypes.number,
-  height: React.PropTypes.number
- };
-
 LazyImageWrapper.defaultProps = {
-  blurRadius: 10,
-  width: 600,
-  height: 190
+  blurRadius: 4,
+  width: '100%',
+  height: undefined
 };
 
 

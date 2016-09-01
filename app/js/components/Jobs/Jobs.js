@@ -18,9 +18,9 @@ export class Jobs extends React.Component {
 		})
 
 		return (
-			<div className="jobs thinkdifferent component">
+			<div id={this.props.id} className="jobs thinkdifferent component">
 				<div className="header">
-					<p>{this.props.title}</p>
+					<div className="title">{this.props.title}</div>
 					<div className="divider"></div>
 					<img className="rotate-sw arrow" src={this.props.arrowSrc} />
 				</div>
