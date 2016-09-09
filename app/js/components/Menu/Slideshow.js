@@ -6,14 +6,13 @@ export class Slideshow extends React.Component {
 	defaultProps() {
 		return {
 			borderSrc: '',
-			src: [],
-			currentSlide: 0
+			src: []
 		}
 	}
 
 	render() {
 		var images = this.props.src.map((item, key) => {
-			var style = {opacity: this.props.currentSlide == key ? 1 : 0}
+			var style = {opacity: key == 0 ? 1 : 0}
 			return (
 				<Image
 					key = {key}

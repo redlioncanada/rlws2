@@ -36,7 +36,6 @@ export class appdata {
 				],
 				slideshow: {
 					borderSrc: './images/ChalkboardBorder.png',
-					currentSlide: 0,
 					src: [
 						'./images/Chalkboard-1.jpg',
 						'./images/Chalkboard-2.jpg',
@@ -64,8 +63,18 @@ export class appdata {
 				brainRightText: 'Creative',
 				text: 'Left brain and right brain thinking are no longer that distant from one another. It is our belief that today, creativity and logic are intrinsically linked and each strengthens the other.'
 			},
+			Work: {
+				id: 'work',
+				title: 'Latest work\n and news',
+				endpoint: './json/Work.json',
+				arrowSrc: './images/Icon-ShortArrow.svg',
+				work: [],		//fetched via jobs.json at run time
+				currentlySelectedWork: -1
+			},
 			Partners: {
 				id: 'partners',
+				title: 'Our\npartners',
+				arrowSrc: './images/Icon-ShortArrow.svg',
 				partners: [
 					{
 						name: 'Havergal',
@@ -155,12 +164,13 @@ export class appdata {
 				address: {
 					title: 'Address',
 					text: '111 Queen St E, Suite 400\nToronto, ON, M5C 1S2',
-					link: 'https://www.google.ca/maps/place/Red+Lion+Canada/@43.6533059,-79.3828852,15z/data=!4m15!1m9!2m8!1sred+lion!3m6!1sred+lion!2s111+Queen+St+E,+Toronto,+ON+M5C+1S1!3s0x89d4cb36ac3ec14f:0x7d1dcef4cd4a7c1f!4m2!1d-79.3741304!2d43.6533063!3m4!1s0x89d4cb36ad0991a9:0x8feadbddc141b1ed!8m2!3d43.6532941!4d-79.3741236',
+					link: 'https://www.google.ca/maps/place/Red+Lion+Canada/@43.6532941,-79.3763123,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb36ad0991a9:0x8feadbddc141b1ed!8m2!3d43.6532941!4d-79.3741236',
 					backgroundColour: '#82cbab',
 					slantVectorSrc: './images/Address-Slant.svg'
 				},
 				map: {
-					imageSrc: './images/Map.jpg'
+					imageSrc: './images/Map.jpg',
+					imagePinSrc: './images/Map-pin.png'
 				}
 			}
 		}

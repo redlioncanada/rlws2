@@ -22,5 +22,33 @@
 			left: 0;
 			float: left;
 		}
+
+		//it's ugly, but it's getting 60fps
+		//see tools/cssgen.php
+		> div:nth-child(1) {animation: image-a 12s linear infinite;}
+		> div:nth-child(2) {animation: image-b 12s linear infinite;}
+		> div:nth-child(3) {animation: image-c 12s linear infinite;}
+		> div:nth-child(4) {animation: image-d 12s linear infinite;}
+		> div:nth-child(5) {animation: image-e 12s linear infinite;}
+		> div:nth-child(6) {animation: image-f 12s linear infinite;}
+		> div:nth-child(7) {animation: image-g 12s linear infinite;}
+		> div:nth-child(8) {animation: image-h 12s linear infinite;}
+		> div:nth-child(9) {animation: image-i 12s linear infinite;}
+		> div:nth-child(10) {animation: image-j 12s linear infinite;}
+		> div:nth-child(11) {animation: image-k 12s linear infinite;}
+		> div:nth-child(12) {animation: image-l 12s linear infinite;}
 	}
 }
+
+@keyframes image-a{ 0.000000000000% {opacity:0} 0.000000000001% {opacity:1} 8.333333333334% {opacity:1} 8.333333333335% {opacity:0}}
+@keyframes image-b{ 8.333333333333% {opacity:0} 8.333333333334% {opacity:1} 16.666666666668% {opacity:1} 16.666666666669% {opacity:0}}
+@keyframes image-c{ 16.666666666667% {opacity:0} 16.666666666668% {opacity:1} 25.000000000001% {opacity:1} 25.000000000002% {opacity:0}}
+@keyframes image-d{ 25.000000000000% {opacity:0} 25.000000000001% {opacity:1} 33.333333333334% {opacity:1} 33.333333333335% {opacity:0}}
+@keyframes image-e{ 33.333333333333% {opacity:0} 33.333333333334% {opacity:1} 41.666666666668% {opacity:1} 41.666666666669% {opacity:0}}
+@keyframes image-f{ 41.666666666667% {opacity:0} 41.666666666668% {opacity:1} 50.000000000001% {opacity:1} 50.000000000002% {opacity:0}}
+@keyframes image-g{ 50.000000000000% {opacity:0} 50.000000000001% {opacity:1} 58.333333333334% {opacity:1} 58.333333333335% {opacity:0}}
+@keyframes image-h{ 58.333333333333% {opacity:0} 58.333333333334% {opacity:1} 66.666666666668% {opacity:1} 66.666666666669% {opacity:0}}
+@keyframes image-i{ 66.666666666667% {opacity:0} 66.666666666668% {opacity:1} 75.000000000001% {opacity:1} 75.000000000002% {opacity:0}}
+@keyframes image-j{ 75.000000000000% {opacity:0} 75.000000000001% {opacity:1} 83.333333333334% {opacity:1} 83.333333333335% {opacity:0}}
+@keyframes image-k{ 83.333333333333% {opacity:0} 83.333333333334% {opacity:1} 91.666666666668% {opacity:1} 91.666666666669% {opacity:0}}
+@keyframes image-l{ 91.666666666667% {opacity:0} 91.666666666668% {opacity:1} 99.999999999999% {opacity:1} 100.000000000000% {opacity:0}}

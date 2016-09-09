@@ -1,0 +1,112 @@
+[
+	{
+		"title": "416 tee",
+		"iconSrc": "./images/Icon-Tee.svg",
+		"hoverSrc": "./images/Work-416Tee-Hover.jpg",
+		"backgroundColor": "#85cbcd",
+		"description": "Lorem ipsum dolor sit amisis, egestas leo et, gravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Our new\nwheels",
+		"iconSrc": "./images/Icon-Car.svg",
+		"hoverSrc": "./images/Work-NewWheels-Hover.jpg",
+		"backgroundColor": "#fe97ac",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tellus facilisis, egestas leo m tristique luctus nisi at vulputate.",
+		"contentType": "video",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "https://www.youtube.com/watch?v=32FB-gYr49Y"
+	},
+	{
+		"title": "Giant\nflat lay",
+		"iconSrc": "./images/Icon-Camera.svg",
+		"hoverSrc": "./images/Work-FlayLay-Hover.jpg",
+		"backgroundColor": "#2aa032",
+		"description": "r adipiscing elit. Sed id tellus facilisis, egestas leo et, gravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Real\nconfidence",
+		"iconSrc": "./images/Icon-Pencil.svg",
+		"hoverSrc": "./images/Work-RealConfidence-Hover.jpg",
+		"backgroundColor": "#ffda0f",
+		"description": "Lorem ipsum dolor sit amet, consecteas leo et, gravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Babsocks",
+		"iconSrc": "./images/Icon-Sock.svg",
+		"hoverSrc": "./images/Work-Babsocks-Hover.jpg",
+		"backgroundColor": "#04ce85",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.en dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Instagram\nescape room",
+		"iconSrc": "./images/Icon-Door.svg",
+		"hoverSrc": "./images/Work-EscapeTheRoom-Hover.jpg",
+		"backgroundColor": "#2ec1c9",
+		"description": "Lorem ipsum doloravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Ministagram",
+		"iconSrc": "./images/Icon-Mixer.svg",
+		"hoverSrc": "./images/Work-Ministagram-Hover.jpg",
+		"backgroundColor": "#e4d8cc",
+		"description": "Lorem ipsum dolor sit amet, us facilisis, egestas leo et, gravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Films that\nstick",
+		"iconSrc": "./images/Icon-Filmstrip.svg",
+		"hoverSrc": "./images/Work-FilmsThatStick-Hover.jpg",
+		"backgroundColor": "#ff6120",
+		"description": "L ipsum doctetur adipiscing elit. Sed id tellus facilisis, egestas leo et, gravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Famous\nfries",
+		"iconSrc": "./images/Icon-Fries.svg",
+		"hoverSrc": "./images/Work-FamousFries-Hover.jpg",
+		"backgroundColor": "#a78aa8",
+		"description": " dolor sit amet, consectetur adipiscing eida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Athletes\nget dirty",
+		"iconSrc": "./images/Icon-Laundry.svg",
+		"hoverSrc": "./images/Work-AthletesGetDirty-Hover.jpg",
+		"backgroundColor": "#fe777b",
+		"description": "Lorem ipsum dolor sit amet, cleo et, gravida nulla. Aenean congue eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	},
+	{
+		"title": "Choose your\nown silent film\nfestival",
+		"iconSrc": "./images/Icon-Hand.svg",
+		"hoverSrc": "./images/Work-ChooseYourOwnTSFF-Hover.jpg",
+		"backgroundColor": "#ffb183",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id te eros eu sapien dapibus rutrum. Aliquam tristique luctus nisi at vulputate.",
+		"contentType": "image",
+		"closeSrc": "./images/Icon-X.svg",
+		"content": "./images/Work-FlayLay-Hover.jpg"
+	}
+]

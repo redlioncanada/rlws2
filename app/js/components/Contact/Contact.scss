@@ -8,15 +8,13 @@
 
 	.header {
 		$headerPadding: 15px;
-		$headerSize: 170px;
 
 		position: relative;
-		width: $headerSize;
-		height: $headerSize;
+		width: 33.333333333%;
+		height: $headerBoxSize;
 		background-color: black;
 		padding: $headerPadding;
 		float: left;
-		margin-right: 5px;
 
 		.divider {
 			width: 100%;
@@ -36,7 +34,7 @@
 	.methods {
 		float: left;
 		min-width: 200px;
-		margin-top: 102px;
+		margin-top: $headerBoxSize - 68;
 		width: 66.66666666666%;
 
 		.method {
@@ -45,6 +43,10 @@
 			height: 70px;
 			cursor: pointer;
 			float: left;
+		}
+
+		.method:nth-child(2n-1) {
+			padding-left: 10px;
 		}
 
 		.method.address {
@@ -66,9 +68,28 @@
 		}
 	}
 
+	.map {
+		position: relative;
+	}
+
 	.map img {
 		width: 250%;
 		margin-top: 20px;
 		margin-left: -78%;
 	}
+
+	.map .background {z-index: 1;}
+	.map .pin {
+		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		margin-bottom: 5px;
+		animation: bounce 2s infinite;
+	}
+}
+
+@keyframes bounce {
+	0%, 10%, 30%, 50%, 100% {transform: translateY(0);}
+    20% {transform: translateY(-30px);}
+    45% {transform: translateY(-15px);}
 }

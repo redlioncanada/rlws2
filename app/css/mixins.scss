@@ -26,6 +26,34 @@
 	font-family: 'Rubik Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@mixin extrusion($position: 'top', $size: 10px) {
+  @if $position == 'bottom' {
+    bottom: -$size;
+    height: $size;
+    width: 100%;
+    left: 0;
+  } @else if $position == 'left' {
+    left: -$size;
+    width: $size;
+    height: 100%;
+    top: 0;
+  } @else if $position == 'right' {
+    right: -$size;
+    width: $size;
+    height: 100%;
+    top: 0;
+  } @else {
+    top: -$size;
+    height: $size;
+    width: 100%;
+    left: 0;
+  }
+
+  content: ' ';
+  position: absolute;
+  background-color: inherit;
+}
+
 @mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {

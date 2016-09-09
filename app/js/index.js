@@ -10,6 +10,7 @@ import {Menu} from './components/Menu/Menu'
 import {Anchor} from './components/Anchor/Anchor'
 import {Slogan} from './components/Slogan/Slogan'
 import {Partners} from './components/Partners/Partners'
+import {Work} from './components/Work/Work'
 import {Contact} from './components/Contact/Contact'
 
 require('../../node_modules/normalize.scss/normalize.scss')
@@ -19,7 +20,6 @@ class RedLion extends React.Component {
 	state = appdata.Data()
 
 	componentDidMount() {
-		//fetch jobs.json
 		fetch(this.state.Jobs.endpoint)
 			.then(res => {
 				return res.json()
@@ -29,19 +29,23 @@ class RedLion extends React.Component {
 				console.error('Failed to fetch jobs.json', e)
 			})
 
-		//every 1 second, change the current slide of the slideshow in the menu component
-		setInterval(() => {
-			let menuState = this.state.Menu,
-				slideshowState = menuState.slideshow,
-				numberOfSlides = slideshowState.src.length,
-				currentSlide = slideshowState.currentSlide+1 > numberOfSlides-1 ? 0 : slideshowState.currentSlide+1,
-				updatedSlideshowState = {...slideshowState, currentSlide: currentSlide},
-				updatedMenuState = {...this.state.Menu, slideshow: updatedSlideshowState}
-			this.setState({Menu: updatedMenuState})
-		},1000)
+		fetch(this.state.Work.endpoint)
+			.then(res => {
+				return res.json()
+			}).then(json => {
+				this.setState({Work: {...this.state.Work, work: json}})
+			}).catch(e => {
+				console.error('Failed to fetch work.json', e)
+			})
 	}
 
 	render() {
+		var workProps = {
+			...this.state.Work,
+			entryClicked: this.workEntryClicked.bind(this),
+			closeClicked: this.workCloseClicked.bind(this)
+		}
+
 		return (
 			<div>
 				<Wallpaper />
@@ -49,10 +53,25 @@ class RedLion extends React.Component {
 				<Menu {...this.state.Menu} />
 				<Anchor {...this.state.Anchor} />
 				<Slogan {...this.state.Slogan} />
+				<Work {...workProps} />
 				<Partners {...this.state.Partners} />
 				<Contact {...this.state.Contact} />
 			</div>
 		)
+	}
+
+	workEntryClicked(index) {
+		this.setState({Work: {
+			...this.state.Work,
+			currentlySelectedWork: index
+		}})
+	}
+
+	workCloseClicked() {
+		this.setState({Work: {
+			...this.state.Work,
+			currentlySelectedWork: -1
+		}})
 	}
 }
 
