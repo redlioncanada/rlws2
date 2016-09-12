@@ -12,6 +12,9 @@ export class appdata {
 					address: 'mailto:jobs@redlioncanada.com'
 				}
 			},
+			Culture: {
+				id: 'culture'
+			},
 			Menu: {
 				background: {
 					src: './images/Chalkboard.jpg'

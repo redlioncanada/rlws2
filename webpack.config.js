@@ -40,6 +40,10 @@ module.exports = {
       {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
           loader: 'file?name=fonts/[name].[ext]'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ],
     sassLoader: {

@@ -6,13 +6,14 @@ class LazyImageWrapper extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      loaded: false
+      loaded: false,
+      hiddenOnLoad: false
     }
     this.handleLoaded = this.handleLoaded.bind(this);
   }
   handleLoaded() {
     this.setState({
-      loaded: true
+      loaded: true,
     })
   }
   render() {
@@ -35,7 +36,7 @@ class LazyImageWrapper extends React.Component {
     var fullStyle = {opacity: this.state.loaded ? 1 : 0}
 
     return (
-      <div style={parentStyle}>
+      <div style={parentStyle} className={this.props.className}>
         <LazyImage className='lores'
           src={low}
           width={width}
@@ -43,6 +44,7 @@ class LazyImageWrapper extends React.Component {
           loaded={this.state.loaded}
           style={lazyStyle}
           blurRadius={this.props.blurRadius}
+          hiddenOnLoad={this.props.hiddenOnLoad}
         />
         <FullImage className='hires'
           src={src}
@@ -57,7 +59,8 @@ class LazyImageWrapper extends React.Component {
 LazyImageWrapper.defaultProps = {
   blurRadius: 4,
   width: '100%',
-  height: undefined
+  height: undefined,
+  hiddenOnLoad: false
 };
 
 

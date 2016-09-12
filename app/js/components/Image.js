@@ -7,7 +7,8 @@ class Image extends React.Component {
 			src: '',
 			width: 0,
 			height: 0,
-			style: {}
+			style: {},
+			className: ''
 		}
 	}
 
@@ -21,7 +22,7 @@ class Image extends React.Component {
 		}
 		
 		return (
-			<LazyImageWrapper {...props} style={this.props.style} />
+			<LazyImageWrapper {...props} style={this.props.style} className={this.props.className} />
 		)
 	}
 

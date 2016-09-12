@@ -6,6 +6,7 @@ import {appdata} from './appdata.js'
 
 import {Wallpaper} from './components/Wallpaper/Wallpaper'
 import {Jobs} from './components/Jobs/Jobs'
+import {Culture} from './components/Culture/Culture'
 import {Menu} from './components/Menu/Menu'
 import {Anchor} from './components/Anchor/Anchor'
 import {Slogan} from './components/Slogan/Slogan'
@@ -16,27 +17,15 @@ import {Contact} from './components/Contact/Contact'
 require('../../node_modules/normalize.scss/normalize.scss')
 require('../css/index.scss')
 
+var workJSON = require('!json!./components/Work/Work.json')
+var jobsJSON = require('!json!./components/Jobs/Jobs.json')
+
 class RedLion extends React.Component {
 	state = appdata.Data()
 
-	componentDidMount() {
-		fetch(this.state.Jobs.endpoint)
-			.then(res => {
-				return res.json()
-			}).then(json => {
-				this.setState({Jobs: {...this.state.Jobs, jobs: json}})
-			}).catch(e => {
-				console.error('Failed to fetch jobs.json', e)
-			})
-
-		fetch(this.state.Work.endpoint)
-			.then(res => {
-				return res.json()
-			}).then(json => {
-				this.setState({Work: {...this.state.Work, work: json}})
-			}).catch(e => {
-				console.error('Failed to fetch work.json', e)
-			})
+	componentWillMount() {
+		this.setState({Jobs: {...this.state.Jobs, jobs: jobsJSON}})
+		this.setState({Work: {...this.state.Work, work: workJSON}})
 	}
 
 	render() {
@@ -50,6 +39,7 @@ class RedLion extends React.Component {
 			<div>
 				<Wallpaper />
 				<Jobs {...this.state.Jobs} />
+				<Culture {...this.state.Culture} />
 				<Menu {...this.state.Menu} />
 				<Anchor {...this.state.Anchor} />
 				<Slogan {...this.state.Slogan} />

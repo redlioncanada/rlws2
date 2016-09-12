@@ -22,11 +22,15 @@ export class Slideshow extends React.Component {
 			)
 		})
 
+		var border = !!this.props.borderSrc ? '' : (
+			<div className="border">
+				<img src = {this.props.borderSrc} />
+			</div>
+		)
+
 		return (
 			<div className="slideshow subcomponent">
-				<div className="border">
-					<img src = {this.props.borderSrc} />
-				</div>
+				{border}
 
 				<div className="images">
 					{images}

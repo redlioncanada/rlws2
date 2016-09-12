@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from '../Image'
 var Velocity = require('velocity-animate')
 require('./WorkExpanded.scss')
 
@@ -27,7 +28,7 @@ export class WorkExpanded extends React.Component {
 		switch(this.props.contentType) {
 			case 'image':
 				main = (
-					<img className="image main" src={this.props.content} />
+					<Image className="image main" src={this.props.content} hiddenOnLoad={true} />
 				)
 		}
 

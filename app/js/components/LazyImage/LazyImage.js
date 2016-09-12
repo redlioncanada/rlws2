@@ -12,8 +12,12 @@ class LazyImage extends React.Component {
     style.width = this.props.width
     style.height = this.props.height
 
+    var src = this.props.hiddenOnLoad ?  'data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' : this.props.src
+
+    if (src.indexOf('.gif') > -1) src = src.replace(/\.gif/g, '.jpg') //replace gifs with static jpegs to start
+
     return (
-      <img src={this.props.src} style={style} className={this.props.loaded ? 'fadeout' : ''} />
+      <img src={src} style={style} className={this.props.loaded ? 'fadeout' : ''} />
     )
   }
 }
@@ -22,7 +26,8 @@ LazyImage.defaultProps = {
   blurRadius: 4,
   width: '100%',
   height: undefined,
-  loaded: false
+  loaded: false,
+  hiddenOnLoad: false
 };
 
 export default LazyImage
