@@ -47,4 +47,21 @@
 	.slideshow {
 		z-index: 2;
 	}
+
+	@media(max-width: $contentMaxWidth) {
+		.links-container {
+			width: 270px;
+		}
+
+		.links-container .menulink {
+			width: 56px;
+			height: 20px;
+			margin-right: 10px;
+
+			.text {
+				font-size: 0.6em;
+				line-height: 20px;
+			}
+		}
+	}
 }

@@ -15,9 +15,10 @@
 	.images {
 		top: -29px;
 		width: 19%;
+		display: inline-block;
 
 		> div {
-			position: absolute;
+			position: absolute !important;
 			top: 0;
 			left: 0;
 			float: left;
@@ -41,14 +42,14 @@
 }
 
 @keyframes image-a{ 0.000000000000% {opacity:0} 0.000000000001% {opacity:1} 8.333333333334% {opacity:1} 8.333333333335% {opacity:0}}
-@keyframes image-b{ 8.333333333333% {opacity:0} 8.333333333334% {opacity:1} 16.666666666668% {opacity:1} 16.666666666669% {opacity:0}}
-@keyframes image-c{ 16.666666666667% {opacity:0} 16.666666666668% {opacity:1} 25.000000000001% {opacity:1} 25.000000000002% {opacity:0}}
-@keyframes image-d{ 25.000000000000% {opacity:0} 25.000000000001% {opacity:1} 33.333333333334% {opacity:1} 33.333333333335% {opacity:0}}
-@keyframes image-e{ 33.333333333333% {opacity:0} 33.333333333334% {opacity:1} 41.666666666668% {opacity:1} 41.666666666669% {opacity:0}}
-@keyframes image-f{ 41.666666666667% {opacity:0} 41.666666666668% {opacity:1} 50.000000000001% {opacity:1} 50.000000000002% {opacity:0}}
-@keyframes image-g{ 50.000000000000% {opacity:0} 50.000000000001% {opacity:1} 58.333333333334% {opacity:1} 58.333333333335% {opacity:0}}
-@keyframes image-h{ 58.333333333333% {opacity:0} 58.333333333334% {opacity:1} 66.666666666668% {opacity:1} 66.666666666669% {opacity:0}}
-@keyframes image-i{ 66.666666666667% {opacity:0} 66.666666666668% {opacity:1} 75.000000000001% {opacity:1} 75.000000000002% {opacity:0}}
-@keyframes image-j{ 75.000000000000% {opacity:0} 75.000000000001% {opacity:1} 83.333333333334% {opacity:1} 83.333333333335% {opacity:0}}
-@keyframes image-k{ 83.333333333333% {opacity:0} 83.333333333334% {opacity:1} 91.666666666668% {opacity:1} 91.666666666669% {opacity:0}}
-@keyframes image-l{ 91.666666666667% {opacity:0} 91.666666666668% {opacity:1} 99.999999999999% {opacity:1} 100.000000000000% {opacity:0}}
+@keyframes image-b{ 8.333333333332% {opacity:0} 8.333333333333% {opacity:1} 16.666666666668% {opacity:1} 16.666666666669% {opacity:0}}
+@keyframes image-c{ 16.666666666666% {opacity:0} 16.666666666667% {opacity:1} 25.000000000001% {opacity:1} 25.000000000002% {opacity:0}}
+@keyframes image-d{ 24.999999999999% {opacity:0} 25.000000000000% {opacity:1} 33.333333333334% {opacity:1} 33.333333333335% {opacity:0}}
+@keyframes image-e{ 33.333333333332% {opacity:0} 33.333333333333% {opacity:1} 41.666666666668% {opacity:1} 41.666666666669% {opacity:0}}
+@keyframes image-f{ 41.666666666666% {opacity:0} 41.666666666667% {opacity:1} 50.000000000001% {opacity:1} 50.000000000002% {opacity:0}}
+@keyframes image-g{ 49.999999999999% {opacity:0} 50.000000000000% {opacity:1} 58.333333333334% {opacity:1} 58.333333333335% {opacity:0}}
+@keyframes image-h{ 58.333333333332% {opacity:0} 58.333333333333% {opacity:1} 66.666666666668% {opacity:1} 66.666666666669% {opacity:0}}
+@keyframes image-i{ 66.666666666666% {opacity:0} 66.666666666667% {opacity:1} 75.000000000001% {opacity:1} 75.000000000002% {opacity:0}}
+@keyframes image-j{ 74.999999999999% {opacity:0} 75.000000000000% {opacity:1} 83.333333333334% {opacity:1} 83.333333333335% {opacity:0}}
+@keyframes image-k{ 83.333333333332% {opacity:0} 83.333333333333% {opacity:1} 91.666666666668% {opacity:1} 91.666666666669% {opacity:0}}
+@keyframes image-l{ 91.666666666666% {opacity:0} 91.666666666667% {opacity:1} 99.999999999999% {opacity:1} 100.000000000000% {opacity:0}}

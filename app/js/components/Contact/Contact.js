@@ -52,7 +52,7 @@ export class Contact extends React.Component {
 				</div>
 
 				<div className="map">
-					<a href={this.props.address.link} rel="noopener noreferrer" target="_blank">
+					<a href={this.props.map.link} rel="noopener noreferrer" target="_blank">
 						<img className="background" src={this.props.map.imageSrc} />
 						<img className="pin" src={this.props.map.imagePinSrc}/>
 					</a>

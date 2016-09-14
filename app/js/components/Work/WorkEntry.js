@@ -10,7 +10,8 @@ export class WorkEntry extends React.Component {
 			isHeader: false,
 			iconSrc: false,
 			hoverSrc: false,
-			entryClicked: false
+			entryClicked: false,
+			isSelected: false
 		}
 	}
 
@@ -48,7 +49,6 @@ export class WorkEntry extends React.Component {
 	}
 
 	handleClick() {
-		console.log('click')
 		if (!!this.props.entryClicked) this.props.entryClicked(this.props.index)
 	}
 }

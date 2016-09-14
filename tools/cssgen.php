@@ -25,6 +25,9 @@
 
 		$css2 .= "@keyframes " . $name . "{ ";
 			$startPercent = number_format($divisor * ($i-1), 12);
+			if ($startPercent != 0) {
+				$startPercent = number_format($startPercent - .000000000001, 12);
+			}
 
 			$endPercent = number_format(($divisor * $i), 12);
 			if ($i == $animationNumberOfElements) {

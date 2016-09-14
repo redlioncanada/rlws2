@@ -9,8 +9,7 @@ export class WorkExpanded extends React.Component {
 			backgroundColor: '#000',
 			description: '',
 			content: '',
-			type: 'image',
-			shouldOpen: false,
+			type: 'image'
 		}
 	}
 
@@ -28,7 +27,7 @@ export class WorkExpanded extends React.Component {
 		switch(this.props.contentType) {
 			case 'image':
 				main = (
-					<Image className="image main" src={this.props.content} hiddenOnLoad={true} />
+					<Image className="image main" src={this.props.content} hiddenOnLoad={true} defer={true} />
 				)
 		}
 
@@ -51,8 +50,8 @@ export class WorkExpanded extends React.Component {
 		)
 	}
 
-	componentDidUpdate() {
-		if (this.props.shouldOpen) {
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.shouldOpen) {
 			this.animateOpen()
 		} else {
 			this.animateClose()
@@ -65,11 +64,14 @@ export class WorkExpanded extends React.Component {
 
 	animateOpen() {
 		if (!this.height) this.height = this.refs.this.scrollHeight
+		// if (!this.scrollTop) this.refs.this.getBoundingClientRect().top
 
 		Velocity(this.refs.this, {stop: true})
 		Velocity(this.refs.this, {'max-height': this.height, easing: 'linear'}, {timeout: 400}, () => {
 			if (typeof this.props.didOpen === 'function') this.props.didOpen()
 		})
+
+		// Velocity(window, {'scroll': this.scrollTop, easing: 'linear'}, {timeout: 400})
 	}
 
 	animateClose() {

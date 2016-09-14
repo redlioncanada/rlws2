@@ -83,6 +83,13 @@
 		bottom: -24px;
 		@include horizontal-center();
 	}
+
+	@media(max-width: $innerContentMaxWidth) {
+		.text-container {
+			width: 80%;
+			padding: 18px 20px;
+		}
+	}
 }
 
 @keyframes out-in-stop-from-right {

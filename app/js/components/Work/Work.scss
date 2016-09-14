@@ -5,4 +5,20 @@
 	width: $innerContentMaxWidth;
 	white-space: pre-line;
 	margin-bottom: 5px;
+
+	.workentry, .workexpanded-wrapper {
+		position: relative;
+	}
+
+	.workentry {
+		z-index: 3;
+	}
+
+	.workexpanded-wrapper {
+		z-index: 1;
+	}
+
+	.workexpanded-wrapper.selected {
+		z-index: 2;
+	}
 }

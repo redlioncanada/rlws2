@@ -3,137 +3,182 @@
 
 #app div.component.work {
 	margin-top: $workTopExtrusionSize;
-}
 
-.workentry {
-	background-color: white;
-	width: 33.3333333333%;
-	height: 190px;
-	float: left;
-
-	> div {
-		width: 100%;
-		height: 100%;
-		padding: $workTablePadding/2;
-	}
-
-	> div > div {
-		width: 100%;
-		height: 100%;
-		position: relative;
-	}
-}
-
-.workentry .header, .workentry .content {
-	width: 100%;
-	height: 100%;
-	padding: 15px;
-}
-
-.workentry .header {
-	position: relative;
-	color: white;
-
-	.divider {
-		width: 100%;
-		height: 2px;
-		margin-top: 6px;
+	.workentry {
 		background-color: white;
-	}
+		width: 33.3333333333%;
+		height: 190px;
+		float: left;
 
-	.arrow {
-		position: absolute;
-		bottom: $workCellPadding;
-		right: $workCellPadding;
-		width: 15px;
-	}
-}
-
-.workentry .content {
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
-
-	.icon {
-		position: absolute;
-		bottom: $workCellPadding;
-		right: $workCellPadding;
-		height: 25%;
-		width: auto;
-	}
-
-	.hover-container {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		transition: opacity 0.4s;
-		backface-visibility: hidden;
-
-		img {
-			position: absolute;
+		> div {
 			width: 100%;
-			top: 0;
-			left: 0;
-			backface-visibility: hidden;
+			height: 100%;
+			padding: $workTablePadding/2;
+		}
+
+		> div > div {
+			width: 100%;
+			height: 100%;
+			position: relative;
 		}
 	}
 
-	&:hover .hover-container {
-		opacity: 1;
+	.workentry .header, .workentry .content {
+		width: 100%;
+		height: 100%;
+		padding: 15px;
+	}
+
+	.workentry .header {
+		position: relative;
+		color: white;
+
+		.divider {
+			width: 100%;
+			height: 2px;
+			margin-top: 6px;
+			background-color: white;
+		}
+
+		.arrow {
+			position: absolute;
+			bottom: $workCellPadding;
+			right: $workCellPadding;
+			width: 15px;
+		}
+	}
+
+	.workentry .content {
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+
+		.icon {
+			position: absolute;
+			bottom: $workCellPadding;
+			right: $workCellPadding;
+			height: 25%;
+			width: auto;
+		}
+
+		.hover-container {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 0.4s;
+			backface-visibility: hidden;
+
+			img {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				backface-visibility: hidden;
+			}
+		}
+
+		&:hover .hover-container {
+			opacity: 1;
+		}
+	}
+
+	.workentry .content .icon {
+		&[src*="Car"], &[src*="Camera"] {
+			width: 25%;
+		}
+	}
+
+	//add odd extrusions
+	.workentry:nth-child(2) > div > div:after {@include extrusion('top', $workTopExtrusionSize);}
+	.workentry:nth-child(2) .hover-container {
+		top: -$workTopExtrusionSize;
+		
+		img {
+			width: 110%;
+		 }
+	}
+
+	.workentry:nth-child(7) > div > div:after {@include extrusion('right', 18px);}
+	.workentry:nth-child(7) .hover-container {width: 110%;}
+
+	.workentry:nth-child(9) > div > div:after {
+		@include extrusion('left', 20px);
+	}
+
+	.workentry:last-child > div > div:after {
+		@include extrusion('bottom', $workBottomExtrusionSize);
+	}
+
+	.workentry:last-child {
+		margin-bottom: $workBottomExtrusionSize;
+	}
+	//end add odd extrusions
+
+	//remove outer table padding
+	.workentry:nth-child(4n+1) {
+		> div {
+			padding-left: 0;
+		}
+	}
+
+	.workentry:nth-child(4n+3) {
+		> div {
+			padding-right: 0;
+		}
+	}
+
+	.workentry:nth-child(1), .workentry:nth-child(2), .workentry:nth-child(3) {
+		> div {
+			padding-top: 0;
+		}
+	}
+
+	.workentry:nth-child(7) > div > div {overflow:hidden;}  //padding isn't inserted properly on this tile on mobile for some reason, "temp" workaround
+	//end remove outer table padding
+
+	@media(max-width: $innerContentMaxWidth) {
+		padding: 0 30px;
+
+		.workentry {
+			width: 50%;
+		}
+
+		//remove outer table padding
+		.workentry:nth-child(4n+1) {
+			> div {
+				padding-left: $workTablePadding/2;
+			}
+		}
+		.workentry:nth-child(3n+1) {
+			> div {
+				padding-left: 0;
+			}
+		}
+		.workentry:nth-child(4n+3) {
+			> div {
+				padding-right: $workTablePadding/2;
+			}
+		}
+		.workentry:nth-child(3n+3) {
+			> div {
+				padding-right: 0;
+			}
+		}
+		//end remove outer table padding
+
+		//add odd extrusions
+		.workentry:nth-child(7) > div > div:after {content: '';}
+		.workentry:nth-child(7) .hover-container {width: initial;}
+		.workentry:nth-child(8) > div > div:after {@include extrusion('right', 18px);}
+		.workentry:nth-child(8) .hover-container {width: 110%;}
+
+		.workentry:nth-child(9) > div > div:after {content: '';}
+		.workentry:nth-child(10) > div > div:after {
+			@include extrusion('left', 20px);
+		}
+		//end add odd extrusions
 	}
 }
-
-.workentry .content .icon {
-	&[src*="Car"], &[src*="Camera"] {
-		width: 25%;
-	}
-}
-
-//add odd extrusions
-.workentry:nth-child(2) > div > div:after {@include extrusion('top', $workTopExtrusionSize);}
-.workentry:nth-child(2) .hover-container {
-	top: -$workTopExtrusionSize;
-	
-	img {
-		width: 110%;
-	 }
-}
-
-.workentry:nth-child(7) > div > div:after {@include extrusion('right', 18px);}
-.workentry:nth-child(7) .hover-container {width: 110%;}
-
-.workentry:nth-child(9) > div > div:after {
-	@include extrusion('left', 20px);
-}
-
-.workentry:last-child > div > div:after {
-	@include extrusion('bottom', $workBottomExtrusionSize);
-}
-
-.workentry:last-child {
-	margin-bottom: $workBottomExtrusionSize;
-}
-//end add odd extrusions
-
-//remove outer table padding
-.workentry:nth-child(1), .workentry:nth-child(5), .workentry:nth-child(9) {
-	> div {
-		padding-left: 0;
-	}
-}
-
-.workentry:nth-child(3), .workentry:nth-child(7), .workentry:nth-child(11) {
-	> div {
-		padding-right: 0;
-	}
-}
-
-.workentry:nth-child(1), .workentry:nth-child(2), .workentry:nth-child(3) {
-	> div {
-		padding-top: 0;
-	}
-}
-//end remove outer table padding

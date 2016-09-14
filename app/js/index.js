@@ -1,9 +1,9 @@
 "use strict"
 import React from 'react';
 import ReactDOM from 'react-dom'
-import 'whatwg-fetch'
 import {appdata} from './appdata.js'
 
+import {Preloader} from './components/Preloader/Preloader'
 import {Wallpaper} from './components/Wallpaper/Wallpaper'
 import {Jobs} from './components/Jobs/Jobs'
 import {Culture} from './components/Culture/Culture'
@@ -35,7 +35,7 @@ class RedLion extends React.Component {
 			closeClicked: this.workCloseClicked.bind(this)
 		}
 
-		return (
+		var appContent = (
 			<div>
 				<Wallpaper />
 				<Jobs {...this.state.Jobs} />
@@ -46,6 +46,18 @@ class RedLion extends React.Component {
 				<Work {...workProps} />
 				<Partners {...this.state.Partners} />
 				<Contact {...this.state.Contact} />
+			</div>
+		)
+
+		var preloaderProps = {
+			...this.state.Preloader,
+			handleAppLoaded: this.appLoaded.bind(this),
+			content: appContent
+		}
+
+		return (
+			<div>
+				<Preloader {...preloaderProps} />
 			</div>
 		)
 	}
@@ -61,6 +73,13 @@ class RedLion extends React.Component {
 		this.setState({Work: {
 			...this.state.Work,
 			currentlySelectedWork: -1
+		}})
+	}
+
+	appLoaded() {
+		this.setState({Preloader: {
+			...this.state.Preloader,
+			loaded: true
 		}})
 	}
 }

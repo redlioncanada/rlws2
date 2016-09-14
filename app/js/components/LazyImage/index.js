@@ -31,7 +31,7 @@ class LazyImageWrapper extends React.Component {
       return <img src={src} style={styles} />
     }
 
-    var parentStyle = {...this.props.style, overflow: 'hidden'}
+    var parentStyle = {...this.props.style, overflow: 'hidden', position: 'relative'}
     var lazyStyle = {position: 'absolute'}
     var fullStyle = {opacity: this.state.loaded ? 1 : 0}
 
@@ -50,6 +50,7 @@ class LazyImageWrapper extends React.Component {
           src={src}
           onLoad={this.handleLoaded}
           style={fullStyle}
+          defer={this.props.defer}
         />
       </div>
     )

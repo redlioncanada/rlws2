@@ -1,19 +1,36 @@
 export class appdata {
 	static Data() {
 		return {
+			Preloader: {
+				loaded: false,
+				logoSrc: './images/Logo-RedLion.svg',
+				arrowSrc: './images/Icon-LongArrow.svg'
+			},
 			Jobs: {
 				id: 'jobs',
 				endpoint: './json/Jobs.json',
 				title: 'Jobs',
 				arrowSrc: './images/Icon-ShortArrow.svg',
-				jobs: [],		//fetched via jobs.json at run time
+				jobs: [],		//fetched via jobs.json at compile time
 				email: {
 					subject: 'I\'d love to work at Red Lion',
 					address: 'mailto:jobs@redlioncanada.com'
 				}
 			},
 			Culture: {
-				id: 'culture'
+				id: 'culture',
+				social: {
+					instagram: {
+						link: 'https://www.instagram.com/red_lion_canada/',
+						normalSrc: './images/LinkedIN.jpg',
+						hoverSrc: './images/LinkedIN_Rollover.jpg'
+					},
+					linkedin: {
+						link: 'https://www.linkedin.com/company/red-lion/',
+						normalSrc: './images/Instagram.jpg',
+						hoverSrc: './images/Instagram_Rollover.jpg'
+					}
+				}
 			},
 			Menu: {
 				background: {
@@ -40,18 +57,18 @@ export class appdata {
 				slideshow: {
 					borderSrc: './images/ChalkboardBorder.png',
 					src: [
-						'./images/Chalkboard-1.jpg',
-						'./images/Chalkboard-2.jpg',
-						'./images/Chalkboard-3.jpg',
-						'./images/Chalkboard-4.jpg',
-						'./images/Chalkboard-5.jpg',
-						'./images/Chalkboard-6.jpg',
-						'./images/Chalkboard-7.jpg',
-						'./images/Chalkboard-8.jpg',
-						'./images/Chalkboard-9.jpg',
-						'./images/Chalkboard-10.jpg',
-						'./images/Chalkboard-11.jpg',
-						'./images/Chalkboard-12.jpg'
+						'./images/Chalkboard-1Chalkboard.jpg',
+						'./images/Chalkboard-2Chalkboard.jpg',
+						'./images/Chalkboard-3Chalkboard.jpg',
+						'./images/Chalkboard-4Chalkboard.jpg',
+						'./images/Chalkboard-5Chalkboard.jpg',
+						'./images/Chalkboard-6Chalkboard.jpg',
+						'./images/Chalkboard-7Chalkboard.jpg',
+						'./images/Chalkboard-8Chalkboard.jpg',
+						'./images/Chalkboard-9Chalkboard.jpg',
+						'./images/Chalkboard-10Chalkboard.jpg',
+						'./images/Chalkboard-11Chalkboard.jpg',
+						'./images/Chalkboard-12Chalkboard.jpg'
 					]
 				}
 			},
@@ -71,7 +88,7 @@ export class appdata {
 				title: 'Latest work\n and news',
 				endpoint: './json/Work.json',
 				arrowSrc: './images/Icon-ShortArrow.svg',
-				work: [],		//fetched via jobs.json at run time
+				work: [],		//fetched via work.json at compile time
 				currentlySelectedWork: -1
 			},
 			Partners: {
@@ -173,7 +190,8 @@ export class appdata {
 				},
 				map: {
 					imageSrc: './images/Map.jpg',
-					imagePinSrc: './images/Map-pin.png'
+					imagePinSrc: './images/Map-pin.png',
+					link: 'https://www.google.ca/maps/place/Red+Lion+Canada/@43.6532941,-79.3763123,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb36ad0991a9:0x8feadbddc141b1ed!8m2!3d43.6532941!4d-79.3741236',
 				}
 			}
 		}

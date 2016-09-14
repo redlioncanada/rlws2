@@ -1,0 +1,40 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+$iconSize: 40px;
+#app div.subcomponent.social {
+	display: inline-block;
+	margin-bottom: 20px;
+	@include horizontal-center(1);
+
+	.social-icon {
+		width: $iconSize;
+		height: $iconSize;
+		position: relative;
+		float: left;
+		margin-right: 10px;
+	}
+
+	> a:last-child .social-icon {
+		margin-right: 0;
+	}
+
+	.normal, .hover {
+		position: absolute;
+		width: 100%;
+	}
+
+	.normal {
+		z-index: 1;
+	}
+
+	.hover {
+		z-index: 2;
+		opacity: 0;
+		transition: opacity 0.1s linear;
+	}
+
+	.social-icon:hover .hover {
+		opacity: 1;
+	}
+}

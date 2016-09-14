@@ -1,0 +1,40 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.component.preloader {
+	max-width: initial;
+	.overlay {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		z-index: 10;
+		background: white;
+		opacity: 1;
+	}
+
+	.content {
+		display: none;
+	}
+
+	.overlay .component.anchor {
+		height: inherit;
+		margin: 0;
+		max-width: initial;
+
+		.anchor-container {
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+#app div.component.preloader.loaded {
+	.overlay {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.content {
+		display: block;
+	}
+}

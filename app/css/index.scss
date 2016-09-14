@@ -28,6 +28,7 @@ img {
 #app {
 	width: 100%;
 	font-size: 13pt;
+	overflow-x: hidden;
 
 	.component {
 		width: inherit;
@@ -45,5 +46,11 @@ img {
 		display: inline-block;
 		width: 100%;
 		position: relative;
+	}
+
+	@media(max-width: $innerContentMaxWidth) {
+		.component {
+			width: 100% !important;
+		}
 	}
 }
