@@ -84,7 +84,7 @@
 		@include horizontal-center();
 	}
 
-	@media(max-width: $innerContentMaxWidth) {
+	@media(max-width: $iphone6) {
 		.text-container {
 			width: 80%;
 			padding: 18px 20px;

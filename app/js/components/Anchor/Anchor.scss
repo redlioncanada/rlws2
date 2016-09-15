@@ -28,7 +28,11 @@
 		}
 	}
 
-	@media(max-width: $innerContentMaxWidth) {
+	@media(max-width: $iphone6) {
+		.anchor-container {
+			width: 184px;
+		}
+
 		.anchor-container .logo {
 			margin: 0 25px;
 		}

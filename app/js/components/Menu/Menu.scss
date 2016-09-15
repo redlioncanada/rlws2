@@ -48,7 +48,25 @@
 		z-index: 2;
 	}
 
-	@media(max-width: $contentMaxWidth) {
+	@media(max-width: $iphone6) {
+		.background {
+			width: 125%;
+
+			img {
+				margin-left: -38%;
+			}
+		}
+
+		.slideshow {
+			.images {
+				width: 44%;
+			}
+
+			.border {
+				width: 49%;
+			}
+		}
+
 		.links-container {
 			width: 270px;
 		}

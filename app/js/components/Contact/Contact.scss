@@ -36,6 +36,8 @@
 		min-width: 200px;
 		margin-top: $headerBoxSize - 68;
 		width: 66.66666666666%;
+		z-index: 2;
+		position: relative;
 
 		.method {
 			width: 50%;
@@ -56,6 +58,10 @@
 			.edgy {
 				margin-top: -1px;
 			}
+
+			.method-wrapper {
+				padding-bottom: 4px;
+			}
 		}
 
 		.method-wrapper {
@@ -70,6 +76,7 @@
 
 	.map {
 		position: relative;
+		z-index: 1;
 	}
 
 	.map img {
@@ -85,6 +92,67 @@
 		bottom: 0;
 		margin-bottom: 5px;
 		animation: bounce 2s infinite;
+	}
+
+	@media(max-width:$iphone6) {
+		padding: 0 40px;
+		font-size: 0.9em;
+
+		.header {
+			width: 50%;
+			height: 160px;
+		}
+
+		.methods {
+			width: 50%;
+			min-width: initial;
+			margin-top: 27px;
+		}
+
+		.methods .method {
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 0;
+			margin: 0 0 6px 0;
+			height: 60px;
+
+			.title {
+				margin-bottom: 4px;
+			}
+		}
+
+		.methods .method.address, .methods .method.phone {
+			margin-top: 6px;
+		}
+
+		.map {
+			width: 170%;
+			left: -31%;
+		}
+	}
+
+	@media(max-width: $iphone5) {
+		font-size: 0.8em;
+
+		.header {
+			height: 120px;
+		}
+
+		.method-wrapper {
+			padding: 10px;
+		}
+
+		.methods {
+			margin-top: -15px;
+		}
+
+		.methods .method.phone {
+			margin-top: 1px;
+		}
+
+		.methods .method.address {
+			margin-top: 11px;
+		}
 	}
 }
 

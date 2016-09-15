@@ -12,6 +12,11 @@ export class Partners extends React.Component {
 			)
 		})
 
+		if (partners.length % 2 !== 0) partners.push((
+			<div key={partners.length} className="partner">
+			</div>
+		))
+
 		return (
 			<div id={this.props.id} className="partners component">
 				<div className="wrapper">

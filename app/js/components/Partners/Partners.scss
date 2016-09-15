@@ -45,11 +45,14 @@
 		min-height: 110px;
 		display: inline-block;
 		position: relative;
+		height: 110px;
 
 		img {
-			position: absolute;
+			position: relative;
 			width: 60%;
-			@include center();
+			display: block;
+			margin: 0 auto;
+			@include vertical-center(1);
 		}
 	}
 
@@ -63,4 +66,54 @@
 	.babsocks img {width: 33%;}
 	.italian-by-night img {width: 37%;}
 	.shangri-la-hotel img {width: 57%;}
+
+	@media(max-width: $iphone6) {
+		margin-top: 40px;
+		font-size: 0.9em;
+
+		.header-wrapper {
+			padding-right: 40px;
+		}
+
+		.header {
+			width: 143px;
+			height: 148px;
+		}
+
+		.partner {
+			width: 50%;
+		}
+
+		.partner:nth-child(2n) {
+			padding-left: 40px;
+		}
+
+		.partner:nth-child(2n+1) {
+			padding-right: 40px;
+		}
+	}
+
+	@media(max-width: $iphone5) {
+		font-size: 0.8em;
+
+		.header {
+			width: 114px;
+			height: 129px;
+		}
+
+		.partner img {
+			width: 62%;
+		}
+
+		.cadillac img {width: 47%;}
+		.jenn-air img {width: 57%;}
+		.royaltie img {width: 37%;}
+		.drake-general-store img {width: 75%;}
+		.maytag img {width: 49%;}
+		.whirlpool img {width: 57%;}
+		.toronto-silent-film-festival img {width: 38%;}
+		.babsocks img {width: 35%;}
+		.italian-by-night img {width: 39%;}
+		.shangri-la-hotel img {width: 59%;}
+	}
 }

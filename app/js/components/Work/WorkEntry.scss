@@ -7,8 +7,9 @@
 	.workentry {
 		background-color: white;
 		width: 33.3333333333%;
-		height: 190px;
+		height: 170px;
 		float: left;
+		font-size: 0.9em;
 
 		> div {
 			width: 100%;
@@ -139,7 +140,7 @@
 	.workentry:nth-child(7) > div > div {overflow:hidden;}  //padding isn't inserted properly on this tile on mobile for some reason, "temp" workaround
 	//end remove outer table padding
 
-	@media(max-width: $innerContentMaxWidth) {
+	@media(max-width: $iphone6) {
 		padding: 0 30px;
 
 		.workentry {
@@ -180,5 +181,13 @@
 			@include extrusion('left', 20px);
 		}
 		//end add odd extrusions
+	}
+
+	@media(max-width: $iphone5) {
+		font-size: 0.8em;
+		
+		.workentry {
+			height: 140px;
+		}
 	}
 }

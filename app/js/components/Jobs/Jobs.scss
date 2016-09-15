@@ -34,6 +34,42 @@
 			width: 15px;
 		}
 	}
+
+	@media (max-width: $iphone6) {
+		font-size: 0.9em;
+		padding: 0 40px;
+		margin-top: 40px;
+
+		.header {
+			width: 50%;
+			height: 140px;
+			margin-right: 0;
+		}
+
+		.positions {
+			min-width: initial;
+			width: 50%;
+			padding-left: 10px;
+			margin-top: 80px;
+
+			.position {
+				height: 60px;
+			}
+		}
+	}
+
+	@media(max-width: $iphone5) {
+		margin-top: -10px;
+		font-size: 0.8em;
+
+		.header {
+			height: 130px;
+		}
+
+		.positions {
+			margin-top: 70px;
+		}
+	}
 }
 
 #app div.positions {

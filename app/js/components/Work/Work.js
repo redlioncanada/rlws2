@@ -9,7 +9,7 @@ export class Work extends React.Component {
 		var count = 0, count2 = 1, expanded = [], entries = []
 		for (var key in this.props.work) {
 			var item = this.props.work[key],
-				every = Service.Device().isMobile() ? 2 : 3 //insert a workexpanded section for every 2 works on mobile, and every 3 on desktop
+				every = Service.Device().isPhone() ? 2 : 3 //insert a workexpanded section for every 2 works on mobile, and every 3 on desktop
 
 			count++
 
