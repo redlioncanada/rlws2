@@ -3,38 +3,65 @@
 
 #app div.component.preloader {
 	max-width: initial;
-	.overlay {
+	height: 100%;
+
+	> .overlay {
 		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100vw;
 		height: 100vh;
 		z-index: 10;
 		background: white;
 		opacity: 1;
+		transition: opacity 1s linear;
+
+		.logo:not(.complete) {
+			animation: loading 2s infinite;
+		}
 	}
 
-	.content {
+	> .content {
 		display: none;
+		opacity: 0;
 	}
 
-	.overlay .component.anchor {
+	> .overlay .component.anchor {
 		height: inherit;
 		margin: 0;
 		max-width: initial;
+		overflow-y: scroll;
 
 		.anchor-container {
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
+
+		.arrow {
+			opacity: 0;
+		}
 	}
 }
 
 #app div.component.preloader.loaded {
-	.overlay {
-		opacity: 0;
-		visibility: hidden;
-	}
-
-	.content {
+	> .content {
 		display: block;
 	}
+}
+
+#app div.component.preloader.fadein {
+	> .content {
+		opacity: 1;
+	}
+
+	> .overlay {
+		opacity: 0;
+	}
+}
+
+@keyframes loading {
+	0% 		{ transform: rotate(0deg); }
+	10%   	{ transform: rotate(0deg); }
+	90% 	{ transform: rotate(180deg); }
+	100% 	{ transform: rotate(180deg); }
 }

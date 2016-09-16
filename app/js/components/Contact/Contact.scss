@@ -91,7 +91,9 @@
 		position: absolute;
 		bottom: 0;
 		margin-bottom: 5px;
-		animation: bounce 2s infinite;
+	}
+	.map .pin.animate {
+		animation: bounce 2s 3;
 	}
 
 	@media(max-width:$iphone6) {

@@ -1,7 +1,25 @@
 import React from 'react'
+import Service from '../../services/Service'
+import Sizzle from 'sizzle'
 require('./Contact.scss')
 
 export class Contact extends React.Component {
+	componentDidMount() {
+		Service.Element().On('CameIntoView', (params) => {
+			if (params.element == this.refs.this) {
+				console.log('yup')
+				this.refs.pin.className += ' animate'
+			}
+		}, {element: this.refs.this})
+
+		Service.Element().On('WentOutOfView', (params) => {
+			if (params.element == this.refs.this) {
+				console.log('yup1')
+				this.refs.pin.className = this.refs.pin.className.replace(' animate', '')
+			}
+		}, {element: this.refs.this})
+	}
+
 	render() {
 		var styles = [
 			{backgroundColor: this.props.email.backgroundColour},
@@ -10,7 +28,7 @@ export class Contact extends React.Component {
 		]
 
 		return (
-			<div id={this.props.id} className="contact component">
+			<div ref="this" id={this.props.id} className="contact component">
 				<div className="header">
 					<div className="title">{this.props.contact.title}</div>
 					<div className="divider"></div>
@@ -54,7 +72,7 @@ export class Contact extends React.Component {
 				<div className="map">
 					<a href={this.props.map.link} rel="noopener noreferrer" target="_blank">
 						<img className="background" src={this.props.map.imageSrc} />
-						<img className="pin" src={this.props.map.imagePinSrc}/>
+						<img ref="pin" className="pin" src={this.props.map.imagePinSrc}/>
 					</a>
 				</div>
 			</div>
