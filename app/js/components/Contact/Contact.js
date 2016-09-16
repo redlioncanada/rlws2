@@ -7,14 +7,12 @@ export class Contact extends React.Component {
 	componentDidMount() {
 		Service.Element().On('CameIntoView', (params) => {
 			if (params.element == this.refs.this) {
-				console.log('yup')
 				this.refs.pin.className += ' animate'
 			}
 		}, {element: this.refs.this})
 
 		Service.Element().On('WentOutOfView', (params) => {
 			if (params.element == this.refs.this) {
-				console.log('yup1')
 				this.refs.pin.className = this.refs.pin.className.replace(' animate', '')
 			}
 		}, {element: this.refs.this})
