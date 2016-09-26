@@ -14,11 +14,11 @@
 	}
 
 	.header {
-		$headerPadding: 15px;
+		$headerPadding: 25px;
 
 		position: relative;
-		width: $headerBoxSize;
-		height: $headerBoxSize;
+		width: 33.33333333333333%;
+		height: 313px;
 		background-color: black;
 		padding: $headerPadding;
 		float: right;

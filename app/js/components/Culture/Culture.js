@@ -1,7 +1,7 @@
 import React from 'react'
 import {Social} from './Social'
 import Image from '../Image'
-import {Slideshow} from '../Menu/Slideshow'
+import {Slideshow} from '../Chalkboard/Slideshow'
 require('./Culture.scss')
 import Service from '../../services/Service'
 

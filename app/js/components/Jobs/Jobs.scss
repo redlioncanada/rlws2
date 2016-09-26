@@ -10,11 +10,11 @@
 	white-space: pre-line;
 
 	.header {
-		$headerPadding: 15px;
+		$headerPadding: 25px;
 
 		position: relative;
-		width: $headerBoxSize;
-		height: $headerBoxSize;
+		width: 33%;
+		height: 310px;
 		background-color: black;
 		padding: $headerPadding;
 		float: left;
@@ -74,6 +74,6 @@
 
 #app div.positions {
 	float: left;
-	min-width: 200px;
+	width: 33%;
 	margin-top: $headerBoxSize - 70;
 }

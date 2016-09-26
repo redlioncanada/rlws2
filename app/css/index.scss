@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6, .bold {
 p {
 	@include font-rubik-light();
 	font-size: 0.6em;
+	letter-spacing: 0.4px;
 }
 
 img {
@@ -27,7 +28,7 @@ img {
 
 #app {
 	width: 100%;
-	font-size: 13pt;
+	font-size: 16pt;
 	overflow-x: hidden;
 
 	.component {

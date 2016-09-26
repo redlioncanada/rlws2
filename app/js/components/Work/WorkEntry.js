@@ -1,5 +1,8 @@
 import React from 'react'
 require('./WorkEntry.scss')
+import Sizzle from 'sizzle'
+import Utils from '../../services/Utils'
+var Velocity = require('velocity-animate')
 
 export class WorkEntry extends React.Component {
 	defaultProps() {
@@ -11,7 +14,19 @@ export class WorkEntry extends React.Component {
 			iconSrc: false,
 			hoverSrc: false,
 			entryClicked: false,
-			isSelected: false
+			isSelected: false,
+			loaded: false
+		}
+	}
+
+	constructor() {
+		super()
+		window.addEventListener('resize', Utils.debounce(this.handleResize.bind(this), 50))
+	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.loaded === false && this.props.loaded === true) {	//loaded
+			this.handleResize()
 		}
 	}
 
@@ -40,15 +55,30 @@ export class WorkEntry extends React.Component {
 		var style = {backgroundColor: this.props.backgroundColor}
 
 		return (
-			<div className="workentry subcomponent">
-			<div>
-				<div style={style}>{innerContent}</div>
+			<div ref="this" className="workentry subcomponent">
+				<div>
+					<div style={style}>{innerContent}</div>
+				</div>
 			</div>
-		</div>
 		)
 	}
 
 	handleClick() {
 		if (!!this.props.entryClicked) this.props.entryClicked(this.props.index)
+	}
+
+	handleResize() {
+		var width = this.refs.this.offsetWidth
+		if (this.lastWidth && this.lastWidth == width) return
+
+		if (!(typeof width === 'undefined' || width == 0)) {
+			if (!!this.resizeTimeout) clearTimeout(this.resizeTimeout)
+			this.lastWidth = width
+			Velocity(this.refs.this, {height: width}, {duration: 0})
+		} else {
+			if (!this.resizeTimeout) {
+				this.resizeTimeout = setTimeout(this.handleResize.bind(this), 300)
+			}
+		}
 	}
 }

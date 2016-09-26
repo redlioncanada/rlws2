@@ -6,6 +6,26 @@ export class appdata {
 				logoSrc: './images/Logo-RedLion.svg',
 				arrowSrc: './images/Icon-LongArrow.svg'
 			},
+			Menu: {
+				links: [
+					{
+						text: 'work',
+						link: '#work'
+					},
+					{
+						text: 'partners',
+						link: '#partners'
+					},
+					{
+						text: 'jobs',
+						link: '#jobs'
+					},
+					{
+						text: 'contact',
+						link: '#contact'
+					},
+				]
+			},
 			Jobs: {
 				id: 'jobs',
 				endpoint: './json/Jobs.json',
@@ -32,28 +52,10 @@ export class appdata {
 					}
 				}
 			},
-			Menu: {
+			Chalkboard: {
 				background: {
 					src: './images/Chalkboard.jpg'
 				},
-				links: [
-					{
-						text: 'work',
-						link: '#work'
-					},
-					{
-						text: 'partners',
-						link: '#partners'
-					},
-					{
-						text: 'jobs',
-						link: '#jobs'
-					},
-					{
-						text: 'contact',
-						link: '#contact'
-					},
-				],
 				slideshow: {
 					borderSrc: './images/ChalkboardBorder.png',
 					src: [

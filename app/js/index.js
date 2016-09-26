@@ -4,10 +4,11 @@ import ReactDOM from 'react-dom'
 import {appdata} from './appdata.js'
 
 import {Preloader} from './components/Preloader/Preloader'
+import {Menu} from './components/Menu/Menu'
 import {Wallpaper} from './components/Wallpaper/Wallpaper'
 import {Jobs} from './components/Jobs/Jobs'
 import {Culture} from './components/Culture/Culture'
-import {Menu} from './components/Menu/Menu'
+import {Chalkboard} from './components/Chalkboard/Chalkboard'
 import {Anchor} from './components/Anchor/Anchor'
 import {Slogan} from './components/Slogan/Slogan'
 import {Partners} from './components/Partners/Partners'
@@ -32,15 +33,22 @@ class RedLion extends React.Component {
 		var workProps = {
 			...this.state.Work,
 			entryClicked: this.workEntryClicked.bind(this),
-			closeClicked: this.workCloseClicked.bind(this)
+			closeClicked: this.workCloseClicked.bind(this),
+			loaded: this.state.Preloader.loaded
+		}
+
+		var jobProps = {
+			...this.state.Jobs,
+			loaded: this.state.Preloader.loaded
 		}
 
 		var appContent = (
 			<div>
 				<Wallpaper />
-				<Jobs {...this.state.Jobs} />
-				<Culture {...this.state.Culture} />
 				<Menu {...this.state.Menu} />
+				<Jobs {...jobProps} />
+				<Culture {...this.state.Culture} />
+				<Chalkboard {...this.state.Chalkboard} />
 				<Anchor {...this.state.Anchor} />
 				<Slogan {...this.state.Slogan} />
 				<Work {...workProps} />

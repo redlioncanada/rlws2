@@ -21,12 +21,14 @@ export class Preloader extends React.Component {
 			var anchorElement = Sizzle('.preloader > .content .anchor')[0],
 				scrollTop = anchorElement.offsetTop + anchorElement.offsetHeight/2 - window.innerHeight/2,
 				delayInterval = setInterval(() => {
-				if (this.animationCompleted) {
-					clearInterval(delayInterval)
-					window.scrollTo(0, scrollTop)
-					this.refs.this.className += ' fadein'
-				}
-			}, 50)
+					if (this.animationCompleted) {
+						clearInterval(delayInterval)
+						window.scrollTo(0, scrollTop)
+						this.refs.this.className += ' fadein'
+
+						Velocity(this.refs.overlay, {height: 0}, {duration: 0, delay: 1000})
+					}
+				}, 50)
 		}
 	}
 

@@ -3,18 +3,19 @@
 
 #app div.component.slogan {
 	background-color: $sloganBackgroundColour;
-	height: 300px;
+	height: 600px;
 	margin-bottom: 100px;
 
 	.brain-outer {
 		position: relative;
-		top: 80px;
+		top: 237px;
 
 		.brain-container-left {
-			padding-right: 50px;
+			padding-right: 85px;
 
 			.brain {
-				animation: out-in-stop-from-left 5s infinite;
+				// animation: out-in-stop-from-left 5s infinite;
+				transform: translateX(-280%);
 				float: right;
 
 				img {
@@ -24,21 +25,22 @@
 
 				.text {
 					float: left;
-					margin-right: -15px;
+					margin-right: -13px;
 				}
 			}
 		}
 
 		.brain-container-right {
-			padding-left: 50px;
+			padding-left: 85px;
 
 			.brain {
-				animation: out-in-stop-from-right 5s infinite;
+				transform: translateX(280%);
+				// animation: out-in-stop-from-right 5s infinite;
 				float: left;
 
 				.text {
 					float: right;
-					margin-right: -1px;
+					margin-right: -20px;
 				}
 			}
 		}
@@ -54,7 +56,7 @@
 			font-size: 0.8em;
 
 			img {
-				width: 46px;
+				width: 60px;
 				position: absolute;
 			}
 
@@ -68,7 +70,7 @@
 
 			.text {
 				@include font-rubik-medium();
-				margin-top: 45%;
+				margin-top: 60%;
 			}
 		}
 	}

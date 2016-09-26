@@ -1,0 +1,42 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.component.chalkboard {
+	margin-top: 70px;
+
+	.background {
+		width: 100%;
+
+		* {
+			width: inherit;
+		}
+	}
+
+	.background {
+		z-index: 1;
+	}
+
+	.slideshow {
+		z-index: 2;
+	}
+
+	@media(max-width: $iphone6) {
+		.background {
+			width: 125%;
+
+			img {
+				margin-left: -38%;
+			}
+		}
+
+		.slideshow {
+			.images {
+				width: 44%;
+			}
+
+			.border {
+				width: 49%;
+			}
+		}
+	}
+}

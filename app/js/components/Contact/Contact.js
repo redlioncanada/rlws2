@@ -5,17 +5,19 @@ require('./Contact.scss')
 
 export class Contact extends React.Component {
 	componentDidMount() {
+		Service.Element().Register(this.refs.this)
+
 		Service.Element().On('CameIntoView', (params) => {
 			if (params.element == this.refs.this) {
 				this.refs.pin.className += ' animate'
 			}
-		}, {element: this.refs.this})
+		})
 
 		Service.Element().On('WentOutOfView', (params) => {
 			if (params.element == this.refs.this) {
 				this.refs.pin.className = this.refs.pin.className.replace(' animate', '')
 			}
-		}, {element: this.refs.this})
+		})
 	}
 
 	render() {

@@ -2,27 +2,25 @@
 @import '../../../css/mixins.scss';
 
 #app div.component.menu {
-	margin-top: 70px;
-	
-	.background {
-		width: 100%;
-
-		* {
-			width: inherit;
-		}
-	}
+	position: fixed;
+	width: 100%;
+	max-width: initial;
+	z-index: 8;
+	top: 40px;
 
 	.links-container {
-		position: absolute;
-		@include center();
-		margin-top: 2%;
-		z-index: 3;
+		display: inline-block;
+		@include horizontal-center(1);
 
 		.menulink {
 			float: left;
 			width: 80px;
 			height: 25px;
 			margin-right: 17px;
+		}
+
+		.menulink:last-child {
+			margin-right: 0;
 		}
 
 		.menulink .text {
@@ -40,33 +38,7 @@
 		}
 	}
 
-	.background {
-		z-index: 1;
-	}
-
-	.slideshow {
-		z-index: 2;
-	}
-
 	@media(max-width: $iphone6) {
-		.background {
-			width: 125%;
-
-			img {
-				margin-left: -38%;
-			}
-		}
-
-		.slideshow {
-			.images {
-				width: 44%;
-			}
-
-			.border {
-				width: 49%;
-			}
-		}
-
 		.links-container {
 			width: 270px;
 		}

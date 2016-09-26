@@ -1,9 +1,11 @@
+import Utils from './Utils'
+
 class Element {
 	constructor() {
 		this.name = 'Element'
 		this.subscribers = {}
 		this.subscribedElements = {}
-		window.addEventListener('scroll', this.handleScroll.bind(this))
+		window.addEventListener('scroll', Utils.debounce(this.handleScroll.bind(this), 1000/15))
 	}
 
 	IsInView(element) {
@@ -21,21 +23,34 @@ class Element {
 
 	handleScroll(e) {
 		for (var item in this.subscribedElements) {
-			var obj = this.subscribedElements[item]
+			var obj = this.subscribedElements[item],
+				logText = false
 
 			if (this.IsInView(obj.ref)) {
 				if (obj.current === false) {
-					this.Emit('CameIntoView', {element: obj})
+					logText = 'came into view.'
+					this.Emit('CameIntoView', {element: obj.ref})
 				}
 				obj.current = true
 			} else {
 				if (obj.current === true) {
-					this.Emit('WentOutOfView', {element: obj})
+					logText = 'went out of view.'
+					this.Emit('WentOutOfView', {element: obj.ref})
 				}
 				obj.current = false
 			}
-
+			if (!!logText) console.log(`ElementService: ${obj.ref.nodeName.toLowerCase()}.${obj.ref.className.replace(/\s/, '.')} ${logText}`)
 			this.subscribedElements[item] = obj
+		}
+	}
+
+	Register(element) {
+		var id = window.btoa(element.innerHTML).slice(-12)  //encode element to base64
+		if (!(id in this.subscribedElements)) {
+			this.subscribedElements[id] = {
+				ref: element,
+				current: this.IsInView(element),
+			}
 		}
 	}
 
@@ -43,23 +58,14 @@ class Element {
 		if (typeof event === 'string' && typeof fn === 'function') {
 			if (!(event in this.subscribers)) this.subscribers[event] = []
 			this.subscribers[event].push({function: fn, params: params})
-
-			if (event === 'CameIntoView' || event === 'WentOutOfView') {
-				if (!(params.element in this.subscribedElements)) {
-					this.subscribedElements[params.element] = {
-						ref: params.element,
-						current: this.IsInView(params.element),
-					}
-				}
-			}
 		}
 	}
 
-	Emit(event) {
+	Emit(event, params) {
 		if (event in this.subscribers) {
 			for (var item in this.subscribers[event]) {
 				var sub = this.subscribers[event][item]
-				sub.function.call(this,sub.params)
+				sub.function.call(this,params)
 			}
 		}
 	}

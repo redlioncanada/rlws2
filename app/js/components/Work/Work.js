@@ -21,6 +21,7 @@ export class Work extends React.Component {
 					isHeader = {false}
 					isSelected = {count-1 == this.props.currentlySelectedWork}
 					entryClicked = {this.props.entryClicked}
+					loaded = {this.props.loaded}
 				/>
 			))
 
@@ -66,6 +67,7 @@ export class Work extends React.Component {
 					className = {this.props.title.replace(/\s/, '-').toLowerCase()}
 					arrowSrc = {this.props.arrowSrc}
 					isHeader = {true}
+					loaded = {this.props.loaded}
 				/>
 			)
 		)
