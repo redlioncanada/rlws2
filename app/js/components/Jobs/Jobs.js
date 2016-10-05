@@ -51,7 +51,7 @@ export class Jobs extends React.Component {
 		if (!(typeof width === 'undefined' || width == 0)) {
 			if (!!this.resizeTimeout) clearTimeout(this.resizeTimeout)
 			this.lastWidth = width
-		console.log(width)
+
 			Velocity(this.refs.header, {height: width}, {duration: 0})
 		} else {
 			if (!this.resizeTimeout) {

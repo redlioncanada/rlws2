@@ -54,4 +54,10 @@ img {
 			width: 100% !important;
 		}
 	}
+
+	@media(max-width: $iphone6) {
+		.title {
+			font-size: 0.7em;
+		}
+	}
 }

@@ -3,13 +3,32 @@ import {WorkEntry} from './WorkEntry'
 import {WorkExpanded} from './WorkExpanded'
 require('./Work.scss')
 import Service from '../../services/Service'
+import Utils from '../../services/Utils'
 
 export class Work extends React.Component {
+	constructor() {
+		super()
+		this.resizeRef = Utils.debounce(this.handleResize.bind(this), 50)
+		window.addEventListener('resize', this.resizeRef)
+		this.lastWidth = window.innerWidth
+	}
+
+	handleResize() {
+		if ((this.lastWidth <= 625 && window.innerWidth > 625) || (this.lastWidth > 625 && window.innerWidth <= 625)) {
+			this.forceUpdate()
+		}
+		this.lastWidth = window.innerWidth
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.resizeRef)
+	}
+
 	render() {
 		var count = 0, count2 = 1, expanded = [], entries = []
 		for (var key in this.props.work) {
 			var item = this.props.work[key],
-				every = Service.Device().isPhone() ? 2 : 3 //insert a workexpanded section for every 2 works on mobile, and every 3 on desktop
+				every = window.innerWidth <= 625 ? 2 : 3 //insert a workexpanded section for every 2 works on mobile, and every 3 on desktop
 
 			count++
 

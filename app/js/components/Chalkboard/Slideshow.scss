@@ -8,16 +8,16 @@
 	}
 
 	.border {
-		top: -38px;
-		width: 21%;
+		top: -159px;
+		width: 33%;
 	}
 
 	.images {
-		top: -29px;
-		width: 19%;
+		top: -146px;
+		width: 30%;
 		display: inline-block;
 
-		> div {
+		> img {
 			position: absolute !important;
 			top: 0;
 			left: 0;
@@ -26,19 +26,23 @@
 
 		//it's ugly, but it's getting 60fps
 		//see tools/cssgen.php
-		> div:nth-child(1) {animation: image-a 12s linear infinite;}
-		> div:nth-child(2) {animation: image-b 12s linear infinite;}
-		> div:nth-child(3) {animation: image-c 12s linear infinite;}
-		> div:nth-child(4) {animation: image-d 12s linear infinite;}
-		> div:nth-child(5) {animation: image-e 12s linear infinite;}
-		> div:nth-child(6) {animation: image-f 12s linear infinite;}
-		> div:nth-child(7) {animation: image-g 12s linear infinite;}
-		> div:nth-child(8) {animation: image-h 12s linear infinite;}
-		> div:nth-child(9) {animation: image-i 12s linear infinite;}
-		> div:nth-child(10) {animation: image-j 12s linear infinite;}
-		> div:nth-child(11) {animation: image-k 12s linear infinite;}
-		> div:nth-child(12) {animation: image-l 12s linear infinite;}
+		> img:nth-child(1) {animation: image-a 12s linear infinite;}
+		> img:nth-child(2) {animation: image-b 12s linear infinite;}
+		> img:nth-child(3) {animation: image-c 12s linear infinite;}
+		> img:nth-child(4) {animation: image-d 12s linear infinite;}
+		> img:nth-child(5) {animation: image-e 12s linear infinite;}
+		> img:nth-child(6) {animation: image-f 12s linear infinite;}
+		> img:nth-child(7) {animation: image-g 12s linear infinite;}
+		> img:nth-child(8) {animation: image-h 12s linear infinite;}
+		> img:nth-child(9) {animation: image-i 12s linear infinite;}
+		> img:nth-child(10) {animation: image-j 12s linear infinite;}
+		> img:nth-child(11) {animation: image-k 12s linear infinite;}
+		> img:nth-child(12) {animation: image-l 12s linear infinite;}
 	}
+
+	@media(max-width: 800px) {.border {top: -127px;} .images {top: -116px;}}
+	@media(max-width: 650px) {.border {top: -104px} .images {top: -96px;}}
+	@media(max-width: 550px) {.border {top: -94px} .images {top: -86px}}
 }
 
 @keyframes image-a{ 0.000000000000% {opacity:0} 0.000000000001% {opacity:1} 8.333333333334% {opacity:1} 8.333333333335% {opacity:0}}

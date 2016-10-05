@@ -33,7 +33,7 @@ export class Slogan extends React.Component {
 		Service.Scroll().Register({
 			parent: this.refs.this,
 			target: this.refs.brainLeft,
-			start: 280,
+			start: 140,
 			end: 0,
 			property: 'translateX',
 			reverse: true
@@ -41,7 +41,7 @@ export class Slogan extends React.Component {
 		Service.Scroll().Register({
 			parent: this.refs.this,
 			target: this.refs.brainRight,
-			start: -280,
+			start: -140,
 			end: 0,
 			property: 'translateX',
 			reverse: true

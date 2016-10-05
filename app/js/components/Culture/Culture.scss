@@ -20,9 +20,10 @@
 	}
 
 	.cacti {
-		width: 100%;
+		width: 25%;
 		display: inline-block;
-		margin: 10px 0 20px 0;
+		margin: 10px 100px 20px 0;
+		float: right;
 
 		> div {
 			width: 26%;
@@ -34,12 +35,11 @@
 	.slideshow {
 		display: inline-block;
 		width: 100%;
-		height: 157px;
-		margin: 15px 0 17px 0;
+		margin: 80px 0 17px 0;
 
 		.slideshow {
 			display: inline-block;
-			width: 159px;
+			width: 66.666666%;
 		}
 
 		.slideshow .images {
@@ -47,7 +47,7 @@
 			left: initial;
 			transform: initial;
 			-webkit-transform: initial;
-			right: 47px;
+			right: 30%;
 		}
 
 		> * {
@@ -62,7 +62,7 @@
 
 	.coin2 {
 		> div {
-			width: 60%;
+			width: 45%;
 			margin: 20px 0 0 20px;
 		}
 	}
@@ -73,7 +73,7 @@
 		display: inline-block;
 		margin-bottom: 28px;
 		> * {
-			width: 60%;
+			width: 66%;
 			float: right;
 		}
 	}
@@ -87,9 +87,13 @@
 		}
 	}
 
+	.squarefaces {
+		margin-top: 60%;
+	}
+
 	.coin-icon-group {
 		width: 100%;
-		height: 160px;
+		height: 254px;
 		margin-top: 30px;
 
 		.coin1, .ec-logo {
@@ -102,12 +106,12 @@
 		}
 
 		.coin1 > div {
-			width: 60%;
+			width: 50%;
 			float: right;
 		}
 
 		.ec-logo > div {
-			width: 70%;
+			width: 60%;
 			float: left;
 			bottom: 0;
 			padding-left: 20px;
@@ -118,19 +122,24 @@
 		display: inline-block;
 
 		> div {
-			width: 65%;
+			width: 58%;
 			float: right;
 		}
 	}
 
 	.bird {
-		width: 60%;
-		margin-left: 44px;
+		width: 50%;
+		margin-left: 74px;
 	}
 
 	.rl-sign {
 		width: 100%;
-		margin-top: 40px;
+		margin-top: 70px;
+
+		img {
+			width: 110%;
+			margin-left: -5%;
+		}
 	}
 
 	.columns.bottom {
@@ -179,9 +188,11 @@
 			}
 		}
 
-		.squarefaces > div {
-			width: 65%;
-			margin-left: 40px;
+		.squarefaces {
+			> div {
+				width: 65%;
+				margin-left: 40px;
+			}
 		}
 
 		.rl-sign {

@@ -8,17 +8,18 @@
 	width: $innerContentMaxWidth;
 	@include horizontal-center();
 	white-space: pre-line;
+	font-size: 0.9em;
 
 	.header {
 		$headerPadding: 25px;
 
 		position: relative;
-		width: 33%;
+		width: 32%;
 		height: 310px;
 		background-color: black;
 		padding: $headerPadding;
 		float: left;
-		margin-right: 10px;
+		margin-right: 14px;
 
 		.divider {
 			width: 100%;
@@ -31,29 +32,37 @@
 			position: absolute;
 			bottom: $headerPadding;
 			right: $headerPadding;
-			width: 15px;
+			width: 25px;
 		}
 	}
 
 	@media (max-width: $iphone6) {
 		font-size: 0.9em;
-		padding: 0 40px;
-		margin-top: 40px;
+		padding: 0 14px;
+		margin-top: 100px;
 
 		.header {
 			width: 50%;
 			height: 140px;
 			margin-right: 0;
+			padding: 15px;
+
+			.arrow {
+				bottom: 15px;
+				right: 15px;
+				width: 15px;
+			}
 		}
 
 		.positions {
 			min-width: initial;
 			width: 50%;
 			padding-left: 10px;
-			margin-top: 80px;
+			margin-top: 116px;
 
 			.position {
 				height: 60px;
+				padding: 10px;
 			}
 		}
 	}
@@ -67,13 +76,13 @@
 		}
 
 		.positions {
-			margin-top: 70px;
+			margin-top: 86px;
 		}
 	}
 }
 
 #app div.positions {
 	float: left;
-	width: 33%;
-	margin-top: $headerBoxSize - 70;
+	width: 32%;
+	margin-top: 201px;
 }

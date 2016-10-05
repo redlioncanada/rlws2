@@ -42,6 +42,11 @@ class RedLion extends React.Component {
 			loaded: this.state.Preloader.loaded
 		}
 
+		var contactProps = {
+			...this.state.Contact,
+			loaded: this.state.Preloader.loaded
+		}
+
 		var appContent = (
 			<div>
 				<Wallpaper />
@@ -53,7 +58,7 @@ class RedLion extends React.Component {
 				<Slogan {...this.state.Slogan} />
 				<Work {...workProps} />
 				<Partners {...this.state.Partners} />
-				<Contact {...this.state.Contact} />
+				<Contact {...contactProps} />
 			</div>
 		)
 

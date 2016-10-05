@@ -10,6 +10,7 @@
 
 	.links-container {
 		display: inline-block;
+		width: 373px;
 		@include horizontal-center(1);
 
 		.menulink {
@@ -26,9 +27,9 @@
 		.menulink .text {
 			width: inherit;
 			height: inherit;
-			font-size: 0.8em;
+			font-size: 0.6em;
 			text-align: center;
-			line-height: 23px;
+			line-height: 25px;
 		}
 
 		.menulink a {
@@ -38,9 +39,10 @@
 		}
 	}
 
+
 	@media(max-width: $iphone6) {
 		.links-container {
-			width: 270px;
+			width: 255px;
 		}
 
 		.links-container .menulink {

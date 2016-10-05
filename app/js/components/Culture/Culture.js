@@ -47,7 +47,7 @@ export class Culture extends React.Component {
 					</div>
 					<div className="coin-icon-group">
 						<div className="coin1">
-							<Image src="./images/RL_Coin-3.jpg" />
+							<div><Image src="./images/RL_Coin-3.jpg" /></div>
 						</div>
 						<div className="ec-logo">
 							<div><img src="./images/Logo-Extracurriculars.svg" /></div>
@@ -78,14 +78,14 @@ export class Culture extends React.Component {
 				<div className="column2">
 					<div className="coin-icon-group">
 						<div className="coin1">
-							<Image src="./images/RL_Coin-3.jpg" />
+							<div><Image src="./images/RL_Coin-3.jpg" /></div>
 						</div>
 						<div className="ec-logo">
 							<div><img src="./images/Logo-Extracurriculars.svg" /></div>
 						</div>
 					</div>
 					<div className="squarefaces">
-						<Image src="./images/SquareFace.jpg" />
+						<div><Image src="./images/SquareFace.jpg" /></div>
 					</div>
 				</div>
 			</div>
@@ -95,20 +95,20 @@ export class Culture extends React.Component {
 			<div id={this.props.id} className="culture component">
 				{topSection}
 				<div className="rl-sign">
-					<Image src="./images/RL_NeonSign.jpg" />
+					<div><Image src="./images/RL_NeonSign.jpg" /></div>
 				</div>
 				<div className="columns bottom">
 					<div className="column1">
 						<div className="pride-card">
-							<Image src="./images/Pride_Card.jpg" />
+							<div><Image src="./images/Pride_Card.jpg" /></div>
 						</div>
 						<div className="coin2">
-							<Image src="./images/RL_Coin-1.jpg" />
+							<div><Image src="./images/RL_Coin-1.jpg" /></div>
 						</div>
 					</div>
 					<div className="column2">
 						<div className="coin3">
-							<Image src="./images/RL_Coin-2.jpg" />
+							<div><Image src="./images/RL_Coin-2.jpg" /></div>
 						</div>
 						<div className="bird">
 							<img src="./images/Bird.svg" />

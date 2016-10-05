@@ -10,6 +10,8 @@ export class WorkEntry extends React.Component {
 			backgroundColor: '#FFF',
 			title: 'Red Lion ravages competition',
 			description: 'as a Red Lion should',
+			link: false,
+			cta: false,
 			isHeader: false,
 			iconSrc: false,
 			hoverSrc: false,
@@ -21,13 +23,18 @@ export class WorkEntry extends React.Component {
 
 	constructor() {
 		super()
-		window.addEventListener('resize', Utils.debounce(this.handleResize.bind(this), 50))
+		this.resizeRef = Utils.debounce(this.handleResize.bind(this), 50)
+		window.addEventListener('resize', this.resizeRef)
 	}
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.loaded === false && this.props.loaded === true) {	//loaded
 			this.handleResize()
 		}
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.resizeRef)
 	}
 
 	render() {
@@ -56,7 +63,7 @@ export class WorkEntry extends React.Component {
 
 		return (
 			<div ref="this" className="workentry subcomponent">
-				<div>
+				<div ref="inner">
 					<div style={style}>{innerContent}</div>
 				</div>
 			</div>
@@ -68,16 +75,18 @@ export class WorkEntry extends React.Component {
 	}
 
 	handleResize() {
+		var padding = Number(window.getComputedStyle(this.refs.inner, null).getPropertyValue('padding-left').replace('px','')) || Number(window.getComputedStyle(this.refs.inner, null).getPropertyValue('padding-right').replace('px','')) || 0
 		var width = this.refs.this.offsetWidth
 		if (this.lastWidth && this.lastWidth == width) return
 
 		if (!(typeof width === 'undefined' || width == 0)) {
 			if (!!this.resizeTimeout) clearTimeout(this.resizeTimeout)
+			width = width - padding*2
 			this.lastWidth = width
 			Velocity(this.refs.this, {height: width}, {duration: 0})
 		} else {
 			if (!this.resizeTimeout) {
-				this.resizeTimeout = setTimeout(this.handleResize.bind(this), 300)
+				this.resizeTimeout = setTimeout(this.handleResize.bind(this), 50)
 			}
 		}
 	}

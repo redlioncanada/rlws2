@@ -43,10 +43,30 @@
 
 		p {
 			text-align: center;
+			padding: 0 10%;
 		}
 
-		.main {
-			padding: 25px 10% 15px 10%;
+		.video {
+			margin: 25px 0 15px 0;
+
+			iframe {
+				padding: 0 10%;
+			}
+		}
+
+		.image {
+			padding: 25px 10% 25px 10%;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	@media(max-width: $iphone6) {
+		.close .close-button {
+			width: 25px;
+			height: 25px;
 		}
 	}
 }

@@ -3,16 +3,17 @@
 #app div.component.wallpaper {
 	max-width: initial !important;
 	width: 100%;
-	height: 170px;
+	height: 233px;
 	background: url(../../../assets/images/Wallpaper.jpg);
 	background-repeat: repeat-x;
-	background-size: 985px 170px;
+	// background-size: 985px 170px;
 	background-position-x: -90px;
 
 	@media only screen and (max-device-width : $phone) {
 		background: url(../../../assets/images/Wallpaper-Mobile.jpg);
 		background-repeat: repeat-x;
 		background-size: 985px 170px;
+		height: 140px;
 	}
 
 	@media (max-width : 450px) {

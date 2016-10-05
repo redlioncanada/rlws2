@@ -17,7 +17,7 @@
 		$headerPadding: 25px;
 
 		position: relative;
-		width: 33.33333333333333%;
+		width: 32.33333333333333%;
 		height: 313px;
 		background-color: black;
 		padding: $headerPadding;
@@ -35,24 +35,21 @@
 			position: absolute;
 			bottom: $headerPadding;
 			left: $headerPadding;
-			width: 15px;
+			width: 25px;
 		}
 	}
 
 	.partner {
 		width: 33.33333333333%;
 		float: left;
-		min-height: 110px;
+		min-height: 150px;
 		display: inline-block;
 		position: relative;
-		height: 110px;
 
 		img {
-			position: relative;
+			position: absolute;
 			width: 60%;
-			display: block;
-			margin: 0 auto;
-			@include vertical-center(1);
+			@include center();
 		}
 	}
 
@@ -65,23 +62,31 @@
 	.toronto-silent-film-festival img {width: 36%;}
 	.babsocks img {width: 33%;}
 	.italian-by-night img {width: 37%;}
-	.shangri-la-hotel img {width: 57%;}
+	.shangri-la-hotel img {width: 60%;}
 
 	@media(max-width: $iphone6) {
 		margin-top: 40px;
 		font-size: 0.9em;
 
 		.header-wrapper {
-			padding-right: 40px;
+			padding-right: 14px;
 		}
 
 		.header {
 			width: 143px;
 			height: 148px;
+			padding: 15px;
+
+			.arrow {
+				bottom: 15px;
+				left: 15px;
+				width: 15px;
+			}
 		}
 
 		.partner {
 			width: 50%;
+			min-height: 110px;
 		}
 
 		.partner:nth-child(2n) {
@@ -97,7 +102,7 @@
 		font-size: 0.8em;
 
 		.header {
-			width: 114px;
+			width: 138px;
 			height: 129px;
 		}
 

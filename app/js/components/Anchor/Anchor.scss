@@ -37,4 +37,35 @@
 			margin: 0 25px;
 		}
 	}
+
+	@media(max-width: $iphone5) {
+		& {
+			margin-top: 70px;
+			margin-bottom: 70px;
+		}
+	}
+
+	.bounceUp {
+		animation: bounceUp 2s ease-in infinite;
+	}
+
+	.bounceDown {
+		animation: bounceDown 2s ease-in infinite;
+	}
+}
+
+@keyframes bounceUp {
+	0% {transform:initial;}
+	10% {transform: translateY(-50%);}
+	18% {transform:initial;}
+	25% {transform: translateY(-50%);}
+	35% {transform: initial;}
+}
+
+@keyframes bounceDown {
+	0% {transform:rotate(180deg);}
+	10% {transform: translateY(50%) rotate(180deg);}
+	18% {transform:rotate(180deg);}
+	25% {transform: translateY(50%) rotate(180deg);}
+	35% {transform: rotate(180deg);}
 }

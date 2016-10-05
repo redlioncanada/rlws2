@@ -7,7 +7,7 @@ export class Partners extends React.Component {
 			var classNames = `partner ${item.name.replace(/\s/g, '-').toLowerCase()}`
 			return (
 				<div key={key} className={classNames}>
-					<img src={item.imageSrc} alt ={item.name} />
+					<img src={item.imageSrc} alt={item.name} />
 				</div>
 			)
 		})

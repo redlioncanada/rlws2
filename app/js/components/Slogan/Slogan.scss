@@ -3,19 +3,20 @@
 
 #app div.component.slogan {
 	background-color: $sloganBackgroundColour;
-	height: 600px;
+	height: 450px;
 	margin-bottom: 100px;
 
 	.brain-outer {
 		position: relative;
-		top: 237px;
+		top: 150px;
+		margin-left: -27px;
 
 		.brain-container-left {
-			padding-right: 85px;
+			padding-right: 14px;
 
 			.brain {
 				// animation: out-in-stop-from-left 5s infinite;
-				transform: translateX(-280%);
+				transform: translateX(-140%);
 				float: right;
 
 				img {
@@ -31,16 +32,16 @@
 		}
 
 		.brain-container-right {
-			padding-left: 85px;
+			padding-left: 14px;
 
 			.brain {
-				transform: translateX(280%);
+				transform: translateX(140%);
 				// animation: out-in-stop-from-right 5s infinite;
 				float: left;
 
 				.text {
 					float: right;
-					margin-right: -20px;
+					margin-right: -19px;
 				}
 			}
 		}
@@ -56,7 +57,7 @@
 			font-size: 0.8em;
 
 			img {
-				width: 60px;
+				width: 50px;
 				position: absolute;
 			}
 
@@ -66,11 +67,12 @@
 
 			.img2 {
 				z-index: 1;
+				width: 48px;
 			}
 
 			.text {
 				@include font-rubik-medium();
-				margin-top: 60%;
+				margin-top: 47%;
 			}
 		}
 	}
@@ -78,7 +80,7 @@
 	.text-container {
 		color: $sloganTextColor;
 		background: $sloganTextBackgroundColour;
-		width: 60%;
+		width: $innerContentMaxWidth;
 		padding: 23px 60px;
 		position: absolute;
 		text-align: center;
@@ -95,15 +97,15 @@
 }
 
 @keyframes out-in-stop-from-right {
-	0% {transform: translateX(280%)}
+	0% {transform: translateX(140%)}
 	70% {transform: translateX(0)}
 	97% {transform: translateX(0)}
-	100% {transform: translateX(280%)}
+	100% {transform: translateX(140%)}
 }
 
 @keyframes out-in-stop-from-left {
-	0% {transform: translateX(-280%)}
+	0% {transform: translateX(-140%)}
 	70% {transform: translateX(0)}
 	97% {transform: translateX(0)}
-	100% {transform: translateX(-280%)}
+	100% {transform: translateX(-140%)}
 }

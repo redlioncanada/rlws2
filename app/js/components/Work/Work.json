@@ -5,19 +5,21 @@
 		"hoverSrc": "./images/Work-416Tee-Hover.jpg",
 		"backgroundColor": "#85cbcd",
 		"description": "The two biggest fan bases in Toronto merge seamlessly with one t-shirt designed to bring the city together. Exclusively available at The Drake General Store (woes sold separately).",
+		"cta": "Get yours here",
+		"link": "http://www.drakegeneralstore.ca/wearing/jays-gear",
 		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": "./images/Work-416Tee-Content.jpg"
 	},
 	{
-		"title": "Our new\nwheels",
+		"title": "Looking for something",
 		"iconSrc": "./images/Icon-Car.svg",
 		"hoverSrc": "./images/Work-NewWheels-Hover.jpg",
 		"backgroundColor": "#fe97ac",
 		"description": "We couldn’t be more excited to announce our new partnership. Looking forward to the journey ahead, Cadillac.",
-		"contentType": "image",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-NewWheels-Content.jpg"
+		"content": "https://www.youtube.com/embed/h2rfkbjSf2U"
 	},
 	{
 		"title": "Giant\nflat lay",
@@ -25,19 +27,23 @@
 		"hoverSrc": "./images/Work-FlayLay-Hover.jpg",
 		"backgroundColor": "#2aa032",
 		"description": "We asked girls from junior kindergarten to Grade 12 to bring in one item that gives them real confidence. This was the result.",
+		"cta": "See more here",
+		"link": "https://www.havergal.on.ca/experience/realgirlthings/",
 		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlayLay-Hover.jpg"
+		"content": "./images/Work-FlatLay-Content.jpg"
 	},
 	{
 		"title": "Real\nconfidence",
 		"iconSrc": "./images/Icon-Pencil.svg",
 		"hoverSrc": "./images/Work-RealConfidence-Hover.jpg",
 		"backgroundColor": "#ffda0f",
-		"description": "Where does real confidence come from? To find out, we asked girls.\n(Needs content image)",
-		"contentType": "image",
+		"description": "Where does real confidence come from? To find out, we asked girls.",
+		"cta": "See more here",
+		"link": "https://www.havergal.on.ca/experience/realgirlthings/",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlayLay-Hover.jpg"
+		"content": "https://www.youtube.com/embed/mNVXRlFPcKs"
 	},
 	{
 		"title": "Babsocks",
@@ -45,6 +51,8 @@
 		"hoverSrc": "./images/Work-Babsocks-Hover.jpg",
 		"backgroundColor": "#04ce85",
 		"description": "Leading up to St. Patrick’s Day, we teamed up with our partners Babsocks to create a design that pays tribute to the Toronto St. Pats. They sold out pretty quick.",
+		"cta": "Get your pair here",
+		"link": "https://babsocks.ca/",
 		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": "./images/Work-Babsocks-Content.jpg"
@@ -54,10 +62,10 @@
 		"iconSrc": "./images/Icon-Door.svg",
 		"hoverSrc": "./images/Work-EscapeTheRoom-Hover.jpg",
 		"backgroundColor": "#2ec1c9",
-		"description": "Search for clues. Find all seven hidden film reels. Unscramble the secret code to escape. Did we mention the whole thing happens on Instagram?\n(Needs content image)",
-		"contentType": "image",
+		"description": "Search for clues. Find all seven hidden film reels. Unscramble the secret code to escape. Did we mention the whole thing happens on Instagram?",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlayLay-Hover.jpg"
+		"content": "https://www.youtube.com/embed/h2rfkbjSf2U"
 	},
 	{
 		"title": "Ministagram",
@@ -65,19 +73,19 @@
 		"hoverSrc": "./images/Work-Ministagram-Hover.jpg",
 		"backgroundColor": "#e4d8cc",
 		"description": "How do you make the launch of small product feel really big? Make the Instagram feed mini, too.",
-		"contentType": "image",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-Ministagram-Content.jpg"
+		"content": "https://www.youtube.com/embed/2WJWgpQVdz0"
 	},
 	{
 		"title": "Films that\nstick",
 		"iconSrc": "./images/Icon-Filmstrip.svg",
 		"hoverSrc": "./images/Work-FilmsThatStick-Hover.jpg",
 		"backgroundColor": "#ff6120",
-		"description": "It’s one thing to have a song stuck in your head, it’s another to have a film stuck in your life. After you’ve just watched a Canadian Film Festival film, there’s no such thing as a normal day at the office.\n(Needs content image)",
-		"contentType": "image",
+		"description": "It’s one thing to have a song stuck in your head, it’s another to have a film stuck in your life. After you’ve just watched a Canadian Film Festival film, there’s no such thing as a normal day at the office.",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlayLay-Hover.jpg"
+		"content": "https://www.youtube.com/embed/MTYZW_XKyuA"
 	},
 	{
 		"title": "Famous\nfries",
@@ -94,19 +102,19 @@
 		"iconSrc": "./images/Icon-Laundry.svg",
 		"hoverSrc": "./images/Work-AthletesGetDirty-Hover.jpg",
 		"backgroundColor": "#fe777b",
-		"description": "Pan Am athletes give it their all when they’re training. When they’re done, they take it all off. That’s where Maytag comes in.\n(Needs content image)",
-		"contentType": "image",
+		"description": "Pan Am athletes give it their all when they’re training. When they’re done, they take it all off. That’s where Maytag comes in.",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlayLay-Hover.jpg"
+		"content": "https://www.youtube.com/embed/j0oMbLPB_X4"
 	},
 	{
 		"title": "Choose your\nown silent film\nfestival",
 		"iconSrc": "./images/Icon-Hand.svg",
 		"hoverSrc": "./images/Work-ChooseYourOwnTSFF-Hover.jpg",
 		"backgroundColor": "#ffb183",
-		"description": "Choose your own story from start to finish, with 82 real silent film clips and almost unlimited paths for you to follow—entirely on Instagram.\n(Needs content image)",
-		"contentType": "image",
+		"description": "Choose your own story from start to finish, with 82 real silent film clips and almost unlimited paths for you to follow—entirely on Instagram.",
+		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlayLay-Hover.jpg"
+		"content": "https://www.youtube.com/embed/s0lOBx3BG2I"
 	}
 ]

@@ -118,31 +118,31 @@ export class appdata {
 						imageSrc: './images/Logo-DrakeGeneralStore.svg',
 						link: undefined
 					},
-					{
-						name: 'Jenn-Air',
-						imageSrc: './images/Logo-JennAir.svg',
-						link: undefined
-					},
-					{
-						name: 'Maytag',
-						imageSrc: './images/Logo-Maytag.svg',
-						link: undefined
-					},
-					{
-						name: 'Whirlpool',
-						imageSrc: './images/Logo-Whirlpool.svg',
-						link: undefined
-					},
+					// {
+					// 	name: 'Jenn-Air',
+					// 	imageSrc: './images/Logo-JennAir.svg',
+					// 	link: undefined
+					// },
+					// {
+					// 	name: 'Maytag',
+					// 	imageSrc: './images/Logo-Maytag.svg',
+					// 	link: undefined
+					// },
+					// {
+					// 	name: 'Whirlpool',
+					// 	imageSrc: './images/Logo-Whirlpool.svg',
+					// 	link: undefined
+					// },
 					{
 						name: 'Royaltie',
 						imageSrc: './images/Logo-Royaltie.svg',
 						link: undefined
 					},
-					{
-						name: 'KitchenAid',
-						imageSrc: './images/Logo-KitchenAid.svg',
-						link: undefined
-					},
+					// {
+					// 	name: 'KitchenAid',
+					// 	imageSrc: './images/Logo-KitchenAid.svg',
+					// 	link: undefined
+					// },
 					{
 						name: 'Toronto Silent Film Festival',
 						imageSrc: './images/Logo-TSFF.svg',
