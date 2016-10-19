@@ -1,6 +1,8 @@
+//determines which platform we're on, desktop/tablet/mobile/phone
+
 class Device {
 	isMobile() {
-		var regex = navigator.userAgent.match(/Mobi/i)
+		var regex = navigator.userAgent.match(/Mobi/i)	//suggested string to use via mozilla docs
 		return !!regex && regex.length
 	}
 

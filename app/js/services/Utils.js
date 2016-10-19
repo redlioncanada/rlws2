@@ -1,5 +1,6 @@
 export default class Utils {
 	static debounce(func, wait, immediate) {
+		//makes sure that a function isn't called more often than the wait parameter specifies
 		var timeout;
 		return function() {
 			var context = this, args = arguments;

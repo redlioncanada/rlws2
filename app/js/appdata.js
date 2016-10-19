@@ -42,13 +42,13 @@ export class appdata {
 				social: {
 					instagram: {
 						link: 'https://www.instagram.com/red_lion_canada/',
-						normalSrc: './images/LinkedIN.jpg',
-						hoverSrc: './images/LinkedIN_Rollover.jpg'
+						normalSrc: './images/Instagram.jpg',
+						hoverSrc: './images/Instagram_Rollover.jpg'
 					},
 					linkedin: {
 						link: 'https://www.linkedin.com/company/red-lion/',
-						normalSrc: './images/Instagram.jpg',
-						hoverSrc: './images/Instagram_Rollover.jpg'
+						normalSrc: './images/LinkedIN.jpg',
+						hoverSrc: './images/LinkedIN_Rollover.jpg'
 					}
 				}
 			},
@@ -79,10 +79,11 @@ export class appdata {
 				arrowSrc: './images/Icon-LongArrow.svg'
 			},
 			Slogan: {
-				brainSrc: './images/Brain.svg',
 				brainMaskSrc: './images/Brain_mask.svg',
 				brainLeftText: 'Capitalist',
+				brainLeftSrc: './images/Brain-left.svg',
 				brainRightText: 'Creative',
+				brainRightSrc: './images/Brain-right.svg',
 				text: 'Left brain and right brain thinking are no longer that distant from one another. It is our belief that today, creativity and logic are intrinsically linked and each strengthens the other.'
 			},
 			Work: {
@@ -118,31 +119,31 @@ export class appdata {
 						imageSrc: './images/Logo-DrakeGeneralStore.svg',
 						link: undefined
 					},
-					// {
-					// 	name: 'Jenn-Air',
-					// 	imageSrc: './images/Logo-JennAir.svg',
-					// 	link: undefined
-					// },
-					// {
-					// 	name: 'Maytag',
-					// 	imageSrc: './images/Logo-Maytag.svg',
-					// 	link: undefined
-					// },
-					// {
-					// 	name: 'Whirlpool',
-					// 	imageSrc: './images/Logo-Whirlpool.svg',
-					// 	link: undefined
-					// },
+					{
+						name: 'Jenn-Air',
+						imageSrc: './images/Logo-JennAir.svg',
+						link: undefined
+					},
+					{
+						name: 'Maytag',
+						imageSrc: './images/Logo-Maytag.svg',
+						link: undefined
+					},
+					{
+						name: 'Whirlpool',
+						imageSrc: './images/Logo-Whirlpool.svg',
+						link: undefined
+					},
 					{
 						name: 'Royaltie',
 						imageSrc: './images/Logo-Royaltie.svg',
 						link: undefined
 					},
-					// {
-					// 	name: 'KitchenAid',
-					// 	imageSrc: './images/Logo-KitchenAid.svg',
-					// 	link: undefined
-					// },
+					{
+						name: 'KitchenAid',
+						imageSrc: './images/Logo-KitchenAid.svg',
+						link: undefined
+					},
 					{
 						name: 'Toronto Silent Film Festival',
 						imageSrc: './images/Logo-TSFF.svg',

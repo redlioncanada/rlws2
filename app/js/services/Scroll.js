@@ -1,3 +1,5 @@
+//Applies parallax to an element. See Slogan.js for usage.
+
 import Utils from './Utils'
 
 class Scroll {

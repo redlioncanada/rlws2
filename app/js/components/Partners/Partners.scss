@@ -68,13 +68,9 @@
 		margin-top: 40px;
 		font-size: 0.9em;
 
-		.header-wrapper {
-			padding-right: 14px;
-		}
-
-		.header {
-			width: 143px;
-			height: 148px;
+		div.header {
+			width: 166px;
+			height: 166px;
 			padding: 15px;
 
 			.arrow {
@@ -98,10 +94,21 @@
 		}
 	}
 
+	@media(max-width: $tablet) {
+		.header {
+			height: 248px;
+			width: 31.333333333%
+		}
+
+		.header-wrapper {
+			padding-right: 14px;
+		}
+	}
+
 	@media(max-width: $iphone5) {
 		font-size: 0.8em;
 
-		.header {
+		div.header {
 			width: 138px;
 			height: 129px;
 		}

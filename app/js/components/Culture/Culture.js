@@ -21,7 +21,7 @@ export class Culture extends React.Component {
 			'./images/SC-11.jpg'
 		]
 
-		var topSection = !Service.Device().isMobile() ? (
+		var topSection = !Service.Device().isPhone() ? (
 			<div className="columns top desktop">
 				<div className="column1">
 					<Social {...this.props.social} />
@@ -32,10 +32,10 @@ export class Culture extends React.Component {
 						<Image src="./images/Cacti.jpg" />
 					</div>
 					<div className="slideshow">
-						<Slideshow src={slideshowSrc} />
+						<a href="http://instagram.com/social_calories" rel="noreferer nofollow"><Slideshow src={slideshowSrc} /></a>
 					</div>
 					<div className="squarefaces">
-						<Image src="./images/SquareFace.jpg" />
+						<a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a>
 					</div>
 				</div>
 				<div className="column2">
@@ -72,7 +72,7 @@ export class Culture extends React.Component {
 						<Image src="./images/OfficeArt-2.jpg" />
 					</div>
 					<div className="slideshow">
-						<Slideshow src={slideshowSrc} />
+						<a href="http://instagram.com/social_calories" rel="noreferer nofollow"><Slideshow src={slideshowSrc} /></a>
 					</div>
 				</div>
 				<div className="column2">
@@ -85,7 +85,7 @@ export class Culture extends React.Component {
 						</div>
 					</div>
 					<div className="squarefaces">
-						<div><Image src="./images/SquareFace.jpg" /></div>
+						<div><a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a></div>
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@ export class Culture extends React.Component {
 				<div className="columns bottom">
 					<div className="column1">
 						<div className="pride-card">
-							<div><Image src="./images/Pride_Card.jpg" /></div>
+							<div><a href="http://greetingsfromthecloset.com" rel="noreferer nofollow"><Image src="./images/Pride_Card.jpg" /></a></div>
 						</div>
 						<div className="coin2">
 							<div><Image src="./images/RL_Coin-1.jpg" /></div>

@@ -18,16 +18,31 @@
 
 	.slideshow {
 		z-index: 2;
+
+		.images {
+			max-width: 300px;
+		}
+
+		.border {
+			max-width: 330px;
+		}
+	}
+
+	@media(max-width: $innerContentMaxWidth) {
+		.background img {
+			display: none;
+		}
+
+		.background {
+			background: url(../../../assets/images/Chalkboard.jpg);
+			background-repeat:no-repeat;
+			background-position: center center;
+			height: 346px;
+		}
 	}
 
 	@media(max-width: $iphone6) {
-		.background {
-			width: 125%;
-
-			img {
-				margin-left: -38%;
-			}
-		}
+		margin-top: 60px;
 
 		.slideshow {
 			.images {

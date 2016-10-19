@@ -1,3 +1,5 @@
+//Emits events when an element scrolls into or out of view. Only works on elements that are a direct descendant of the scrolled element.
+
 import Utils from './Utils'
 
 class Element {

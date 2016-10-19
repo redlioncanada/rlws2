@@ -3,6 +3,7 @@ import {Anchor} from '../Anchor/Anchor'
 require('./Preloader.scss')
 import Sizzle from 'sizzle'
 var Velocity = require('velocity-animate')
+import Service from '../../services/Service'
 
 export class Preloader extends React.Component {
 	static defaultProps = {
@@ -18,8 +19,9 @@ export class Preloader extends React.Component {
 	componentDidUpdate(prevProps) {
 		if (this.props.loaded && !prevProps.loaded) {
 			this.refs.this.className += ' loaded'
-			var anchorElement = Sizzle('.preloader > .content .anchor')[0],
-				scrollTop = anchorElement.offsetTop + anchorElement.offsetHeight/2 - window.innerHeight/2,
+			var innerHeight = Service.Device().isMobile() ? window.screen.availHeight : window.innerHeight,
+				anchorElement = Sizzle('.preloader > .content .anchor')[0],
+				scrollTop = anchorElement.offsetTop + anchorElement.offsetHeight/2 - innerHeight/2,
 				delayInterval = setInterval(() => {
 					if (this.animationCompleted) {
 						clearInterval(delayInterval)

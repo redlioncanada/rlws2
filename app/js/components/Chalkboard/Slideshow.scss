@@ -40,9 +40,11 @@
 		> img:nth-child(12) {animation: image-l 12s linear infinite;}
 	}
 
-	@media(max-width: 800px) {.border {top: -127px;} .images {top: -116px;}}
-	@media(max-width: 650px) {.border {top: -104px} .images {top: -96px;}}
-	@media(max-width: 550px) {.border {top: -94px} .images {top: -86px}}
+	@media(max-width: 800px) {.border {top: -117px;} .images {top: -106px;}}
+	@media(max-width: 750px) {.border {top: -97px;} .images {top: -86px;}}
+	@media(max-width: 685px) {.border {top: -77px} .images {top: -66px;}}
+	@media(max-width: 640px) {.border {top: -57px} .images {top: -48px}}
+	@media(max-width: 550px) {.border {top: -37px} .images {top: -28px}}
 }
 
 @keyframes image-a{ 0.000000000000% {opacity:0} 0.000000000001% {opacity:1} 8.333333333334% {opacity:1} 8.333333333335% {opacity:0}}

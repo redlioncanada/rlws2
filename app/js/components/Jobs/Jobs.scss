@@ -36,10 +36,16 @@
 		}
 	}
 
+	@media(max-width: $tablet) {
+		.positions {
+			margin-top: 147px;
+		}
+	}
+
 	@media (max-width: $iphone6) {
 		font-size: 0.9em;
 		padding: 0 14px;
-		margin-top: 100px;
+		margin-top: 50px;
 
 		.header {
 			width: 50%;
@@ -58,11 +64,12 @@
 			min-width: initial;
 			width: 50%;
 			padding-left: 10px;
-			margin-top: 116px;
+			margin-top: 114px;
 
 			.position {
 				height: 60px;
 				padding: 10px;
+				margin-bottom: 10px;
 			}
 		}
 	}

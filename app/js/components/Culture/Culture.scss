@@ -165,17 +165,24 @@
 			margin-right: 40%;
 		}
 
-		.pillowfight > div {
-			width: 46%;
+		.pillowfight {
+			float: right;
+			margin-right: 14px;
+			width: 70%;
+
+			> div {
+				width: 46%;
+			}
 		}
 
-		.art2 > div {
+		.art2 {
 			float: none;
 			padding: 0 50px;
 		}
 
 		.coin-icon-group {
 			margin-top: -10px;
+			height: 178px;
 
 			.coin1 > div {
 				width: 45%;
@@ -189,6 +196,8 @@
 		}
 
 		.squarefaces {
+			margin-top: 0;
+
 			> div {
 				width: 65%;
 				margin-left: 40px;
@@ -217,6 +226,19 @@
 			width: 45%;
 			margin-right: 50px;
 			float: right;
+		}
+
+		.slideshow {
+			margin-top: 20px;
+			height: 166px;
+
+			>.slideshow {
+				width: 40%;
+			}
+
+			> .slideshow .images {
+				right: 3%;
+			}
 		}
 	}
 }

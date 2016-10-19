@@ -12,14 +12,14 @@
 		margin-left: -27px;
 
 		.brain-container-left {
-			padding-right: 14px;
+			padding-right: 19px;
 
 			.brain {
 				// animation: out-in-stop-from-left 5s infinite;
 				transform: translateX(-140%);
 				float: right;
 
-				img {
+				img:last-child {
 					transform: scale(-1, 1);
 				}
 
@@ -32,7 +32,7 @@
 		}
 
 		.brain-container-right {
-			padding-left: 14px;
+			padding-left: 19px;
 
 			.brain {
 				transform: translateX(140%);
@@ -57,7 +57,7 @@
 			font-size: 0.8em;
 
 			img {
-				width: 50px;
+				width: 55px;
 				position: absolute;
 			}
 
@@ -67,12 +67,12 @@
 
 			.img2 {
 				z-index: 1;
-				width: 48px;
+				width: 54px;
 			}
 
 			.text {
 				@include font-rubik-medium();
-				margin-top: 47%;
+				margin-top: 54%;
 			}
 		}
 	}
@@ -90,7 +90,7 @@
 
 	@media(max-width: $iphone6) {
 		.text-container {
-			width: 80%;
+			width: 90%;
 			padding: 18px 20px;
 		}
 	}

@@ -46,9 +46,9 @@ export class WorkExpanded extends React.Component {
 		}
 
 		var ctaElement = !!this.props.link ? (
-			<p>{this.props.cta.replace(' here', '')} <a href={this.props.link} target="_blank" ref="noreferrer nofollow">here</a>.</p>
+			<p>{this.props.description} {this.props.cta.replace(' here', '')} <a href={this.props.link} target="_blank" ref="noreferrer nofollow">here</a>.</p>
 		) : (
-			<p>{this.props.cta}.</p>
+			<p>{this.props.description} {this.props.cta}</p>
 		)
 
 		return (
@@ -61,9 +61,8 @@ export class WorkExpanded extends React.Component {
 							</div>
 						</div>
 						<div className="content">
-							<p>{this.props.description}</p>
-							{main}
 							{ctaElement}
+							{main}
 						</div>
 					</div>
 				</div>
