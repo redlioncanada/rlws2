@@ -4,6 +4,7 @@ import Image from '../Image'
 import {Slideshow} from '../Chalkboard/Slideshow'
 require('./Culture.scss')
 import Service from '../../services/Service'
+import {Carousel} from '../Carousel/Carousel'
 
 export class Culture extends React.Component {
 	render() {
@@ -45,6 +46,9 @@ export class Culture extends React.Component {
 					<div className="art2">
 						<Image src="./images/OfficeArt-2.jpg" />
 					</div>
+					<div className="carousel-outer">
+						<Carousel {...this.props.carousel} />
+					</div>
 					<div className="coin-icon-group">
 						<div className="coin1">
 							<div><Image src="./images/RL_Coin-3.jpg" /></div>
@@ -83,6 +87,9 @@ export class Culture extends React.Component {
 						<div className="ec-logo">
 							<div><img src="./images/Logo-Extracurriculars.svg" /></div>
 						</div>
+					</div>
+					<div className="carousel-outer">
+						<Carousel {...this.props.carousel} />
 					</div>
 					<div className="squarefaces">
 						<div><a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a></div>

@@ -86,6 +86,36 @@ export class appdata {
 				brainRightSrc: './images/Brain-right.svg',
 				text: 'Left brain and right brain thinking are no longer that distant from one another. It is our belief that today, creativity and logic are intrinsically linked and each strengthens the other.'
 			},
+			Carousel: {
+				navArrowImage: './images/slideshow-arrow.png',
+				slides: [
+					{
+						copy: 'Red Lion partners with\nDrake General Store',
+						image: './images/slideshow-drakegeneralstore.jpg',
+						link: '#'
+					},
+					{
+						copy: 'Red Lion partners with\nDrake General Store',
+						image: './images/slideshow-drakegeneralstore.jpg',
+						link: '#'
+					},
+					{
+						copy: 'Red Lion partners with\nDrake General Store',
+						image: './images/slideshow-drakegeneralstore.jpg',
+						link: '#'
+					},
+					{
+						copy: 'Red Lion partners with\nDrake General Store',
+						image: './images/slideshow-drakegeneralstore.jpg',
+						link: '#'
+					},
+					{
+						copy: 'Red Lion partners with\nDrake General Store',
+						image: './images/slideshow-drakegeneralstore.jpg',
+						link: '#'
+					}
+				]
+			},
 			Work: {
 				id: 'work',
 				title: 'Latest work\n and news',

@@ -17,6 +17,8 @@ import {Contact} from './components/Contact/Contact'
 
 require('../../node_modules/normalize.scss/normalize.scss')
 require('../css/index.scss')
+require('../../node_modules/slick-carousel/slick/slick.scss')
+require('../../node_modules/slick-carousel/slick/slick-theme.scss')
 
 var workJSON = require('!json!./components/Work/Work.json')
 var jobsJSON = require('!json!./components/Jobs/Jobs.json')
@@ -46,13 +48,17 @@ class RedLion extends React.Component {
 			...this.state.Contact,
 			loaded: this.state.Preloader.loaded
 		}
+		var cultureProps = {
+			...this.state.Culture,
+			carousel: this.state.Carousel
+		}
 
 		var appContent = (
 			<div>
 				<Wallpaper />
 				<Menu {...this.state.Menu} />
 				<Jobs {...jobProps} />
-				<Culture {...this.state.Culture} />
+				<Culture {...cultureProps} />
 				<Chalkboard {...this.state.Chalkboard} />
 				<Anchor {...this.state.Anchor} />
 				<Slogan {...this.state.Slogan} />

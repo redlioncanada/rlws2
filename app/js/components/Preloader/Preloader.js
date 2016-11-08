@@ -66,6 +66,14 @@ export class Preloader extends React.Component {
 	onLoadingAnimationComplete() {
 		if (this.props.loaded) {
 			Sizzle('.preloader > .overlay .logo')[0].className += ' complete'
+
+			//trigger a resize event
+			//necessary for elements to size properly on initial load
+			//since display:none prevents js from getting element dimensions
+			var evt = window.document.createEvent('UIEvents')
+			evt.initUIEvent('resize', true, false, window, 0)
+			window.dispatchEvent(evt)
+
 			this.animationCompleted = true
 		}
 	}

@@ -1,0 +1,130 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+@import '../../../css/util.scss';
+#app div.component.carousel {
+	width: 100%;
+	margin: 0 auto;
+
+	* {
+		box-sizing: initial;
+	}
+
+	.carousel-slide {
+		display: inline-block;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.copy {
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		width: 100%;
+		height: 80px;
+
+		.container, .copy-background {
+			width: inherit;
+			height: inherit;
+			bottom: 0;
+			position: absolute;
+		}
+
+		.container {
+			z-index: 2;
+			position: relative;
+
+			p {
+				position: absolute;
+				font-family: 'Rubik Medium';
+				padding: 0 20px;
+				@include vertical-center;
+				font-size: 0.85em;
+			}
+
+			p:after {
+				content: " >>";
+				font-size: 0.8em;
+			}
+		}
+
+		.copy-background {
+			background-color: #fff;
+			opacity: 0.7;
+			z-index: 1;
+		}
+	}
+
+	.slick-slide {
+		position: relative;
+	}
+
+	.slick-next {
+		right: -30px;
+	}
+	.slick-prev {
+		left: -32px;
+	}
+	.slick-prev, .slick-next {
+		height: 32px;
+	}
+
+	.slick-arrow.slick-prev:before {
+		content: url('../../../assets/images/slideshow-arrow.png');
+	}
+
+	.slick-arrow.slick-next:before {
+		content: url('../../../assets/images/slideshow-arrow.png');
+		display: inline-block;
+		transform: rotate(180deg);
+	}
+
+	.slick-dots {
+		bottom: initial;
+		margin-top: 10px;
+
+		li {
+			margin: 0;
+		}
+
+		button {
+			width: 10px;
+		}
+
+		button:before {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    content: "\2022" !important;
+		    width: 25px;
+		    height: 25px;
+		    font-family: "slick";
+		    font-size: 11px;
+		    line-height: 20px;
+		    text-align: center;
+		    color: black;
+		    opacity: 1;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+
+		li:not(.slick-active) button:after {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    content: "\2022" !important;
+		    width: 25px;
+		    height: 25px;
+		    font-family: "slick";
+		    font-size: 7px;
+		    line-height: 20px;
+		    text-align: center;
+		    color: white;
+		    opacity: 1;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+	}
+}
