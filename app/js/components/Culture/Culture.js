@@ -1,59 +1,57 @@
 import React from 'react'
 import {Social} from './Social'
 import Image from '../Image'
-import {Slideshow} from '../Chalkboard/Slideshow'
 require('./Culture.scss')
 import Service from '../../services/Service'
 import {Carousel} from '../Carousel/Carousel'
 
 export class Culture extends React.Component {
+	constructor() {
+		super()
+	}
 	render() {
-		var slideshowSrc = [
-			'./images/SC-1.jpg',
-			'./images/SC-2.jpg',
-			'./images/SC-3.jpg',
-			'./images/SC-4.jpg',
-			'./images/SC-5.jpg',
-			'./images/SC-6.jpg',
-			'./images/SC-7.jpg',
-			'./images/SC-8.jpg',
-			'./images/SC-9.jpg',
-			'./images/SC-10.jpg',
-			'./images/SC-11.jpg'
-		]
-
 		var topSection = !Service.Device().isPhone() ? (
 			<div className="columns top desktop">
 				<div className="column1">
 					<Social {...this.props.social} />
-					<div className="art1">
+					<div className="art1 item">
 						<Image src="./images/OfficeArt-1.jpg" />
+						<p className="caption">{this.props.captions.Art1}</p>
 					</div>
-					<div className="cacti">
+					<div className="cacti item">
 						<Image src="./images/Cacti.jpg" />
 					</div>
-					<div className="slideshow">
-						<a href="http://instagram.com/social_calories" rel="noreferer nofollow"><Slideshow src={slideshowSrc} /></a>
+					<div className="calories item">
+						<a href="http://instagram.com/social_calories" rel="noreferer nofollow">
+							<div>
+								<Image className="calories-background" src="./images/SC_GIF.gif"/>
+								<p className="caption">{this.props.captions.Calories}</p>
+							</div>
+						</a>
 					</div>
-					<div className="squarefaces">
+					<div className="squarefaces item">
 						<a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a>
+						<p className="caption">{this.props.captions.Squareface}</p>
+					</div>
+					<div className="coin-icon-group">
+						<div className="coin1 item">
+							<div><Image src="./images/RL_Coin-3.jpg" /></div>
+						</div>
 					</div>
 				</div>
 				<div className="column2">
-					<div className="pillowfight">
+					<div className="pillowfight item">
 						<Image src="./images/Pillow_GIF.gif" />
 					</div>
-					<div className="art2">
+					<div className="art2 item">
 						<Image src="./images/OfficeArt-2.jpg" />
+						<p className="caption">{this.props.captions.Art2}</p>
 					</div>
-					<div className="carousel-outer">
+					<div className="carousel-outer item">
 						<Carousel {...this.props.carousel} />
 					</div>
 					<div className="coin-icon-group">
-						<div className="coin1">
-							<div><Image src="./images/RL_Coin-3.jpg" /></div>
-						</div>
-						<div className="ec-logo">
+						<div className="ec-logo item">
 							<div><img src="./images/Logo-Extracurriculars.svg" /></div>
 						</div>
 					</div>
@@ -63,61 +61,85 @@ export class Culture extends React.Component {
 			<div className="columns top mobile">
 				<div className="column1">
 					<Social {...this.props.social} />
-					<div className="art1">
+					<div className="art1 item">
 						<Image src="./images/OfficeArt-1.jpg" />
+						<p className="caption">{this.props.captions.Art1}</p>
 					</div>
-					<div className="pillowfight">
+					<div className="pillowfight item">
 						<Image src="./images/Pillow_GIF.gif" />
 					</div>
-					<div className="cacti">
+					<div className="cacti item">
 						<Image src="./images/Cacti.jpg" />
 					</div>
-					<div className="art2">
+					<div className="art2 item">
 						<Image src="./images/OfficeArt-2.jpg" />
+						<p className="caption">{this.props.captions.Art2}</p>
 					</div>
-					<div className="slideshow">
-						<a href="http://instagram.com/social_calories" rel="noreferer nofollow"><Slideshow src={slideshowSrc} /></a>
+					<div className="calories item">
+						<a href="http://instagram.com/social_calories" rel="noreferer nofollow">
+							<div>
+								<Image className="calories-background" src="./images/SC_GIF.gif"/>
+								<p className="caption">{this.props.captions.Calories}</p>
+							</div>
+						</a>
 					</div>
 				</div>
 				<div className="column2">
 					<div className="coin-icon-group">
-						<div className="coin1">
+						<div className="coin1 item">
 							<div><Image src="./images/RL_Coin-3.jpg" /></div>
 						</div>
-						<div className="ec-logo">
+						<div className="ec-logo item">
 							<div><img src="./images/Logo-Extracurriculars.svg" /></div>
 						</div>
 					</div>
-					<div className="carousel-outer">
+					<div className="carousel-outer item">
 						<Carousel {...this.props.carousel} />
 					</div>
-					<div className="squarefaces">
+					<div className="squarefaces item">
 						<div><a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a></div>
+						<p className="caption">{this.props.captions.Squareface}</p>
 					</div>
 				</div>
 			</div>
 		)
 
+		var classes = "culture component"
+		classes += Service.Device().isMobile() ? " mobile" : " desktop"
+
+		var video = this.props.showLightbox ? (
+			<iframe id="ytplayer" width="100%" src={"//www.youtube.com/embed/" + this.props.videos.redlion + '?rel=0&autoplay=1'} frameBorder="0" allowFullscreen></iframe>
+		) : ''
+
 		return (
-			<div id={this.props.id} className="culture component">
+			<div id={this.props.id} className={classes}>
 				{topSection}
-				<div className="rl-sign">
-					<div><Image src="./images/RL_NeonSign.jpg" /></div>
+				<div className="rl-sign item" onClick={() => {this.props.toggleLightbox()}}>
+					<div className="play" style={{display: this.props.showLightbox ? 'none' : 'block'}}></div>
+					<div className="video-outer" style={{opacity: this.props.showLightbox ? 1:0}}>
+						<div className="video-wrapper">
+							<div className="video-container">
+								{video}
+							</div>
+						</div>
+					</div>
+					<div className="sign"><Image src="./images/RL_NeonSign.jpg" /></div>
 				</div>
 				<div className="columns bottom">
 					<div className="column1">
-						<div className="pride-card">
+						<div className="pride-card item">
 							<div><a href="http://greetingsfromthecloset.com" rel="noreferer nofollow"><Image src="./images/Pride_Card.jpg" /></a></div>
+							<p className="caption">{this.props.captions.Closetcards}</p>
 						</div>
-						<div className="coin2">
+						<div className="coin2 item">
 							<div><Image src="./images/RL_Coin-1.jpg" /></div>
 						</div>
 					</div>
 					<div className="column2">
-						<div className="coin3">
+						<div className="coin3 item">
 							<div><Image src="./images/RL_Coin-2.jpg" /></div>
 						</div>
-						<div className="bird">
+						<div className="bird item">
 							<img src="./images/Bird.svg" />
 						</div>
 					</div>

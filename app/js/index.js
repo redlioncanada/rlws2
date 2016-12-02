@@ -2,18 +2,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import {appdata} from './appdata.js'
+import Sizzle from 'sizzle'
 
 import {Preloader} from './components/Preloader/Preloader'
 import {Menu} from './components/Menu/Menu'
 import {Wallpaper} from './components/Wallpaper/Wallpaper'
 import {Jobs} from './components/Jobs/Jobs'
 import {Culture} from './components/Culture/Culture'
+import {About} from './components/About/About'
 import {Chalkboard} from './components/Chalkboard/Chalkboard'
 import {Anchor} from './components/Anchor/Anchor'
 import {Slogan} from './components/Slogan/Slogan'
 import {Partners} from './components/Partners/Partners'
 import {Work} from './components/Work/Work'
 import {Contact} from './components/Contact/Contact'
+
+import Service from './services/Service'
 
 require('../../node_modules/normalize.scss/normalize.scss')
 require('../css/index.scss')
@@ -50,18 +54,28 @@ class RedLion extends React.Component {
 		}
 		var cultureProps = {
 			...this.state.Culture,
-			carousel: this.state.Carousel
+			carousel: this.state.Carousel,
+			toggleLightbox: this.toggleLightbox.bind(this)
 		}
+		var mobileProps = {
+			...this.state.Menu,
+			mobileMenuClicked: this.mobileMenuToggle.bind(this)
+		}
+
+		var menu = Service.Device().isMobile() ? undefined : (
+			<Menu {...mobileProps} />
+		)
 
 		var appContent = (
 			<div>
 				<Wallpaper />
-				<Menu {...this.state.Menu} />
+				{menu}
 				<Jobs {...jobProps} />
 				<Culture {...cultureProps} />
 				<Chalkboard {...this.state.Chalkboard} />
 				<Anchor {...this.state.Anchor} />
 				<Slogan {...this.state.Slogan} />
+				<About {...this.state.About} />
 				<Work {...workProps} />
 				<Partners {...this.state.Partners} />
 				<Contact {...contactProps} />
@@ -71,7 +85,8 @@ class RedLion extends React.Component {
 		var preloaderProps = {
 			...this.state.Preloader,
 			handleAppLoaded: this.appLoaded.bind(this),
-			content: appContent
+			content: appContent,
+			mobileProps: mobileProps
 		}
 
 		return (
@@ -100,6 +115,38 @@ class RedLion extends React.Component {
 			...this.state.Preloader,
 			loaded: true
 		}})
+	}
+
+	mobileMenuToggle() {
+		this.setState({
+			Menu: {
+				...this.state.Menu,
+				open: !this.state.Menu.open
+			}
+		})
+
+		// document.body.style.overflow = !this.state.Menu.open ? "hidden" : "initial"
+
+		if (!this.state.Menu.open) {
+			var scrollTop = (window.pageYOffset || window.scrollTop) - (document.clientTop || 0)
+			document.body.style.position = "fixed"
+			document.body.style.marginTop = -scrollTop+"px"
+		} else {
+			var scrollTop = Number(document.body.style.marginTop.replace('px','')) * -1
+			console.log(scrollTop)
+			document.body.style.position = "initial"
+			document.body.style.marginTop = "initial"
+			window.scrollTo(0, scrollTop)
+		}
+	}
+
+	toggleLightbox() {
+		this.setState({
+			Culture: {
+				...this.state.Culture,
+				showLightbox: !this.state.Culture.showLightbox
+			}
+		})
 	}
 }
 

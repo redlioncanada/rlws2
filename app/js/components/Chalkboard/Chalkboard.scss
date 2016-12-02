@@ -6,25 +6,29 @@
 
 	.background {
 		width: 100%;
+		z-index: 1;
 
 		* {
 			width: inherit;
 		}
 	}
 
-	.background {
-		z-index: 1;
-	}
-
-	.slideshow {
-		z-index: 2;
-
-		.images {
-			max-width: 300px;
-		}
+	.gif {
+		position: absolute;
+		@include horizontal-center();
+		top: -146px;
+		width: 26%;
 
 		.border {
-			max-width: 330px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.gif-background {
+			width: 91%;
+			@include center(1);
 		}
 	}
 
@@ -37,21 +41,33 @@
 			background: url(../../../assets/images/Chalkboard.jpg);
 			background-repeat:no-repeat;
 			background-position: center center;
+			background-size: 260%;
 			height: 346px;
+		}
+	}
+
+	@media(max-width: $tablet) {
+		.background {
+			background-size: 160%;
+			height: 226px;
+		}
+
+		.gif {
+			top: -146px;
+			width: 30%;
 		}
 	}
 
 	@media(max-width: $iphone6) {
 		margin-top: 60px;
 
-		.slideshow {
-			.images {
-				width: 44%;
-			}
+		.background {
+			margin-top: 100px;
+		}
 
-			.border {
-				width: 49%;
-			}
+		.gif {
+			top: -76px;
+			width: 46%;
 		}
 	}
 }

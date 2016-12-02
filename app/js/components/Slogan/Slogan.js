@@ -22,9 +22,6 @@ export class Slogan extends React.Component {
 						</span>
 					</div>
 				</div>
-				<div className="text-container">
-					<p className="text">{this.props.text}</p>
-				</div>
 			</div>
 		)
 	}

@@ -3,16 +3,17 @@
 
 #app div.component.slogan {
 	background-color: $sloganBackgroundColour;
-	height: 450px;
-	margin-bottom: 100px;
+	height: 300px;
+	margin-bottom: 70px;
+	position: relative;
 
 	.brain-outer {
 		position: relative;
-		top: 150px;
-		margin-left: -27px;
+		top: 60px;
+		margin-left: -65px;
 
 		.brain-container-left {
-			padding-right: 19px;
+			padding-right: 33px;
 
 			.brain {
 				// animation: out-in-stop-from-left 5s infinite;
@@ -32,7 +33,7 @@
 		}
 
 		.brain-container-right {
-			padding-left: 19px;
+			padding-left: 33px;
 
 			.brain {
 				transform: translateX(140%);
@@ -41,7 +42,7 @@
 
 				.text {
 					float: right;
-					margin-right: -19px;
+					margin-right: -55px;
 				}
 			}
 		}
@@ -57,7 +58,7 @@
 			font-size: 0.8em;
 
 			img {
-				width: 55px;
+				width: 88px;
 				position: absolute;
 			}
 
@@ -67,31 +68,42 @@
 
 			.img2 {
 				z-index: 1;
-				width: 54px;
+				width: 86px;
 			}
 
 			.text {
 				@include font-rubik-medium();
-				margin-top: 54%;
+				margin-top: 94%;
 			}
 		}
 	}
+}
 
-	.text-container {
-		color: $sloganTextColor;
-		background: $sloganTextBackgroundColour;
-		width: $innerContentMaxWidth;
-		padding: 23px 60px;
-		position: absolute;
-		text-align: center;
-		bottom: -24px;
-		@include horizontal-center();
+@media(max-width: $iphone6) {
+	.brain-outer {
+		margin-left: -45px !important;
+		top: 76px !important;
+
+		.brain .img1 {
+			width: 68px !important;
+	 	}
+	 	.brain .img2 {
+	 		width: 66px !important;
+	 	}
+
+	 	.text {
+	 		margin-top: 74% !important;
+	 	}
 	}
 
-	@media(max-width: $iphone6) {
-		.text-container {
-			width: 90%;
-			padding: 18px 20px;
+	.brain-container-left {
+		padding-right: 23px !important;
+	}
+
+	.brain-container-right {
+		padding-left: 23px !important;
+		.text {
+			margin-right: -38px !important;
 		}
 	}
 }

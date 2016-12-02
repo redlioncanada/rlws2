@@ -1,0 +1,71 @@
+@import '../../../css/variables.scss';
+@import '../../../css/mixins.scss';
+
+#app div.component.mobilebutton {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 101;
+
+	.toggle {
+		border: 2px solid black;
+		border-radius: 5px;
+		height: 42px;
+		width: 42px;
+		float: right;
+		margin: 20px 20px 0 0;
+		background: white;
+	}
+
+	.toggle-icon {
+		width: 17px;
+		height: 15px;
+		position: relative;
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		@include center();
+
+		span {
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			background: black;
+			opacity: 1;
+			left: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+		}
+
+		span:nth-child(1) {
+			top: 0px;
+		}
+
+		span:nth-child(2), span:nth-child(3) {
+			top: 6px;
+		}
+
+		span:nth-child(4) {
+			top: 12px;
+		}
+	}
+}
+
+#app div.component.mobilebutton.open {
+	.toggle-icon {
+		span:nth-child(1), span:nth-child(4) {
+			top: 6px;
+			width: 0%;
+			left: 50%;
+		}
+
+		span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+	}
+}

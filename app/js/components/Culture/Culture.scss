@@ -15,8 +15,31 @@
 		position: relative;
 	}
 
+	.item img {
+		backface-visibility: hidden;
+		z-index: 1;
+	}
+
+	.item:hover .caption {
+		opacity: 1;
+	}
+
+	.caption {
+		transition: opacity 0.6s ease-in;
+		opacity: 0;
+		text-align: center;
+	}
+
 	.art1 {
 		padding: 0 20px;
+		.caption {
+			position: relative;
+			z-index: 2;
+			margin-top: -35px;
+		}
+		img {
+			position: relative;
+		}
 	}
 
 	.cacti {
@@ -32,28 +55,13 @@
 		}
 	}
 
-	.slideshow {
+	.calories {
 		display: inline-block;
-		width: 100%;
-		margin: 80px 0 17px 0;
-
-		.slideshow {
-			display: inline-block;
-			width: 66.666666%;
-		}
-
-		.slideshow .images {
-			width: 100%;
-			left: initial;
-			transform: initial;
-			-webkit-transform: initial;
-			right: 30%;
-		}
-
-		> * {
-			right: 0;
-			transform: translateX(0);
-		}
+	}
+	.calories a > div {
+		width: 64%;
+		float: right;
+		margin: 0 40px 60px 0;
 	}
 
 	.pride-card {
@@ -62,7 +70,7 @@
 
 	.coin2 {
 		> div {
-			width: 45%;
+			width: 53%;
 			margin: 20px 0 0 20px;
 		}
 	}
@@ -73,7 +81,7 @@
 		display: inline-block;
 		margin-bottom: 28px;
 		> * {
-			width: 66%;
+			width: 64%;
 			float: right;
 		}
 	}
@@ -85,15 +93,26 @@
 		> div {
 			float: right;
 		}
+
+		.caption {
+			z-index: 2;
+			margin-top: -35px;
+			position: relative;
+		}
+
+		img {
+			position: relative;
+		}
 	}
 
 	.carousel-outer {
-		width: 300px;
+		width: 299px;
 		margin: 0 auto;
+		margin-top: 70px;
 	}
 
 	.squarefaces {
-		margin-top: 60%;
+		margin-top: 42%;
 	}
 
 	.coin-icon-group {
@@ -108,11 +127,17 @@
 
 		.coin1 {
 			height: 100%;
+			float: right;
 		}
 
 		.coin1 > div {
+			margin: 20px 70px 0 0;
 			width: 50%;
 			float: right;
+		}
+
+		.ec-logo {
+			margin: 90px 0 0 30px;
 		}
 
 		.ec-logo > div {
@@ -138,18 +163,98 @@
 	}
 
 	.rl-sign {
+		position: relative;
 		width: 100%;
-		margin-top: 70px;
+		margin-top: 10px;
+		cursor: pointer;
+
+		.sign {
+			z-index: 1;
+		}
 
 		img {
-			width: 110%;
-			margin-left: -5%;
+			// width: 110%;
+			// margin-left: -5%;
 		}
+
+		$size: 5;
+		.play {
+			position: absolute;
+			transition: opacity 0.3s ease-in;
+			left: 0;
+			top: 0;
+			width: 12px * $size;
+		    height: 16px * $size;
+		    border-top: (8px * $size) solid transparent;
+		    border-left: (12px * $size) solid white;
+		    border-bottom: (8px * $size) solid transparent;
+		    @include center();
+		    z-index: 2;
+		    opacity: 0;
+		    pointer-events: none;
+		}
+
+		.video-outer {
+			position: absolute;
+			width: 100%;
+			background-color: black;
+			opacity: 0;
+		}
+
+		.video-wrapper {
+			padding: 0 10%;
+			height: 100%;
+		}
+
+		.video-container {
+			position:relative;
+			padding-bottom:54%;
+			// padding-top:30px;
+			height:0;
+			overflow:hidden;
+			// @include vertical-center();
+			z-index: 2;
+		}
+
+		.video-container iframe, .video-container object, .video-container embed {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+		}
+	}
+
+	.rl-sign:hover .play {
+		opacity: 1;
 	}
 
 	.columns.bottom {
 		padding: 0 40px;
 		margin-top: 30px;
+	}
+
+	@media(max-width: $tablet) {
+		.play {
+			opacity: 1 !important;
+		}
+
+		.squarefaces {
+			margin-top: 50%;
+
+			.caption {
+				margin-top: 25px;
+			}
+		}
+
+		.art1 .caption, .art2 .caption {
+			// margin-top: 0;
+		}
+
+		.cacti {
+			float: left;
+			margin: -80px 0px 30px 50px;
+		}
 	}
 
 	@media(max-width: $iphone6) {
@@ -163,6 +268,10 @@
 		.art1 {
 			width: 70%;
 			padding: 0 0 0 40px;
+
+			.caption {
+				margin-top: -20px;
+			}
 		}
 
 		.cacti > div {
@@ -173,6 +282,7 @@
 		.pillowfight {
 			float: right;
 			margin-right: 14px;
+			margin-top: 40px;
 			width: 70%;
 
 			> div {
@@ -183,6 +293,10 @@
 		.art2 {
 			float: none;
 			padding: 0 50px;
+
+			.caption {
+				margin-top: -20px;
+			}
 		}
 
 		.coin-icon-group {
@@ -191,7 +305,12 @@
 
 			.coin1 > div {
 				width: 45%;
-				margin-right: 25px;
+				margin-right: 45px;
+			}
+
+			.ec-logo {
+				float: left;
+				margin: -100px 0 0 80px;
 			}
 
 			.ec-logo > div {
@@ -201,11 +320,15 @@
 		}
 
 		.squarefaces {
-			margin-top: 0;
+			margin-top: 10%;
 
 			> div {
 				width: 65%;
-				margin-left: 40px;
+				@include horizontal-center(1);
+			}
+
+			.caption {
+				margin-top: 0px;
 			}
 		}
 
@@ -215,11 +338,12 @@
 
 		.pride-card > div {
 			width: 83%;
+			@include horizontal-center(1);
 		}
 
 		.coin2 > div {
 			width: 44%;
-			margin: 20px 0 0 30px;
+			margin: 20px 0 0 20px;
 		}
 
 		.coin3 > div {
@@ -229,21 +353,83 @@
 
 		.bird {
 			width: 45%;
-			margin-right: 50px;
-			float: right;
+			float: left;
+			margin: -70px 0 0 30px;
 		}
 
-		.slideshow {
-			margin-top: 20px;
-			height: 166px;
+		.calories {
+			margin-top: 40px;
 
-			>.slideshow {
-				width: 40%;
+			a > div {
+				width: 47%;
+				margin-bottom: 10px;
 			}
+		}
 
-			> .slideshow .images {
-				right: 3%;
+		.carousel-outer {
+			width: 174px;
+			margin-top: 40px;
+			margin-bottom: 60px;
+
+			.copy p {
+				font-size: 0.6em;
 			}
 		}
 	}
+}
+
+#app div.component.culture.mobile {
+	.caption {
+		opacity: 1;
+	}
+
+	.coin1 img:hover, .coin2 img:hover, .coin3 img:hover, .ec-logo img:hover {
+		animation-play-state: paused;
+	}
+}
+
+//animations
+.coin1 img {
+	animation: spin 0.6s linear infinite;
+	animation-play-state: paused;
+}
+.coin1 img:hover {
+	animation-play-state: running;
+}
+@keyframes spin {
+	0% {transform: initial}
+	100% {transform: rotate(360deg)}
+}
+
+.coin2 img {
+	animation: tilt 0.8s ease-in infinite;
+	animation-play-state: paused;
+}
+.coin2 img:hover {
+	animation-play-state: running;
+}
+@keyframes tilt {
+	0% {transform: initial}
+	60% {transform: rotate(30deg)}
+	100% {transform: initial}
+}
+
+.coin3 img {
+	animation: pulse 0.8s linear infinite;
+	animation-play-state: paused;
+}
+.coin3 img:hover {
+	animation-play-state: running;
+}
+@keyframes pulse {
+	0% {transform: initial}
+	60% {transform: scale(1.08)}
+	100% {transform: initial}
+}
+.ec-logo img {
+	animation: spin 0.6s linear infinite;
+	animation-play-state: paused;
+}
+.ec-logo img:hover {
+	animation-play-state: running;
 }

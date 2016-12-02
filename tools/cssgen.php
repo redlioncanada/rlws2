@@ -5,6 +5,7 @@
 	$animationName = "image";
 	$animationEasing = "linear";
 	$animationTiming = "infinite";
+	$animationTotalTime = 30;
 	$animationNumberOfElements = 12;
 	$animationSelector = "> div:nth-child({})";
 	$animationProperty = "opacity";
@@ -20,28 +21,20 @@
 	for($i = 1; $i <= $animationNumberOfElements; $i++) {
 		$name = $animationName . '-' . $char;
 		$selector = str_replace("{}", $i, $animationSelector);
-		$animation = "animation: " . $name . " " . $animationNumberOfElements . "s " . $animationEasing . " " . $animationTiming . ";";
+		$animation = "animation: " . $name . " " . $animationTotalTime . "s " . $animationEasing . " " . $animationTiming . ";";
 		$css1 .= $selector . " {" . $animation . "}<br/>";
 
 		$css2 .= "@keyframes " . $name . "{ ";
-			$startPercent = number_format($divisor * ($i-1), 12);
-			if ($startPercent != 0) {
-				$startPercent = number_format($startPercent - .000000000001, 12);
-			}
+			for ($j = 0; $j <= $animationNumberOfElements; $j++) {
+				$percent = $j*$divisor;
 
-			$endPercent = number_format(($divisor * $i), 12);
-			if ($i == $animationNumberOfElements) {
-				$endPercent -= .000000000001;
-			} else {
-				$endPercent += .000000000001;
+				if ($j == $i-1 || ($i == 1 && intval($percent) == 100)) {
+					$css2 .= $percent . "%" . " {" . $animationProperty . ":" . $animationOn . "} ";	//on
+				} else {
+					$css2 .= $percent . "%" . " {" . $animationProperty . ":" . $animationOff . "} ";	//off
+				}
 			}
-
-			$css2 .= $startPercent . "%" . " {" . $animationProperty . ":" . $animationOff . "} ";	//off
-			$css2 .= number_format($startPercent+.000000000001, 12) . "%" . " {" . $animationProperty . ":" . $animationOn . "} ";	//on
-			$css2 .= $endPercent . "%" . " {" . $animationProperty . ":" . $animationOn. "} ";	//on
-			$css2 .= number_format($endPercent+.000000000001, 12) . "%" . " {" . $animationProperty . ":" . $animationOff . "}";	//off
 		$css2 .= "}<br/>";
-
 		$char++;	//why php, why?
 	}
 

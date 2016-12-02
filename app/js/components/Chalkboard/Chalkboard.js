@@ -10,7 +10,10 @@ export class Chalkboard extends React.Component {
 				<div className="background">
 					<Image {...this.props.background} />
 				</div>
-				<Slideshow {...this.props.slideshow} />
+				<div className="gif">
+					<Image className="gif-background" src={this.props.gif.src} />
+					<Image className="border" src={this.props.border.src} />
+				</div>
 			</div>
 		)
 	}

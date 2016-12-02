@@ -3,6 +3,8 @@ import {Anchor} from '../Anchor/Anchor'
 require('./Preloader.scss')
 import Sizzle from 'sizzle'
 var Velocity = require('velocity-animate')
+import {MobileMenu} from '../MobileMenu/MobileMenu'
+import {MobileButton} from '../MobileButton/MobileButton'
 import Service from '../../services/Service'
 
 export class Preloader extends React.Component {
@@ -19,16 +21,19 @@ export class Preloader extends React.Component {
 	componentDidUpdate(prevProps) {
 		if (this.props.loaded && !prevProps.loaded) {
 			this.refs.this.className += ' loaded'
-			var innerHeight = Service.Device().isMobile() ? window.screen.availHeight : window.innerHeight,
+			var innerHeight = window.innerHeight,
 				anchorElement = Sizzle('.preloader > .content .anchor')[0],
-				scrollTop = anchorElement.offsetTop + anchorElement.offsetHeight/2 - innerHeight/2,
 				delayInterval = setInterval(() => {
 					if (this.animationCompleted) {
 						clearInterval(delayInterval)
+						var scrollTop = anchorElement.offsetTop + anchorElement.offsetHeight/2 - innerHeight/2
 						window.scrollTo(0, scrollTop)
 						this.refs.this.className += ' fadein'
 
 						Velocity(this.refs.overlay, {height: 0}, {duration: 0, delay: 1000})
+						setTimeout(() => {
+							document.body.style.overflow = "initial"	//allow scrolling after fadeout completes
+						},1000)
 					}
 				}, 50)
 		}
@@ -40,15 +45,29 @@ export class Preloader extends React.Component {
 		logoElement.addEventListener('onanimationiteration', this.onLoadingAnimationComplete.bind(this), false)
 		logoElement.addEventListener('animationiteration', this.onLoadingAnimationComplete.bind(this), false)
 		logoElement.addEventListener('webkitAnimationIteration', this.onLoadingAnimationComplete.bind(this), false)
+		// document.body.style.overflow = "hidden"
 	}
 
 	render() {
 		var className = 'component preloader'
 
+		var menu = Service.Device().isMobile() ? (
+			<MobileMenu {...this.props.mobileProps} />
+		) : undefined
+
+		var mobileButton = Service.Device().isMobile() ? (
+			<MobileButton {...this.props.mobileProps} />
+		) : undefined
+
 		return (
 			<div ref="this" className={className}>
 				<div ref="overlay" className="overlay">
 					<Anchor {...this.props} />
+				</div>
+
+				<div ref="mobile-menu" className="menu">
+					{mobileButton}
+					{menu}
 				</div>
 
 				<div ref="content" className="content">

@@ -1,5 +1,6 @@
 @import '../../../css/variables.scss';
 @import '../../../css/mixins.scss';
+@import '../../../css/util.scss';
 
 #app div.component.partners {
 	color: white;
@@ -17,11 +18,13 @@
 		$headerPadding: 25px;
 
 		position: relative;
-		width: 32.33333333333333%;
-		height: 313px;
-		background-color: black;
+		width: calc(33.33333333333333% - 7.5px);
+		height: 100px;
+		background-color: white;
+		border: 1px solid black;
+		color: black;
 		padding: $headerPadding;
-		float: right;
+		float: left;
 		white-space: pre-wrap;
 
 		.divider {
@@ -31,11 +34,12 @@
 			background-color: white;
 		}
 
-		.arrow {
-			position: absolute;
-			bottom: $headerPadding;
-			left: $headerPadding;
-			width: 25px;
+		@media(max-width: $innerContentMaxWidth) {
+			margin-left: 14px;
+		}
+
+		@media(max-width: 625px) {
+			width: calc(50% - 14px) !important;
 		}
 	}
 

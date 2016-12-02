@@ -44,7 +44,6 @@ export class WorkEntry extends React.Component {
 				<div className="header">
 					<div className="title">{this.props.title}</div>
 					<div className="divider"></div>
-					<img className="rotate-sw arrow" src={this.props.arrowSrc} />
 				</div>
 			)
 		} else {
@@ -75,13 +74,16 @@ export class WorkEntry extends React.Component {
 	}
 
 	handleResize() {
-		var padding = Number(window.getComputedStyle(this.refs.inner, null).getPropertyValue('padding-left').replace('px','')) || Number(window.getComputedStyle(this.refs.inner, null).getPropertyValue('padding-right').replace('px','')) || 0
+		var padding = {
+			left: Number(window.getComputedStyle(this.refs.inner, null).getPropertyValue('padding-left').replace('px','')) || 0,
+			right: Number(window.getComputedStyle(this.refs.inner, null).getPropertyValue('padding-right').replace('px','')) || 0
+		}
 		var width = this.refs.this.offsetWidth
 		if (this.lastWidth && this.lastWidth == width) return
 
 		if (!(typeof width === 'undefined' || width == 0)) {
 			if (!!this.resizeTimeout) clearTimeout(this.resizeTimeout)
-			width = width - padding*2
+			width -= padding.left && padding.right ? Math.max(padding.left, padding.right) : padding.left || padding.right
 			this.lastWidth = width
 			Velocity(this.refs.this, {height: width}, {duration: 0})
 		} else {

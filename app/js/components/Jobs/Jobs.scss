@@ -1,5 +1,6 @@
 @import '../../../css/variables.scss';
 @import '../../../css/mixins.scss';
+@import '../../../css/util.scss';
 
 #app div.component.jobs {
 	color: white;
@@ -14,12 +15,13 @@
 		$headerPadding: 25px;
 
 		position: relative;
-		width: 32%;
+		width: calc(33.333333333333% - 7.5px);
 		height: 310px;
-		background-color: black;
+		border: 1px solid black;
 		padding: $headerPadding;
 		float: left;
 		margin-right: 14px;
+		color: black;
 
 		.divider {
 			width: 100%;
@@ -90,6 +92,6 @@
 
 #app div.positions {
 	float: left;
-	width: 32%;
-	margin-top: 201px;
+	width: calc(33.333333333% - 14px);
+	margin-top: 207px;
 }

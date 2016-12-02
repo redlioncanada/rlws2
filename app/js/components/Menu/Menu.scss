@@ -10,7 +10,7 @@
 
 	.links-container {
 		display: inline-block;
-		width: 392px;
+		width: 495px;
 		@include horizontal-center(1);
 
 		.menulink {
@@ -36,6 +36,10 @@
 			width: inherit;
 			height: inherit;
 			display: block;
+		}
+
+		.text {
+			text-transform: lowercase;
 		}
 	}
 

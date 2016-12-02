@@ -92,7 +92,8 @@ export class Work extends React.Component {
 		)
 
 		return (
-			<div id={this.props.id} className="work component">
+			<div className="work component">
+				<div id={this.props.id} className="hash"></div>
 				<div className="wrapper">{entries}</div>
 			</div>
 		)

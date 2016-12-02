@@ -40,11 +40,11 @@ export class Contact extends React.Component {
 		]
 
 		return (
-			<div ref="this" id={this.props.id} className="contact component">
+			<div ref="this" className="contact component">
+				<div className="hash" id={this.props.id}></div>
 				<div className="header" ref="header">
 					<div className="title">{this.props.contact.title}</div>
 					<div className="divider"></div>
-					<img className="rotate-sw arrow" src={this.props.contact.arrowSrc} />
 				</div>
 
 				<div className="methods subcomponent">

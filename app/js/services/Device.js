@@ -3,12 +3,12 @@
 class Device {
 	isMobile() {
 		var regex = navigator.userAgent.match(/Mobi/i)	//suggested string to use via mozilla docs
-		return !!regex && regex.length
+		return !!regex && regex.length ? true : false
 	}
 
 	isTablet() {
 		var regex = navigator.userAgent.match(/Tablet|iPad/i)
-		return !!regex && regex.length
+		return !!regex && regex.length ? true : false
 	}
 
 	isPhone() {

@@ -1,5 +1,6 @@
 @import '../../../css/variables.scss';
 @import '../../../css/mixins.scss';
+@import '../../../css/util.scss';
 
 #app div.component.contact {
 	color: white;
@@ -10,10 +11,12 @@
 		$headerPadding: 25px;
 
 		position: relative;
-		width: 33.333333333%;
+		width: calc(33.333333333% - 7.5px);
 		height: $headerBoxSize;
-		background-color: black;
+		background-color: white;
 		padding: $headerPadding;
+		border: 1px solid black;
+		color: black;
 		float: left;
 
 		.divider {
@@ -22,19 +25,12 @@
 			margin-top: 6px;
 			background-color: white;
 		}
-
-		.arrow {
-			position: absolute;
-			bottom: $headerPadding;
-			right: $headerPadding;
-			width: 25px;
-		}
 	}
 
 	.methods {
 		float: left;
 		min-width: 200px;
-		margin-top: 213px;
+		margin-top: 207px;
 		width: 66.66666666666%;
 		z-index: 2;
 		position: relative;
@@ -64,6 +60,10 @@
 			}
 		}
 
+		.method.phone {
+			padding-right: 0;
+		}
+
 		.method-wrapper {
 			width:100%;
 			height: 100%;
@@ -83,15 +83,18 @@
 	.map img {
 		width: 250%;
 		margin-top: 20px;
-		margin-left: -78%;
+		margin-left: -75%;
 	}
 
 	.map .background {z-index: 1;}
 	.map .pin {
 		z-index: 2;
+		width: 5%;
+		left: 50%;
+		bottom: 16%;
 		position: absolute;
-		bottom: 0;
-		margin-bottom: 5px;
+		padding: 0;
+		margin: 0 0 0 -2.5%;
 	}
 	.map .pin.animate {
 		animation: bounce 2s 3;
@@ -101,28 +104,26 @@
 		.methods {
 			margin-top: 156px;
 		}
+
+		.pin {
+
+		}
 	}
 
 	@media(max-width:$iphone6) {
 		padding: 0 14px;
-		font-size: 0.9em;
+		font-size: 0.95em;
 
 		.header {
 			width: 50%;
 			height: 160px;
 			padding: 15px;
-
-			.arrow {
-				width: 15px;
-				bottom: 15px;
-				right: 15px;
-			}
 		}
 
 		div.methods {
 			width: 50%;
 			min-width: initial;
-			margin-top: 44px;
+			margin-top: 42px;
 		}
 
 		.methods .method {

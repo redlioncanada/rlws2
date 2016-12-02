@@ -43,14 +43,14 @@
 
 		p {
 			text-align: center;
-			padding: 0 10%;
+			// padding: 0 10%;
 		}
 
 		.video {
 			margin: 25px 0 15px 0;
 
 			iframe {
-				padding: 0 10%;
+				// padding: 0 10%;
 			}
 		}
 
@@ -67,6 +67,10 @@
 		.close .close-button {
 			width: 25px;
 			height: 25px;
+		}
+
+		.content .image {
+			padding: 25px 0 25px 0;
 		}
 	}
 }

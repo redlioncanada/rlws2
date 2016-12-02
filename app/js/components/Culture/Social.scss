@@ -27,14 +27,4 @@ $iconSize: 40px;
 	.normal {
 		z-index: 1;
 	}
-
-	.hover {
-		z-index: 2;
-		opacity: 0;
-		transition: opacity 0.1s linear;
-	}
-
-	.social-icon:hover .hover {
-		opacity: 1;
-	}
 }

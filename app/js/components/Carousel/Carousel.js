@@ -7,7 +7,7 @@ export class Carousel extends React.Component {
 		var slides = this.props.slides.map((item, index) => {
 			return (
 				<div className="carousel-slide" key={index}>
-					<a href={item.link} rel="nofollow noopener">
+					<a href={item.link} rel="nofollow noopener" target="_blank">
 						<img src={item.image}/>
 						<div className="copy">
 							<div className="container"><p>{item.copy}</p></div>

@@ -30,11 +30,11 @@ export class Jobs extends React.Component {
 		})
 
 		return (
-			<div id={this.props.id} className="jobs thinkdifferent component">
+			<div className="jobs thinkdifferent component">
+				<div className="hash" id={this.props.id}></div>
 				<div ref="header" className="header">
 					<div className="title">{this.props.title}</div>
 					<div className="divider"></div>
-					<img className="rotate-sw arrow" src={this.props.arrowSrc} />
 				</div>
 
 				<div className="positions">

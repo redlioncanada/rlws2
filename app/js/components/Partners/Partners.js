@@ -18,13 +18,13 @@ export class Partners extends React.Component {
 		// ))
 
 		return (
-			<div id={this.props.id} className="partners component">
+			<div className="partners component">
+				<div id={this.props.id} className="hash"></div>
 				<div className="wrapper">
 					<div className="header-wrapper">
 						<div className="header">
 							<div className="title">{this.props.title}</div>
 							<div className="divider"></div>
-							<img className="rotate-se arrow" src={this.props.arrowSrc} />
 						</div>
 					</div>
 					{partners}
