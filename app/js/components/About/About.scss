@@ -8,6 +8,7 @@
 
 	.header {
 		$headerPadding: 25px;
+		font-size: 0.9em;
 
 		position: relative;
 		width: calc(33.33333333333333% - 7.5px);
@@ -44,6 +45,12 @@
 	}
 
 	@media(max-width: $iphone6) {
+		$headerPadding: 15px;
+
+		.header {
+			padding: $headerPadding;
+		}
+
 		.text-container {
 			padding: 18px 20px;
 		}

@@ -74,7 +74,7 @@
 
 		div.header {
 			width: 166px;
-			height: 166px;
+			height: 100px;
 			padding: 15px;
 
 			.arrow {
@@ -100,7 +100,7 @@
 
 	@media(max-width: $tablet) {
 		.header {
-			height: 248px;
+			height: 100px;
 			width: 31.333333333%
 		}
 
@@ -114,7 +114,7 @@
 
 		div.header {
 			width: 138px;
-			height: 129px;
+			height: 100px;
 		}
 
 		.partner img {

@@ -35,7 +35,10 @@ export class Culture extends React.Component {
 					</div>
 					<div className="coin-icon-group">
 						<div className="coin1 item">
-							<div><Image src="./images/RL_Coin-3.jpg" /></div>
+							<div>
+								<Image src="./images/RL_Coin-3-inner.png" />
+								<Image src="./images/RL_Coin-3-outer.jpg" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -87,7 +90,10 @@ export class Culture extends React.Component {
 				<div className="column2">
 					<div className="coin-icon-group">
 						<div className="coin1 item">
-							<div><Image src="./images/RL_Coin-3.jpg" /></div>
+							<div>
+								<Image src="./images/RL_Coin-3-inner.png" />
+								<Image src="./images/RL_Coin-3-outer.jpg" />
+							</div>
 						</div>
 						<div className="ec-logo item">
 							<div><img src="./images/Logo-Extracurriculars.svg" /></div>
@@ -132,12 +138,18 @@ export class Culture extends React.Component {
 							<p className="caption">{this.props.captions.Closetcards}</p>
 						</div>
 						<div className="coin2 item">
-							<div><Image src="./images/RL_Coin-1.jpg" /></div>
+							<div>
+								<Image src="./images/RL_Coin-1-inner.png" />
+								<Image src="./images/RL_Coin-1-outer.jpg" />
+							</div>
 						</div>
 					</div>
 					<div className="column2">
 						<div className="coin3 item">
-							<div><Image src="./images/RL_Coin-2.jpg" /></div>
+							<div>
+								<Image src="./images/RL_Coin-2-inner.png" />
+								<Image src="./images/RL_Coin-2-outer.jpg" />
+							</div>
 						</div>
 						<div className="bird item">
 							<img src="./images/Bird.svg" />

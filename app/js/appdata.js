@@ -227,7 +227,7 @@ export class appdata {
 					title: 'Address',
 					text: '111 Queen St E, Suite 400\nToronto, ON, M5C 1S2',
 					link: 'https://www.google.ca/maps/place/Red+Lion+Canada/@43.6532941,-79.3763123,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cb36ad0991a9:0x8feadbddc141b1ed!8m2!3d43.6532941!4d-79.3741236',
-					backgroundColour: '#82cbab',
+					backgroundColour: '#48bb85',
 					slantVectorSrc: './images/Address-Slant.svg'
 				},
 				map: {

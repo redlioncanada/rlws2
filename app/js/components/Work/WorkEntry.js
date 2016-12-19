@@ -83,9 +83,9 @@ export class WorkEntry extends React.Component {
 
 		if (!(typeof width === 'undefined' || width == 0)) {
 			if (!!this.resizeTimeout) clearTimeout(this.resizeTimeout)
-			width -= padding.left && padding.right ? Math.max(padding.left, padding.right) : padding.left || padding.right
+			// width -= padding.left && padding.right ? Math.max(padding.left, padding.right) : padding.left || padding.right
 			this.lastWidth = width
-			Velocity(this.refs.this, {height: width}, {duration: 0})
+			Velocity(this.refs.this, {height: width-1}, {duration: 0})
 		} else {
 			if (!this.resizeTimeout) {
 				this.resizeTimeout = setTimeout(this.handleResize.bind(this), 50)
