@@ -104,6 +104,8 @@
 	.workentry:nth-child(9) .hover-container {overflow: initial;}
 	.workentry:nth-child(9) .hover-container .hover {width: initial; height: 100%; right: 0; left: initial;}
 
+	.workentry:nth-child(15) .hover-container .hover {margin-top:-5px !important;}
+
 	// .workentry:nth-child(15) > div > div:after {@include extrusion('bottom', $workBottomExtrusionSize);}
 	// .workentry:nth-child(15) .hover-container {margin-bottom: -$workBottomExtrusionSize; overflow: initial;}
 	//end add odd extrusions

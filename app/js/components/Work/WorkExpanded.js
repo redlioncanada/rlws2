@@ -40,7 +40,7 @@ export class WorkExpanded extends React.Component {
 				break
 			case 'video':
 				main = (
-					<Video className="video main" src={this.props.content} hide={this.open?false:true} />
+					<Video className="video main" src={this.props.content + '?rel=0&autoplay=1'} hide={this.open?false:true} />
 				)
 				break
 		}

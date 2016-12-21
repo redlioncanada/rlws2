@@ -11,7 +11,7 @@
 		$headerPadding: 25px;
 
 		position: relative;
-		width: calc(33.333333333% - 7.5px);
+		width: calc(33.333333333% - 11px);
 		height: $headerBoxSize;
 		background-color: white;
 		padding: $headerPadding;
@@ -51,11 +51,17 @@
 			margin-top: 14px;
 			height: initial;
 
+			.edgy, .method-wrapper {
+				position: relative;
+			}
+
 			.edgy {
+				z-index: 1;
 				margin-top: -1px;
 			}
 
 			.method-wrapper {
+				z-index: 2;
 				padding-bottom: 4px;
 			}
 		}
@@ -158,9 +164,13 @@
 
 	@media(max-width: $iphone5) {
 		font-size: 0.8em;
-		
+
 		div.methods {
-			margin-top: 14px;
+			margin-top: 6px;
+		}
+
+		div.methods .method {
+			margin-top: 8px;
 		}
 	}
 }

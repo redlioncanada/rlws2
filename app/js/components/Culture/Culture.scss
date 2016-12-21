@@ -57,6 +57,7 @@
 	}
 
 	.calories {
+		margin-top: 40px;
 		display: inline-block;
 	}
 	.calories a > div {
@@ -78,6 +79,11 @@
 
 		img:first-child {
 			position: absolute;
+			z-index: 2;
+		}
+
+		img {
+			z-index: 1;
 		}
 	}
 
@@ -146,10 +152,15 @@
 
 		.coin1 img:first-child {
 			position: absolute;
+			z-index: 2;
+		}
+
+		.coin1 img:last-child {
+			z-index: 1;
 		}
 
 		.ec-logo {
-			margin: 90px 0 0 30px;
+			margin: 260px 0 0 30px;
 		}
 
 		.ec-logo > div {
@@ -171,6 +182,11 @@
 
 		img:first-child {
 			position: absolute;
+			z-index: 2;
+		}
+
+		img {
+			z-index: 1;
 		}
 	}
 
@@ -393,6 +409,20 @@
 			}
 		}
 	}
+
+	.influence.copy {
+		margin-top: 30px;
+		position: relative;
+		display: block;
+		color: black;
+		width: 100%;
+		padding: 26px 20px;
+		text-align: center;
+
+		@media(max-width: $iphone6) {
+			padding: 18px 20px;
+		}
+	}
 }
 
 #app div.component.culture.mobile {
@@ -400,7 +430,7 @@
 		opacity: 1;
 	}
 
-	.coin1 img:hover, .coin2 img:hover, .coin3 img:hover, .ec-logo img:hover {
+	.coin1 > div:hover img:last-child, .coin2 > div:hover img:last-child, .coin3 > div:hover img:last-child, .ec-logo img:hover {
 		animation-play-state: paused;
 	}
 }
@@ -410,7 +440,7 @@
 	animation: spin 1.2s linear infinite;
 	animation-play-state: paused;
 }
-.coin1 > div:hover img {
+.coin1 > div:hover img:last-child {
 	animation-play-state: running;
 }
 @keyframes spin {

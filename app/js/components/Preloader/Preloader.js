@@ -30,10 +30,10 @@ export class Preloader extends React.Component {
 						window.scrollTo(0, scrollTop)
 						this.refs.this.className += ' fadein'
 
-						Velocity(this.refs.overlay, {height: 0}, {duration: 0, delay: 1000})
+						Velocity(this.refs.overlay, {height: 0}, {duration: 0, delay: 1500})
 						setTimeout(() => {
 							document.body.style.overflow = "initial"	//allow scrolling after fadeout completes
-						},1000)
+						},1500)
 					}
 				}, 50)
 		}
