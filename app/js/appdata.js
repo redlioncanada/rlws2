@@ -67,7 +67,8 @@ export class appdata {
 				videos: {
 					redlion: "nj4SXUAt80s"
 				},
-				copy: 'We believe in culture. Our ability to influence culture, all of us have a butterfly effect that is exponentially larger than it was even just five years ago. The marketing formula has changed. At Red Lion we believe that formula is now based on cultural influence more than media impressions. We believe advertising is no longer just about messaging, it is about influence.'
+				copyPrefix: 'CULTURE',
+				copy: 'INFLUENCE: We believe in culture. Our ability to influence culture, all of us have a butterfly effect that is exponentially larger than it was even just five years ago. The marketing formula has changed. At Red Lion we believe that formula is now based on cultural influence more than media impressions. We believe advertising is no longer just about messaging, it is about influence.'
 			},
 			Chalkboard: {
 				background: {
@@ -94,8 +95,9 @@ export class appdata {
 			About: {
 				id: 'about',
 				title: 'About',
-				text: 'We seek solutions that truly influence culture. That can be a billboard or a digital experience, a breakthrough on a social platform or a line of clothing. A television commercial or a piece of furniture, each solution is bespoke based on a desired behaviour for our client partners. Ultimately our client partners need to impact their audience and the best way to do this is by influencing culture on their behalf. That is Red Lion.',
-				text2: 'A different model, with unique ingredients, solving different questions with the outcome being one of cultural impact.'
+				textPrefix: 'INFLUENCE',
+				text: 'CULTURE: We seek solutions that truly influence culture. That can be a billboard or a digital experience, a breakthrough on a social platform or a line of clothing. A television commercial or a piece of furniture, each solution is bespoke based on a desired behaviour for our client partners. Ultimately our client partners need to impact their audience and the best way to do this is by influencing culture on their behalf. That is Red Lion. A different model, with unique ingredients, solving different questions with the outcome being one of cultural impact.',
+				text2: ''
 			},
 			Carousel: {
 				slides: [

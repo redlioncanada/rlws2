@@ -12,7 +12,7 @@ export class About extends React.Component {
 							<div className="divider"></div>
 						</div>
 					<div className="text-container">
-						<p className="text">{this.props.text}</p>
+						<p className="text"><span className="strong">{this.props.textPrefix}</span> {this.props.text}</p>
 						<br/>
 						<p className="text-continued">{this.props.text2}</p>
 					</div>
