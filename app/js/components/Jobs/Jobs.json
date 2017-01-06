@@ -1,12 +1,8 @@
 [
 	{
 		"title": "Art director",
-		"backgroundColor": "#85cbcd",
-		"description": ""
-	},
-	{
-		"title": "Copywriter",
-		"backgroundColor": "#e4d8cc",
-		"description": "We’re looking for an intermidiate copywriter with 4-5 years of agency experience."
+		"backgroundColor": "#c7b29b",
+		"description": "We’re looking for an intermediate art director with 4-5 years of agency experience.",
+		"submit": "Submit Portfolio"
 	}
 ]

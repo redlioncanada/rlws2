@@ -39,14 +39,15 @@
 	}
 
 	@media(max-width: $tablet) {
+		padding: 0 14px;
+
 		.positions {
-			margin-top: 147px;
+			margin-top: 137px;
 		}
 	}
 
 	@media (max-width: $iphone6) {
 		font-size: 0.9em;
-		padding: 0 14px;
 		margin-top: 50px;
 
 		.header {
@@ -65,7 +66,7 @@
 		.positions {
 			min-width: initial;
 			width: 50%;
-			padding-left: 10px;
+			padding-left: 14px;
 			margin-top: 114px;
 
 			.position {
@@ -93,5 +94,5 @@
 #app div.positions {
 	float: left;
 	width: calc(33.333333333% - 14px);
-	margin-top: 207px;
+	margin-top: 203px;
 }

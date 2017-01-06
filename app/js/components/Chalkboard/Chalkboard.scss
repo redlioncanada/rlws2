@@ -47,13 +47,15 @@
 	}
 
 	@media(max-width: $tablet) {
+		margin-top: 120px;
+
 		.background {
-			background-size: 160%;
-			height: 226px;
+			background-size: 120%;
+			height: 346px;
 		}
 
 		.gif {
-			top: -146px;
+			top: -86px;
 			width: 30%;
 		}
 	}

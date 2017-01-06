@@ -68,7 +68,7 @@ export class appdata {
 					redlion: "nj4SXUAt80s"
 				},
 				copyPrefix: 'CULTURE',
-				copy: 'INFLUENCE: We believe in culture. Our ability to influence culture, all of us have a butterfly effect that is exponentially larger than it was even just five years ago. The marketing formula has changed. At Red Lion we believe that formula is now based on cultural influence more than media impressions. We believe advertising is no longer just about messaging, it is about influence.'
+				copy: 'INFLUENCE: We create solutions that influence culture. Whether it’s a billboard or a breakthrough on a social platform, a digital experience or a line of clothing. Each solution is bespoke based on our client partner’s desired audience behaviour. That’s what Red Lion is all about: a different model made up of unique ingredients, designed to solve any challenge via cultural influence.'
 			},
 			Chalkboard: {
 				background: {
@@ -96,10 +96,11 @@ export class appdata {
 				id: 'about',
 				title: 'About',
 				textPrefix: 'INFLUENCE',
-				text: 'CULTURE: We seek solutions that truly influence culture. That can be a billboard or a digital experience, a breakthrough on a social platform or a line of clothing. A television commercial or a piece of furniture, each solution is bespoke based on a desired behaviour for our client partners. Ultimately our client partners need to impact their audience and the best way to do this is by influencing culture on their behalf. That is Red Lion. A different model, with unique ingredients, solving different questions with the outcome being one of cultural impact.',
+				text: 'CULTURE: We believe in culture. The ability each of us has to influence the world around us has grown exponentially in just a few short years. The marketing formula has changed, too. At Red Lion, we believe that cultural influence matters more than media impressions. We believe advertising is no longer just about the message: it’s about what the message can do.',
 				text2: ''
 			},
 			Carousel: {
+				title: 'Things we like',
 				slides: [
 					{
 						copy: 'A real teen’s take on Snapchat’s hot new Spectacles',
@@ -204,6 +205,11 @@ export class appdata {
 					{
 						name: 'Shangri-La Hotel',
 						imageSrc: './images/Logo-Shangri-La.svg',
+						link: undefined
+					},
+					{
+						name: 'The Brain Project',
+						imageSrc: './images/Logo-TheBrainProject.svg',
 						link: undefined
 					},
 				]

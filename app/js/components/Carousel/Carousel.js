@@ -28,6 +28,7 @@ export class Carousel extends React.Component {
 		}
 		return (
 			<div ref="this" className="carousel component">
+				<h4 className="title">{this.props.title}</h4>
 				<Slick ref="slick" {...settings}>
 					{slides}
 				</Slick>

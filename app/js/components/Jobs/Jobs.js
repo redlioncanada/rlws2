@@ -25,6 +25,7 @@ export class Jobs extends React.Component {
 					title = {item.title}
 					description = {item.description}
 					subject = {this.props.email.subject}
+					submit = {item.submit}
 				/>
 			)
 		})

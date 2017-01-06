@@ -30,7 +30,7 @@
 	.methods {
 		float: left;
 		min-width: 200px;
-		margin-top: 207px;
+		margin-top: 203px;
 		width: 66.66666666666%;
 		z-index: 2;
 		position: relative;
@@ -90,6 +90,8 @@
 		width: 250%;
 		margin-top: 20px;
 		margin-left: -75%;
+		position: relative;
+		bottom: -6px;
 	}
 
 	.map .background {z-index: 1;}
@@ -107,8 +109,15 @@
 	}
 
 	@media(max-width: $tablet) {
+		padding: 0 14px;
+
+		.header {
+			width: 33.33333333333%;
+		}
+
 		.methods {
-			margin-top: 156px;
+			width: 66.666666666666%;
+			margin-top: 148px;
 		}
 
 		.pin {
@@ -117,7 +126,6 @@
 	}
 
 	@media(max-width:$iphone6) {
-		padding: 0 14px;
 		font-size: 0.95em;
 
 		.header {
