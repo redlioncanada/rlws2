@@ -53,6 +53,12 @@
 	}
 }
 
+@media(max-width: $tablet) {
+	.description-wrapper {
+		font-size: 0.7em;
+	}
+}
+
 @media(max-width: $innerContentMaxWidth) {
 	.position .toggle img {margin: 15px 15px 0 0;}
 }

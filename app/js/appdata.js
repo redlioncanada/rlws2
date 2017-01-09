@@ -67,8 +67,8 @@ export class appdata {
 				videos: {
 					redlion: "nj4SXUAt80s"
 				},
-				copyPrefix: 'CULTURE',
-				copy: 'INFLUENCE: We create solutions that influence culture. Whether it’s a billboard or a breakthrough on a social platform, a digital experience or a line of clothing. Each solution is bespoke based on our client partner’s desired audience behaviour. That’s what Red Lion is all about: a different model made up of unique ingredients, designed to solve any challenge via cultural influence.'
+				copyPrefix: 'INFLUENTIAL',
+				copy: 'CULTURE: We believe in culture. The ability each of us has to influence the world around us has grown exponentially in just a few short years. The marketing formula has changed, too. At Red Lion, we believe that cultural influence matters more than media impressions. We believe advertising is no longer just about the message: it’s about what the message can do.'
 			},
 			Chalkboard: {
 				background: {
@@ -87,16 +87,16 @@ export class appdata {
 			},
 			Slogan: {
 				brainMaskSrc: './images/Brain_mask.svg',
-				brainLeftText: 'Capitalist',
+				brainLeftText: 'Left Brain',
 				brainLeftSrc: './images/Brain-left.svg',
-				brainRightText: 'Creative',
+				brainRightText: 'Right Brain',
 				brainRightSrc: './images/Brain-right.svg'
 			},
 			About: {
 				id: 'about',
 				title: 'About',
-				textPrefix: 'INFLUENCE',
-				text: 'CULTURE: We believe in culture. The ability each of us has to influence the world around us has grown exponentially in just a few short years. The marketing formula has changed, too. At Red Lion, we believe that cultural influence matters more than media impressions. We believe advertising is no longer just about the message: it’s about what the message can do.',
+				textPrefix: 'CULTURAL',
+				text: 'INFLUENCE: We create solutions that influence culture. Whether it’s a billboard or a breakthrough on a social platform, a digital experience or a line of clothing. Each solution is bespoke based on our client partner’s desired audience behaviour. That’s what Red Lion is all about: a different model made up of unique ingredients, designed to solve any challenge via cultural influence.',
 				text2: ''
 			},
 			Carousel: {

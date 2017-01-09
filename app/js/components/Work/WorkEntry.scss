@@ -148,12 +148,18 @@
 		}
 	}
 
-	@media(max-width: 625px) {
+	@media(max-width: $tablet) {
 		padding: 0 7.5px;
+
+		.workentry > div {
+			padding: 7.5px !important;
+		}
+	}
+
+	@media(max-width: 625px) {
 
 		.workentry {
 			width: 50%;
-			> div {padding: 7.5px !important;}
 		}
 
 		//remove outer table padding
@@ -192,7 +198,7 @@
 		//end add odd extrusions
 	}
 
-	@media(max-width: $iphone6) {
+	@media(max-width: $tablet) {
 		.workentry {
 			height: 140px;
 
@@ -207,6 +213,12 @@
 
 		.workentry:nth-child(7) > div > div:after {content: initial;}
 
+		.workexpanded {
+			padding: 0 15px;
+		}
+	}
+
+	@media(max-width: $iphone6) {
 		.workexpanded {
 			padding: 0 8px;
 		}

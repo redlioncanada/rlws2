@@ -157,7 +157,7 @@ export class Culture extends React.Component {
 					</div>
 				</div>
 				<div className="influence copy">
-					<p><span className="strong">{this.props.copyPrefix}</span> {this.props.copy}</p>
+					<p>{this.props.copyPrefix} {this.props.copy}</p>
 				</div>
 			</div>
 		)
