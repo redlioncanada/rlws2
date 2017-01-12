@@ -267,10 +267,13 @@
 		margin-top: 30px;
 	}
 
-	@media(max-width: $tablet) {
+	@media(max-width: $tablet-landscape) {
 		.play {
 			opacity: 1 !important;
 		}
+	}
+
+	@media(max-width: $tablet) {
 
 		.coin-icon-group {
 			margin-bottom: 0;
@@ -278,7 +281,7 @@
 			height: 200px;
 
 			.ec-logo {
-				margin-top: 10	0px;
+				margin-top: 100px;
 			}
 		}
 
@@ -305,6 +308,38 @@
 
 		.pillowfight img {
 			margin-right: 14px;
+		}
+	}
+
+	@media(max-width: $iphone6-landscape) {
+		.pillowfight {
+			margin-top: 50px;
+		}
+
+		.cacti {
+			margin-top: 0;
+		}
+
+		.carousel-outer {
+			width: 250px;
+		}
+
+		.carousel .title {
+			font-size: 0.7em;
+		}
+
+		.squarefaces {
+			padding-right: 10px;
+		}
+
+		.coin-icon-group .ec-logo {
+			margin-top: -80px;
+		}
+	}
+
+	@media(max-width: $iphone5-landscape) {
+		.carousel-outer {
+			width: 210px;
 		}
 	}
 
@@ -355,6 +390,10 @@
 			}
 		}
 
+		.carousel .title {
+			font-size: 0.7em;
+		}
+
 		.coin-icon-group {
 			margin-top: -10px;
 			height: 178px;
@@ -390,6 +429,15 @@
 
 		.rl-sign {
 			margin-top: 20px;
+
+			$size: 3;
+			.play {
+				width: 12px * $size;
+			    height: 16px * $size;
+			    border-top: (8px * $size) solid transparent;
+			    border-left: (12px * $size) solid white;
+			    border-bottom: (8px * $size) solid transparent;
+			}
 		}
 
 		.pride-card > div {

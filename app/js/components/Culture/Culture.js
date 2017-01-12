@@ -22,7 +22,7 @@ export class Culture extends React.Component {
 						<Image src="./images/Cacti.jpg" />
 					</div>
 					<div className="calories item">
-						<a href="http://instagram.com/social_calories" rel="noreferer nofollow">
+						<a href="http://instagram.com/social_calories" rel="noreferer nofollow" target="_blank">
 							<div>
 								<Image className="calories-background" src="./images/SC_GIF.gif"/>
 								<p className="caption">{this.props.captions.Calories}</p>
@@ -30,7 +30,7 @@ export class Culture extends React.Component {
 						</a>
 					</div>
 					<div className="squarefaces item">
-						<a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a>
+						<a href="http://instagram.com/squarefaces" rel="noreferer nofollow" target="_blank"><Image src="./images/SquareFace.jpg" /></a>
 						<p className="caption">{this.props.captions.Squareface}</p>
 					</div>
 					<div className="coin-icon-group">
@@ -78,14 +78,7 @@ export class Culture extends React.Component {
 						<Image src="./images/OfficeArt-2.jpg" />
 						<p className="caption">{this.props.captions.Art2}</p>
 					</div>
-					<div className="calories item">
-						<a href="http://instagram.com/social_calories" rel="noreferer nofollow">
-							<div>
-								<Image className="calories-background" src="./images/SC_GIF.gif"/>
-								<p className="caption">{this.props.captions.Calories}</p>
-							</div>
-						</a>
-					</div>
+					
 				</div>
 				<div className="column2">
 					<div className="coin-icon-group">
@@ -103,8 +96,16 @@ export class Culture extends React.Component {
 						<Carousel {...this.props.carousel} />
 					</div>
 					<div className="squarefaces item">
-						<div><a href="http://instagram.com/squarefaces" rel="noreferer nofollow"><Image src="./images/SquareFace.jpg" /></a></div>
+						<div><a href="http://instagram.com/squarefaces" rel="noreferer nofollow" target="_blank"><Image src="./images/SquareFace.jpg" /></a></div>
 						<p className="caption">{this.props.captions.Squareface}</p>
+					</div>
+					<div className="calories item">
+						<a href="http://instagram.com/social_calories" rel="noreferer nofollow" target="_blank">
+							<div>
+								<Image className="calories-background" src="./images/SC_GIF.gif"/>
+								<p className="caption">{this.props.captions.Calories}</p>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -134,7 +135,7 @@ export class Culture extends React.Component {
 				<div className="columns bottom">
 					<div className="column1">
 						<div className="pride-card item">
-							<div><a href="http://greetingsfromthecloset.com" rel="noreferer nofollow"><Image src="./images/Pride_Card.jpg" /></a></div>
+							<div><a href="http://greetingsfromthecloset.com" rel="noreferer nofollow" target="_blank"><Image src="./images/Pride_Card.jpg" /></a></div>
 							<p className="caption">{this.props.captions.Closetcards}</p>
 						</div>
 						<div className="coin2 item">

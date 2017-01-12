@@ -42,33 +42,41 @@ export class Contact extends React.Component {
 		return (
 			<div ref="this" className="contact component">
 				<div className="hash" id={this.props.id}></div>
-				<div className="header" ref="header">
-					<div className="title">{this.props.contact.title}</div>
-					<div className="divider"></div>
+
+				<div className="methods-wrapper">
+					<div className="header" ref="header">
+						<div className="title">{this.props.contact.title}</div>
+						<div className="divider"></div>
+					</div>
+
+					<div className="methods subcomponent" ref="methods">
+						<div>
+							<div className="method email" ref="methodEmail">
+								<div className="method-wrapper" style={styles[0]}>
+									<a href={this.props.email.link} rel="noopener noreferrer" target="_blank">
+										<div>
+											<div className="title">{this.props.email.title}</div>
+											<p>{this.props.email.text}</p>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div className="method phone" ref="methodPhone">
+								<div className="method-wrapper" style={styles[1]}>
+									<a href={this.props.phone.link} rel="noopener noreferrer" target="_blank">
+										<div>
+											<div className="title">{this.props.phone.title}</div>
+											<p>{this.props.phone.text}</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
-				<div className="methods subcomponent">
-					<div className="method email">
-						<div className="method-wrapper" style={styles[0]}>
-							<a href={this.props.email.link} rel="noopener noreferrer" target="_blank">
-								<div>
-									<div className="title">{this.props.email.title}</div>
-									<p>{this.props.email.text}</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div className="method phone">
-						<div className="method-wrapper" style={styles[1]}>
-							<a href={this.props.phone.link} rel="noopener noreferrer" target="_blank">
-								<div>
-									<div className="title">{this.props.phone.title}</div>
-									<p>{this.props.phone.text}</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div className="method address">
+				<div className="methods methods-bottom subcomponent">
+					<div className="method address"  ref="methodAddress">
 						<div className="method-wrapper" style={styles[2]}>
 							<a href={this.props.address.link} rel="noopener noreferrer" target="_blank">
 								<div>
@@ -99,6 +107,7 @@ export class Contact extends React.Component {
 			if (!!this.resizeTimeout) clearTimeout(this.resizeTimeout)
 			this.lastWidth = width
 			Velocity(this.refs.header, {height: width}, {duration: 0})
+			Velocity(this.refs.methods, {height: width}, {duration: 0})
 		} else {
 			if (!this.resizeTimeout) {
 				this.resizeTimeout = setTimeout(this.handleResize.bind(this), 300)

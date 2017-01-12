@@ -142,10 +142,6 @@
 				padding-right: 14px;
 			}
 		}
-
-		.hover-container {
-			display: none;
-		}
 	}
 
 	@media(max-width: $tablet) {
@@ -214,7 +210,7 @@
 		.workentry:nth-child(7) > div > div:after {content: initial;}
 
 		.workexpanded {
-			padding: 0 15px;
+			padding: 0 9px;
 		}
 	}
 

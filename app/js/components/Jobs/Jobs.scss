@@ -46,6 +46,12 @@
 		}
 	}
 
+	@media(max-width: $iphone6-landscape) {
+		.positions {
+			margin-top: 102px;
+		}
+	}
+
 	@media (max-width: $iphone6) {
 		font-size: 0.9em;
 		margin-top: 50px;
@@ -63,7 +69,7 @@
 			}
 		}
 
-		.positions {
+		div.positions {
 			min-width: initial;
 			width: 50%;
 			padding-left: 14px;
@@ -86,7 +92,13 @@
 		}
 
 		.positions {
-			margin-top: 86px;
+			margin-top: 86px !important;
+		}
+	}
+
+	@media(max-width: $iphone5-landscape) {
+		.positions {
+			margin-top: 70px;
 		}
 	}
 }

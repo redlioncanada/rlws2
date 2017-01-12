@@ -7,6 +7,11 @@
 	margin-top: 50px;
 	width: $innerContentMaxWidth;
 
+	.methods-wrapper {
+		display: inline-block;
+		width: 100%;
+	}
+
 	.header {
 		$headerPadding: 25px;
 
@@ -30,10 +35,17 @@
 	.methods {
 		float: left;
 		min-width: 200px;
-		margin-top: 203px;
+		// margin-top: 203px;
 		width: 66.66666666666%;
 		z-index: 2;
 		position: relative;
+		display: table;
+		vertical-align: bottom;
+
+		> div {
+			display: table-cell;
+			vertical-align: bottom;
+		}
 
 		.method {
 			width: 50%;
@@ -48,8 +60,10 @@
 		}
 
 		.method.address {
-			margin-top: 14px;
+			margin-top: 9px;
 			height: initial;
+
+			padding: 0 19px 0 3px;
 
 			.edgy, .method-wrapper {
 				position: relative;
@@ -79,6 +93,10 @@
 		.method .title {
 			margin-bottom: 6px;
 		}
+	}
+
+	.methods-bottom {
+		float: right;
 	}
 
 	.map {
@@ -117,7 +135,12 @@
 
 		.methods {
 			width: 66.666666666666%;
-			margin-top: 148px;
+			// margin-top: 148px;
+
+			div.method.address {
+				padding-left: 14px;
+				padding-right: 8px;
+			}
 		}
 
 		.pin {
@@ -137,14 +160,13 @@
 		div.methods {
 			width: 50%;
 			min-width: initial;
-			margin-top: 42px;
+			// margin-top: 42px !important;
 		}
 
 		.methods .method {
 			width: 100%;
 			padding-left: 14px;
 			padding-right: 0;
-			margin: 0 0 6px 0;
 			height: 60px;
 
 			.title {
@@ -156,12 +178,20 @@
 			}
 
 			.method-wrapper p {
-				font-size: 0.5em;
+				font-size: 0.5em !important;
 			}
+		}
+
+		.method.email {
+			margin: 0 0 6px 0;
 		}
 
 		.methods .method.address, .methods .method.phone {
 			margin-top: 6px;
+		}
+
+		.methods .method.address {
+			padding-right: 0 !important;
 		}
 
 		.map {
@@ -170,15 +200,31 @@
 		}
 	}
 
+	@media(max-width: $iphone6-landscape) {
+		.methods {
+			// margin-top: 113px;
+		}
+	}
+
 	@media(max-width: $iphone5) {
 		font-size: 0.8em;
 
 		div.methods {
-			margin-top: 6px;
+			// margin-top: 6px;
 		}
 
 		div.methods .method {
 			margin-top: 8px;
+		}
+	}
+
+	@media(max-width: $iphone5-landscape) {
+		div.methods {
+			// margin-top: 80px;
+
+			.method.email p {
+				font-size: 0.4em;
+			}
 		}
 	}
 }

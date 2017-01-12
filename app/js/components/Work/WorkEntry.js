@@ -3,6 +3,7 @@ require('./WorkEntry.scss')
 import Sizzle from 'sizzle'
 import Utils from '../../services/Utils'
 var Velocity = require('velocity-animate')
+import Service from '../../services/Service'
 
 export class WorkEntry extends React.Component {
 	defaultProps() {
@@ -39,6 +40,9 @@ export class WorkEntry extends React.Component {
 
 	render() {
 		var innerContent
+
+		let showHoverContainer = Service.Device().isMobile() ? 'none' : 'block'
+
 		if (!!this.props.isHeader) {
 			innerContent = (
 				<div className="header">
@@ -51,7 +55,7 @@ export class WorkEntry extends React.Component {
 				<div className="content" onClick={()=>{this.handleClick()}}>
 					<div className="title">{this.props.title}</div>
 					<img className="icon" src={this.props.iconSrc} />
-					<div className="hover-container">
+					<div className="hover-container" style={{display: showHoverContainer}}>
 						<img className="hover" src={this.props.hoverSrc} />
 					</div>
 				</div>

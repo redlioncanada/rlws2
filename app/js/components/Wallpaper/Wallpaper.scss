@@ -9,7 +9,7 @@
 	// background-size: 985px 170px;
 	background-position-x: -90px;
 
-	@media only screen and (max-device-width : $phone) {
+	@media only screen and (max-width: $phone) {
 		background: url(../../../assets/images/Wallpaper-Mobile.jpg);
 		background-repeat: repeat-x;
 		background-size: 985px 170px;
