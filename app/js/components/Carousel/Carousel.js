@@ -24,7 +24,9 @@ export class Carousel extends React.Component {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			lazyLoad: true,
-			pauseOnHover: true
+			pauseOnHover: true,
+			draggable: false,
+			touchMove: false
 		}
 		return (
 			<div ref="this" className="carousel component">

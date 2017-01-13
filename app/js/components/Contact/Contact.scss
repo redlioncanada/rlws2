@@ -72,6 +72,7 @@
 			.edgy {
 				z-index: 1;
 				margin-top: -1px;
+				margin-left: -0.5px;
 			}
 
 			.method-wrapper {
@@ -117,7 +118,7 @@
 		z-index: 2;
 		width: 5%;
 		left: 50%;
-		bottom: 16%;
+		bottom: 23%;
 		position: absolute;
 		padding: 0;
 		margin: 0 0 0 -2.5%;
@@ -209,12 +210,15 @@
 	@media(max-width: $iphone5) {
 		font-size: 0.8em;
 
-		div.methods {
-			// margin-top: 6px;
-		}
-
 		div.methods .method {
 			margin-top: 8px;
+			padding-left: 0px !important;
+			width: calc(100% - 12px);
+			float: right;
+		}
+
+		.map .pin {
+			bottom: 21%;
 		}
 	}
 

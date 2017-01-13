@@ -343,6 +343,12 @@
 		}
 	}
 
+	@media(max-width: $iphone5) {
+		.chalkboard .background {
+			height: 219px;
+		}
+	}
+
 	@media(max-width: $iphone6) {
 		margin-top: 15px;
 
