@@ -41,7 +41,7 @@ class Element {
 				}
 				obj.current = false
 			}
-			if (!!logText) console.log(`ElementService: ${obj.ref.nodeName.toLowerCase()}.${obj.ref.className.replace(/\s/, '.')} ${logText}`)
+			// if (!!logText) console.log(`ElementService: ${obj.ref.nodeName.toLowerCase()}.${obj.ref.className.replace(/\s/, '.')} ${logText}`)
 			this.subscribedElements[item] = obj
 		}
 	}

@@ -5,8 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && gulp once",
-    "prod": "webpack -p --progress --config ./webpack.prod.config.js && gulp once",
+    "build": "webpack",
+    "prod": "webpack -p --progress --config ./webpack.prod.config.js",
     "watch": "webpack -w",
     "start": "webpack -w"
   },
@@ -34,8 +34,6 @@
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
-    "gulp": "^3.9.1",
-    "gulp-flatten": "^0.3.1",
     "html-webpack-plugin": "^2.22.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.8.0",

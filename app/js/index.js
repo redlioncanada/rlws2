@@ -125,8 +125,7 @@ class RedLion extends React.Component {
 			}
 		})
 
-		// document.body.style.overflow = !this.state.Menu.open ? "hidden" : "initial"
-
+		//prevents scrolling when mobile menu is open, then puts it back when it's closed
 		if (!this.state.Menu.open) {
 			var scrollTop = (window.pageYOffset || window.scrollTop) - (document.clientTop || 0)
 			document.body.style.position = "fixed"

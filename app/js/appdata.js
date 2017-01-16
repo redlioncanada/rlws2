@@ -229,7 +229,7 @@ export class appdata {
 				phone: {
 					title: 'Phone',
 					text: '416 603 6500 Ext. 5316',
-					link: 'tel://416-603-6500',
+					link: 'tel:416-603-6500',
 					backgroundColour: '#85cbcd'
 				},
 				address: {

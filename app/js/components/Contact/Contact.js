@@ -53,7 +53,7 @@ export class Contact extends React.Component {
 						<div>
 							<div className="method email" ref="methodEmail">
 								<div className="method-wrapper" style={styles[0]}>
-									<a href={this.props.email.link} rel="noopener noreferrer" target="_blank">
+									<a href={this.props.email.link} rel="noopener noreferrer">
 										<div>
 											<div className="title">{this.props.email.title}</div>
 											<p>{this.props.email.text}</p>
@@ -63,7 +63,7 @@ export class Contact extends React.Component {
 							</div>
 							<div className="method phone" ref="methodPhone">
 								<div className="method-wrapper" style={styles[1]}>
-									<a href={this.props.phone.link} rel="noopener noreferrer" target="_blank">
+									<a href={this.props.phone.link} rel="noopener noreferrer">
 										<div>
 											<div className="title">{this.props.phone.title}</div>
 											<p>{this.props.phone.text}</p>

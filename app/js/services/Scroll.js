@@ -38,7 +38,7 @@ class Scroll {
 
 	__scroll() {
 		let scrollY = window.scrollY || window.pageYOffset
-		console.log(scrollY)
+
 		if (scrollY !== this.scrollY) {
 			this.scrollY = scrollY
 			this.__update()
@@ -52,12 +52,10 @@ class Scroll {
 			this.animations[id] = state
 		} else {
 			for (var key in this.animations) {
-				console.log('calc '+key)
 				var state = calc(this.animations[key])
 				this.animations[key] = state
 			}
 		}
-		console.log(this.animations)
 
 		function calc(state) {
 			var {parent, target, start, end, property, throttled, reverse} = state,
@@ -69,7 +67,7 @@ class Scroll {
 				animationEndY = (elY1 + (elY2 - elY1)/2) - self.window.Y2 / 2,
 				percentAnimated = (self.scrollY - animationStartY) / (animationEndY - animationStartY),
 				localThrottled = percentAnimated < 0 || percentAnimated > 1
-console.log(self.scrollY, windowY2, animationStartY, animationEndY, percentAnimated)
+
 			if (localThrottled && throttled) return {parent, target, start, end, property, throttled, reverse}
 			if (percentAnimated < 0) percentAnimated = 0
 			if (percentAnimated > 1) percentAnimated = 1
