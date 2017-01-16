@@ -85,7 +85,7 @@ export class Contact extends React.Component {
 								</div>
 							</a>
 						</div>
-						<img className="edgy" src={this.props.address.slantVectorSrc} />
+						<div className="edgy"><div className="edgy-inner"></div></div>
 					</div>
 				</div>
 

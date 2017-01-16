@@ -69,10 +69,25 @@
 				position: relative;
 			}
 
-			.edgy {
-				z-index: 1;
-				margin-top: -1px;
-				margin-left: -0.5px;
+			.edgy:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -3px;
+				overflow: visible;
+				width: 100%;
+				height: 88px;
+				background-color: #48bb85;
+				z-index: -1;
+				transform: skewY(-16deg);
+				-webkit-backface-visibility: hidden;
+				backface-visibility: initial;
+			}
+
+			.edgy-inner {
+				padding: 20px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 
 			.method-wrapper {
@@ -193,6 +208,11 @@
 
 		.methods .method.address {
 			padding-right: 0 !important;
+
+			.edgy:before {
+				bottom: 17px;
+				height: 75px;
+			}
 		}
 
 		.map {
