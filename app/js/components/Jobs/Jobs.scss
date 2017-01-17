@@ -15,7 +15,7 @@
 		$headerPadding: 25px;
 
 		position: relative;
-		width: calc(33.333333333333% - 11px);
+		width: calc(33.333333333333% - 10px);
 		height: 310px;
 		border: 1px solid black;
 		padding: $headerPadding;
@@ -52,6 +52,12 @@
 		}
 	}
 
+	@media(max-width: $iphone6Small) {
+		div.positions.specific {
+			margin-top: 114px;
+		}
+	}
+
 	@media (max-width: $iphone6) {
 		font-size: 0.9em;
 		margin-top: 50px;
@@ -73,7 +79,7 @@
 			min-width: initial;
 			width: 50%;
 			padding-left: 14px;
-			margin-top: 114px;
+			margin-top: 134px;
 
 			.position {
 				height: 60px;

@@ -38,7 +38,7 @@ export class Jobs extends React.Component {
 					<div className="divider"></div>
 				</div>
 
-				<div className="positions">
+				<div className="positions specific">
 					{positions}
 				</div>
 			</div>
