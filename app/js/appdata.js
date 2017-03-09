@@ -39,7 +39,7 @@ export class appdata {
 				jobs: [],		//fetched via jobs.json at compile time
 				email: {
 					subject: 'I\'d love to work at Red Lion',
-					address: 'mailto:jobs@redlioncanada.com'
+					address: 'mailto:info@redlioncanada.com'
 				}
 			},
 			Culture: {

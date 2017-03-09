@@ -87,8 +87,10 @@
 	}
 
 	.workentry .content .icon {
-		&[src*="Car"], &[src*="Camera"] {
-			width: 25%;
+		max-width: 25%;
+
+		&[src*='Eye'] {
+			width: 20%;
 		}
 	}
 

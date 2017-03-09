@@ -4,117 +4,184 @@
 		"iconSrc": "./images/Icon-Tee.svg",
 		"hoverSrc": "./images/Work-416Tee-Hover.jpg",
 		"backgroundColor": "#85cbcd",
-		"description": "Exclusively available at The Drake General Store (woes sold separately).",
-		"cta": "Get yours here",
-		"link": "http://www.drakegeneralstore.ca/wearing/jays-gear",
-		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-416Tee-Content.jpg"
+		"content": [
+			{
+				"contentType": "image",
+				"content": "./images/Work-416Tee-Content.jpg",
+				"description": "Exclusively available at The Drake General Store (woes sold separately).",
+				"cta": "Get yours here",
+				"link": "http://www.drakegeneralstore.ca/wearing/jays-gear"
+			}
+		]
 	},
 	{
 		"title": "Instagram\ntest drive",
 		"iconSrc": "./images/Icon-Car.svg",
 		"hoverSrc": "./images/Work-NewWheels-Hover.jpg",
 		"backgroundColor": "#fe97ac",
-		"description": "We dared to give people control of a 2017 Cadillac XT5—using only their device.",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/aZHap-mnrxQ"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/vFDRiXbKgHM",
+				"description": "We dared to give people control of a 2017 Cadillac XT5—using only their device."
+			}
+		]
 	},
 	{
-		"title": "Giant\nflat lay",
+		"title": "#realgirlthings",
 		"iconSrc": "./images/Icon-Camera.svg",
 		"hoverSrc": "./images/Work-FlayLay-Hover.jpg",
 		"backgroundColor": "#2aa032",
-		"description": "We asked girls from junior kindergarten to Grade 12 to bring in one item that gives them real confidence. This was the result.",
-		"cta": "See more here",
-		"link": "https://www.havergal.on.ca/experience/realgirlthings/",
-		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FlatLay-Content.jpg"
+		"content": [
+			{
+				"contentType": "image",
+				"content": "./images/Work-FlatLay-Content.jpg",
+				"description": "We asked girls from kindergarten to Grade 12 to bring in one item that gives them real confidence. This was the result.",
+				"cta": "See more here",
+				"link": "https://www.havergal.on.ca/experience/realgirlthings/"
+			},
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/mNVXRlFPcKs",
+				"description": "Over 900 tracings come together to tell one story."
+			},
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/z-uuCc_uNRg",
+				"description": "To find out where real confidence comes from, we asked real girls. Watch the campaign video."
+			}
+		]
 	},
 	{
-		"title": "Real\nconfidence",
-		"iconSrc": "./images/Icon-Pencil.svg",
-		"hoverSrc": "./images/Work-RealConfidence-Hover.jpg",
+		"title": "Daring\nperformances",
+		"iconSrc": "./images/Icon-VideoCamera.svg",
+		"hoverSrc": "./images/Work-DaringPerformances-Hover.jpg",
 		"backgroundColor": "#ffda0f",
-		"description": "Where does real confidence come from? To find out, we asked girls.",
-		"cta": "See more here",
-		"link": "https://www.havergal.on.ca/experience/realgirlthings/",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/mNVXRlFPcKs"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/0eDyxp6GIsY",
+				"description": "Cadillac pays tribute to daring film history during the 2017 Oscars."
+			},
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/MOEq2eTeNQU",
+				"description": ""
+			},
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/S_d9yy2dhk8",
+				"description": ""
+			},
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/1LqK4EdshX4",
+				"description": ""
+			}
+		]
 	},
 	{
 		"title": "Babsocks",
 		"iconSrc": "./images/Icon-Sock.svg",
 		"hoverSrc": "./images/Work-Babsocks-Hover.jpg",
 		"backgroundColor": "#04ce85",
-		"description": "Whether you’re supporting Team Canada or men’s health, there’s a pair of Babsocks for you.",
-		"cta": "Get your pair here",
-		"link": "https://babsocks.ca/",
-		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-Babsocks-Content.jpg"
+		"content": [
+			{
+				"contentType": "image",
+				"content": "./images/Work-Babsocks-Content.jpg",
+				"description": "110% cotton for diehard hockey fans. Not suitable for dusters.",
+				"cta": "Get your pair here",
+				"link": "https://babsocks.ca/"
+			}
+		]
 	},
 	{
 		"title": "Instagram\nescape room",
 		"iconSrc": "./images/Icon-Door.svg",
 		"hoverSrc": "./images/Work-EscapeTheRoom-Hover.jpg",
 		"backgroundColor": "#2ec1c9",
-		"description": "Search for clues. Find hidden film reels. Unscramble the secret code. Can you escape the room?",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/y8ej9na683E"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/y8ej9na683E",
+				"description": "Search for clues. Find hidden film reels. Unscramble the secret code. Can you escape the room?"
+			}
+		]
 	},
 	{
 		"title": "Ministagram",
 		"iconSrc": "./images/Icon-Mixer.svg",
 		"hoverSrc": "./images/Work-Ministagram-Hover.jpg",
 		"backgroundColor": "#e4d8cc",
-		"description": "How do you make the launch of small product feel really big? Make the Instagram feed mini, too.",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/BmZi5iQv9Ws"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/BmZi5iQv9Ws",
+				"description": "How do you make the launch of small product feel really big? Make the Instagram feed mini, too."
+			}
+		]
 	},
 	{
 		"title": "Films that\nstick",
 		"iconSrc": "./images/Icon-Filmstrip.svg",
 		"hoverSrc": "./images/Work-FilmsThatStick-Hover.jpg",
 		"backgroundColor": "#ff6120",
-		"description": "It’s one thing to have a song stuck in your head, it’s another to have a film stuck in your life.",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/MTYZW_XKyuA"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/MTYZW_XKyuA",
+				"description": "It’s one thing to have a song stuck in your head, it’s another to have a film stuck in your life."
+			}
+		]
 	},
 	{
-		"title": "Famous\nfries",
-		"iconSrc": "./images/Icon-Fries.svg",
-		"hoverSrc": "./images/Work-FamousFries-Hover.jpg",
+		"title": "Looking\nfor something",
+		"iconSrc": "./images/Icon-Eye.svg",
+		"hoverSrc": "./images/Work-LookingForSomething-Hover.jpg",
 		"backgroundColor": "#a78aa8",
-		"description": "When you’re hungry on the road, sometimes all you need is a sign.",
-		"contentType": "image",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "./images/Work-FamousFries-Content.jpg"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/ujt54wvc23A",
+				"description": "We’re all looking for something. Only those who dare, find it."
+			}
+		]
 	},
 	{
 		"title": "Athletes\nget dirty",
 		"iconSrc": "./images/Icon-Laundry.svg",
 		"hoverSrc": "./images/Work-AthletesGetDirty-Hover.jpg",
 		"backgroundColor": "#fe777b",
-		"description": "Pan Am athletes give it their all when they’re training. When they’re done, they take it all off.",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/j0oMbLPB_X4"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/j0oMbLPB_X4",
+				"description": "Pan Am athletes give it their all when they’re training. When they’re done, they take it all off."
+			}
+		]
 	},
 	{
 		"title": "Choose your\nown silent film\nfestival",
 		"iconSrc": "./images/Icon-Hand.svg",
 		"hoverSrc": "./images/Work-ChooseYourOwnTSFF-Hover.jpg",
 		"backgroundColor": "#ffb183",
-		"description": "Eighty-two silent film clips. Nearly unlimited possible outcomes. Choose yours.",
-		"contentType": "video",
 		"closeSrc": "./images/Icon-X.svg",
-		"content": "https://www.youtube.com/embed/s0lOBx3BG2I"
+		"content": [
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/s0lOBx3BG2I",
+				"description": "Eighty-two silent film clips. Nearly unlimited possible outcomes. Choose yours."
+			}
+		]
 	}
 ]

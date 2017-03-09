@@ -10,9 +10,6 @@ export class WorkEntry extends React.Component {
 		return {
 			backgroundColor: '#FFF',
 			title: 'Red Lion ravages competition',
-			description: 'as a Red Lion should',
-			link: false,
-			cta: false,
 			isHeader: false,
 			iconSrc: false,
 			hoverSrc: false,

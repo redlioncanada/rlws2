@@ -13,11 +13,7 @@ export class WorkExpanded extends React.Component {
 	defaultProps() {
 		return {
 			backgroundColor: '#000',
-			description: '',
-			link: '',
-			cta: '',
 			content: '',
-			type: 'image'
 		}
 	}
 
@@ -31,25 +27,36 @@ export class WorkExpanded extends React.Component {
 			background: this.props.backgroundColor
 		}
 
-		var main
-		switch(this.props.contentType) {
-			case 'image':
-				main = (
-					<Image className="image main" src={this.props.content} hiddenOnLoad={true} defer={true} />
-				)
-				break
-			case 'video':
-				main = (
-					<Video className="video main" src={this.props.content + '?rel=0&autoplay=1'} hide={this.open?false:true} />
-				)
-				break
-		}
+		var main = undefined
 
-		var ctaElement = !!this.props.link ? (
-			<p>{this.props.description} {this.props.cta.replace(' here', '')} <a href={this.props.link} target="_blank" ref="noreferrer nofollow">here</a>.</p>
-		) : (
-			<p>{this.props.description} {this.props.cta}</p>
-		)
+		if (!!this.props.content && this.props.content.length) {
+			main = this.props.content.map((value, key) => {
+				let cta = !!value.link ? (
+					<p>{value.description} {value.cta.replace(' here', '')} <a href={value.link} target="_blank" ref="noreferrer nofollow">here</a>.</p>
+				) : (
+					<p>{value.description} {value.cta}</p>
+				)
+
+				let content = undefined
+
+				switch(value.contentType) {
+					case 'image':
+						content = (<Image className="image main" src={value.content} hiddenOnLoad={true} defer={true} />)
+						break
+					case 'video':
+						let shouldAutoplay = key == 0 ? 1 : 0
+						content = (<Video className="video main" src={value.content + `?rel=0&autoplay=${shouldAutoplay}`} hide={this.open?false:true} />)
+						break
+				}
+
+				return (
+					<div key={key}>
+						{cta}
+						{content}
+					</div>
+				)
+			})
+		}
 
 		return (
 			<div ref="this" className="workexpanded subcomponent">
@@ -61,7 +68,6 @@ export class WorkExpanded extends React.Component {
 							</div>
 						</div>
 						<div className="content">
-							{ctaElement}
 							{main}
 						</div>
 					</div>
