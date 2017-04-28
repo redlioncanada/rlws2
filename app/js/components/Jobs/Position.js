@@ -35,7 +35,7 @@ export class Position extends React.Component {
 							<div></div>
 						</a>
 						<div className="content">
-							<div className="title">{this.props.title.replace(/\s/g, '\n')}</div>
+							<div className="title">{this.props.title}</div>
 							<div className="description-wrapper" style={{display: this.open ? 'block' : 'none'}}>
 								<p className="description">{this.props.description}</p>
 								<p className="submit">{this.props.submit}</p>

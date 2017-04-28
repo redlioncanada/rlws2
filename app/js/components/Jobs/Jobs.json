@@ -1,8 +1,14 @@
 [
 	{
-		"title": "Art director",
+		"title": "Art\ndirector",
 		"backgroundColor": "#85cbcd",
 		"description": "We’re looking for an intermediate art director with 4-5 years of agency experience.",
 		"submit": "Submit Portfolio"
+	},
+	{
+		"title": "Social Media &\nAnalytics Coordinator",
+		"backgroundColor": "#85cd87",
+		"description": "We're looking for a Social Media and Analytics Coordinator with 1-2 year(s) of experience.",
+		"submit": "Submit CV"
 	}
 ]

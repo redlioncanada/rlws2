@@ -103,9 +103,9 @@ export class appdata {
 				title: 'Things we like',
 				slides: [
 					{
-						copy: 'A real teen’s take on Snapchat’s hot new Spectacles',
+						copy: 'Bots Are Learning to Chat in Their Own Language',
 						image: './images/Carousel-1.jpg',
-						link: 'https://techcrunch.com/2016/11/14/a-real-teens-take-on-snapchats-hot-new-spectacles/'
+						link: 'https://www.wired.com/2017/03/openai-builds-bots-learn-speak-language/'
 					},
 					{
 						copy: 'YouTube VR: A whole new way to watch… and create',
@@ -123,9 +123,9 @@ export class appdata {
 						link: 'http://www.nanalyze.com/2016/11/drone-delivery-startups/'
 					},
 					{
-						copy: 'Barack Obama on the Future of Humanity',
+						copy: 'The Future of Creativity in an Automated World',
 						image: './images/Carousel-5.jpg',
-						link: 'https://www.wired.com/2016/10/president-obama-mit-joi-ito-interview/'
+						link: 'https://www.marketingweek.com//2017/03/06/future-creativity-automated-world/'
 					}
 				]
 			},
