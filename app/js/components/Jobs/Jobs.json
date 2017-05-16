@@ -1,5 +1,17 @@
 [
 	{
+		"title": "Account Supervisor",
+		"backgroundColor": "#f986c4",
+		"description": "We’re looking for an account supervisor with 3-5 years of agency experience.",
+		"submit": "Submit CV"
+	},
+	{
+		"title": "Agency Producer",
+		"backgroundColor": "#fac63a",
+		"description": "We’re looking for an integrated agency producer with 3-5 years of experience.",
+		"submit": "Submit Portfolio"
+	},
+	{
 		"title": "Art\ndirector",
 		"backgroundColor": "#85cbcd",
 		"description": "We’re looking for an intermediate art director with 4-5 years of agency experience.",
@@ -7,7 +19,7 @@
 	},
 	{
 		"title": "Social Media &\nAnalytics Coordinator",
-		"backgroundColor": "#85cd87",
+		"backgroundColor": "#48bb85",
 		"description": "We're looking for a Social Media and Analytics Coordinator with 1-2 year(s) of experience.",
 		"submit": "Submit CV"
 	}
