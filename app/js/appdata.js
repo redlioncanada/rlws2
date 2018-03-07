@@ -103,29 +103,29 @@ export class appdata {
 				title: 'Things we like',
 				slides: [
 					{
-						copy: 'Bots Are Learning to Chat in Their Own Language',
+						copy: 'Some cultural cuisines make it big',
 						image: './images/Carousel-1.jpg',
-						link: 'https://www.wired.com/2017/03/openai-builds-bots-learn-speak-language/'
+						link: 'http://www.baystbull.com/home/2017/11/1/why-some-cultural-cuisines-make-it-big-while-others-flounder'
 					},
 					{
-						copy: 'YouTube VR: A whole new way to watch… and create',
+						copy: 'Prepare for a voice search revolution',
 						image: './images/Carousel-2.jpg',
-						link: 'https://youtube.googleblog.com/2016/11/youtube-vr-whole-new-way-to-watch-and.html'
+						link: 'https://www.forbes.com/sites/jaysondemers/2018/01/09/why-you-need-to-prepare-for-a-voice-search-revolution/#d26f09834af2'
 					},
 					{
-						copy: 'The next manufacturing revolution is here',
+						copy: 'Trivia game takes over your life',
 						image: './images/Carousel-3.jpg',
-						link: 'https://www.ted.com/talks/olivier_scalabre_the_next_manufacturing_revolution_is_here?language=en'
+						link: 'https://www.popsugar.com/news/What-HQ-Trivia-44478085'
 					},
 					{
-						copy: '3 Drone Delivery Startups Using Flying Drones',
+						copy: 'Startups that seek to disrupt',
 						image: './images/Carousel-4.jpg',
-						link: 'http://www.nanalyze.com/2016/11/drone-delivery-startups/'
+						link: 'https://hbr.org/2017/11/startups-that-seek-to-disrupt-get-more-funding-than-those-that-seek-to-build'
 					},
 					{
-						copy: 'The Future of Creativity in an Automated World',
+						copy: 'An interactive coffee experience in Shanghai',
 						image: './images/Carousel-5.jpg',
-						link: 'https://www.marketingweek.com//2017/03/06/future-creativity-automated-world/'
+						link: 'http://www.thedrum.com/news/2017/12/05/starbucks-launches-interactive-coffee-experience-shanghai-it-boosts-presence-china'
 					}
 				]
 			},

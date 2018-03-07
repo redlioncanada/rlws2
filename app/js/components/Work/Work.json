@@ -1,22 +1,22 @@
 [
 	{
-		"title": "416 tee",
-		"iconSrc": "./images/Icon-Tee.svg",
-		"hoverSrc": "./images/Work-416Tee-Hover.jpg",
+		"title": "Daring Views",
+		"iconSrc": "./images/Icon-Wand.svg",
+		"hoverSrc": "./images/Work-DaringViews-Hover.jpg",
 		"backgroundColor": "#85cbcd",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": [
 			{
 				"contentType": "image",
-				"content": "./images/Work-416Tee-Content.jpg",
-				"description": "Exclusively available at The Drake General Store (woes sold separately).",
-				"cta": "Get yours here",
-				"link": "http://www.drakegeneralstore.ca/wearing/jays-gear"
+				"content": "./images/Work-DaringViews-Content.jpg",
+				"description": "The daring see the world a little differently.",
+				"cta": "#DaringViews",
+				"link": "https://www.instagram.com/explore/tags/daringviews/"
 			}
 		]
 	},
 	{
-		"title": "Instagram\ntest drive",
+		"title": "Instagram\nTest Drive",
 		"iconSrc": "./images/Icon-Car.svg",
 		"hoverSrc": "./images/Work-NewWheels-Hover.jpg",
 		"backgroundColor": "#fe97ac",
@@ -30,7 +30,7 @@
 		]
 	},
 	{
-		"title": "#realgirlthings",
+		"title": "#RealGirlThings",
 		"iconSrc": "./images/Icon-Camera.svg",
 		"hoverSrc": "./images/Work-FlayLay-Hover.jpg",
 		"backgroundColor": "#2aa032",
@@ -56,31 +56,18 @@
 		]
 	},
 	{
-		"title": "Daring\nperformances",
-		"iconSrc": "./images/Icon-VideoCamera.svg",
-		"hoverSrc": "./images/Work-DaringPerformances-Hover.jpg",
+		"title": "CT6 Test Drive",
+		"iconSrc": "./images/Icon-Egg.svg",
+		"hoverSrc": "./images/Work-CT6egg-Hover.jpg",
 		"backgroundColor": "#ffda0f",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": [
 			{
 				"contentType": "video",
-				"content": "https://www.youtube.com/embed/0eDyxp6GIsY",
-				"description": "Cadillac pays tribute to daring film history during the 2017 Oscars."
-			},
-			{
-				"contentType": "video",
-				"content": "https://www.youtube.com/embed/MOEq2eTeNQU",
-				"description": ""
-			},
-			{
-				"contentType": "video",
-				"content": "https://www.youtube.com/embed/S_d9yy2dhk8",
-				"description": ""
-			},
-			{
-				"contentType": "video",
-				"content": "https://www.youtube.com/embed/1LqK4EdshX4",
-				"description": ""
+				"content": "https://www.youtube.com/embed/TRrBQc0e7R8",
+				"description": "A one of a kind test drive experience, starting with the invitation.",
+				"cta": "Read more",
+				"link": "http://www.adweek.com/brand-marketing/cadillacs-new-direct-mail-piece-is-colorful-and-tasty-with-a-little-surprise-inside/"
 			}
 		]
 	},
@@ -101,7 +88,7 @@
 		]
 	},
 	{
-		"title": "Instagram\nescape room",
+		"title": "Instagram\nEscape Room",
 		"iconSrc": "./images/Icon-Door.svg",
 		"hoverSrc": "./images/Work-EscapeTheRoom-Hover.jpg",
 		"backgroundColor": "#2ec1c9",
@@ -115,7 +102,7 @@
 		]
 	},
 	{
-		"title": "Mini\nlaunch",
+		"title": "Mini\nLaunch",
 		"iconSrc": "./images/Icon-Mixer.svg",
 		"hoverSrc": "./images/Work-Ministagram-Hover.jpg",
 		"backgroundColor": "#e4d8cc",
@@ -129,21 +116,28 @@
 		]
 	},
 	{
-		"title": "Films that\nstick",
-		"iconSrc": "./images/Icon-Filmstrip.svg",
-		"hoverSrc": "./images/Work-FilmsThatStick-Hover.jpg",
+		"title": "The Brain Project",
+		"iconSrc": "./images/Icon-Brain.svg",
+		"hoverSrc": "./images/Work-BrainProject-Hover.jpg",
 		"backgroundColor": "#ff6120",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": [
 			{
 				"contentType": "video",
-				"content": "https://www.youtube.com/embed/MTYZW_XKyuA",
-				"description": "It’s one thing to have a song stuck in your head, it’s another to have a film stuck in your life."
+				"content": "https://www.youtube.com/embed/0XsOhV9KwPc",
+				"description": "Great minds think of each other. #NoBlankBrains.",
+				"cta": "Read more",
+				"link": "http://www.cbc.ca/life/wellness/this-is-your-brain-on-art-1.4216824"
+			},
+			{
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/1ISm2ir2wHc",
+				"description": "To give everyone the chance to become a Brain Project artist, we turned Instagram into a colouring book."
 			}
 		]
 	},
 	{
-		"title": "Looking\nfor something",
+		"title": "Looking\nFor Something",
 		"iconSrc": "./images/Icon-Eye.svg",
 		"hoverSrc": "./images/Work-LookingForSomething-Hover.jpg",
 		"backgroundColor": "#a78aa8",
@@ -157,7 +151,7 @@
 		]
 	},
 	{
-		"title": "Athletes\nget dirty",
+		"title": "Athletes\nGet Dirty",
 		"iconSrc": "./images/Icon-Laundry.svg",
 		"hoverSrc": "./images/Work-AthletesGetDirty-Hover.jpg",
 		"backgroundColor": "#fe777b",
@@ -171,16 +165,18 @@
 		]
 	},
 	{
-		"title": "Choose your\nown silent film\nfestival",
-		"iconSrc": "./images/Icon-Hand.svg",
-		"hoverSrc": "./images/Work-ChooseYourOwnTSFF-Hover.jpg",
+		"title": "TSFF Puzzle",
+		"iconSrc": "./images/Icon-PuzzlePiece.svg",
+		"hoverSrc": "./images/Work-TSFFpuzzle-Hover.jpg",
 		"backgroundColor": "#ffb183",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": [
 			{
 				"contentType": "video",
-				"content": "https://www.youtube.com/embed/s0lOBx3BG2I",
-				"description": "Eighty-two silent film clips. Nearly unlimited possible outcomes. Choose yours."
+				"content": "https://www.youtube.com/embed/VUA3Nk_PiN8",
+				"description": "51,090,942,171,709,440,000 possibilities. One solution. Can you solve the puzzle?",
+				"cta": "Read more",
+				"link": "http://www.thedrum.com/creative-works/project/red-lion-canada-toronto-silent-film-festival-instagram-puzzle"
 			}
 		]
 	}

@@ -152,7 +152,7 @@ export class Culture extends React.Component {
 								<Image src="./images/RL_Coin-2-outer.jpg" />
 							</div>
 						</div>
-						<div className="bird item">
+						<div className="bird item hide">
 							<img src="./images/Bird.svg" />
 						</div>
 					</div>
