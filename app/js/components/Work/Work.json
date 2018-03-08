@@ -39,8 +39,8 @@
 			{
 				"contentType": "image",
 				"content": "./images/Work-FlatLay-Content.jpg",
-				"description": "We asked girls from kindergarten to Grade 12 to bring in one item that gives them real confidence. This was the result.",
-				"cta": "See more here",
+				"description": "We asked girls from kindergarten to Grade 12 to bring in one item that gives them real confidence. This was the result. See more ",
+				"cta": "here",
 				"link": "https://www.havergal.on.ca/experience/realgirlthings/"
 			},
 			{
@@ -65,8 +65,8 @@
 			{
 				"contentType": "video",
 				"content": "https://www.youtube.com/embed/TRrBQc0e7R8",
-				"description": "A one of a kind test drive experience, starting with the invitation.",
-				"cta": "Read more",
+				"description": "A one of a kind test drive experience, starting with the invitation. Read more ",
+				"cta": "here",
 				"link": "http://www.adweek.com/brand-marketing/cadillacs-new-direct-mail-piece-is-colorful-and-tasty-with-a-little-surprise-inside/"
 			}
 		]
@@ -81,8 +81,8 @@
 			{
 				"contentType": "image",
 				"content": "./images/Work-Babsocks-Content.jpg",
-				"description": "110% cotton for diehard hockey fans. Not suitable for dusters.",
-				"cta": "Get your pair here",
+				"description": "110% cotton for diehard hockey fans. Not suitable for dusters. Get your pair ",
+				"cta": "here",
 				"link": "https://babsocks.ca/"
 			}
 		]
@@ -125,8 +125,8 @@
 			{
 				"contentType": "video",
 				"content": "https://www.youtube.com/embed/0XsOhV9KwPc",
-				"description": "Great minds think of each other. #NoBlankBrains.",
-				"cta": "Read more",
+				"description": "Great minds think of each other. #NoBlankBrains. Read more ",
+				"cta": "here",
 				"link": "http://www.cbc.ca/life/wellness/this-is-your-brain-on-art-1.4216824"
 			},
 			{
@@ -174,8 +174,8 @@
 			{
 				"contentType": "video",
 				"content": "https://www.youtube.com/embed/VUA3Nk_PiN8",
-				"description": "51,090,942,171,709,440,000 possibilities. One solution. Can you solve the puzzle?",
-				"cta": "Read more",
+				"description": "51,090,942,171,709,440,000 possibilities. One solution. Can you solve the puzzle? Read more",
+				"cta": "here",
 				"link": "http://www.thedrum.com/creative-works/project/red-lion-canada-toronto-silent-film-festival-instagram-puzzle"
 			}
 		]

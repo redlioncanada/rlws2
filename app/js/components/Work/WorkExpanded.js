@@ -32,7 +32,7 @@ export class WorkExpanded extends React.Component {
 		if (!!this.props.content && this.props.content.length) {
 			main = this.props.content.map((value, key) => {
 				let cta = !!value.link ? (
-					<p>{value.description} {value.cta.replace(' here', '')} <a href={value.link} target="_blank" ref="noreferrer nofollow">here</a>.</p>
+					<p>{value.description} <a href={value.link} target="_blank" ref="noreferrer nofollow">{value.cta}.</a></p>
 				) : (
 					<p>{value.description} {value.cta}</p>
 				)
