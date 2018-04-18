@@ -107,6 +107,9 @@
 	.workentry:nth-child(9) .hover-container .hover {width: initial; height: 100%; right: 0; left: initial;}
 
 	.workentry:nth-child(15) .hover-container .hover {margin-top:-5px !important;}
+	.workentry:nth-child(13) {
+		display: none;
+	}
 
 	// .workentry:nth-child(15) > div > div:after {@include extrusion('bottom', $workBottomExtrusionSize);}
 	// .workentry:nth-child(15) .hover-container {margin-bottom: -$workBottomExtrusionSize; overflow: initial;}
@@ -217,6 +220,12 @@
 	}
 
 	@media(max-width: $iphone6) {
+		.workentry:nth-child(13) {
+			display: block;
+		} 
+		.workentry:nth-child(14) {
+			display: none;
+		} 
 		.workexpanded {
 			padding: 0 8px;
 		}

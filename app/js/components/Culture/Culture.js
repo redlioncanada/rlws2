@@ -21,17 +21,8 @@ export class Culture extends React.Component {
 					<div className="cacti item">
 						<Image src="./images/Cacti.jpg" />
 					</div>
-					<div className="calories item">
-						<a href="http://instagram.com/social_calories" rel="noreferer nofollow" target="_blank">
-							<div>
-								<Image className="calories-background" src="./images/SC_GIF.gif"/>
-								<p className="caption">{this.props.captions.Calories}</p>
-							</div>
-						</a>
-					</div>
-					<div className="squarefaces item">
-						<a href="http://instagram.com/squarefaces" rel="noreferer nofollow" target="_blank"><Image src="./images/SquareFace.jpg" /></a>
-						<p className="caption">{this.props.captions.Squareface}</p>
+					<div className="carousel-outer item">
+						<Carousel {...this.props.carousel} />
 					</div>
 					<div className="coin-icon-group">
 						<div className="coin1 item">
@@ -49,9 +40,6 @@ export class Culture extends React.Component {
 					<div className="art2 item">
 						<Image src="./images/OfficeArt-2.jpg" />
 						<p className="caption">{this.props.captions.Art2}</p>
-					</div>
-					<div className="carousel-outer item">
-						<Carousel {...this.props.carousel} />
 					</div>
 					<div className="coin-icon-group">
 						<div className="ec-logo item">
@@ -94,18 +82,6 @@ export class Culture extends React.Component {
 					</div>
 					<div className="carousel-outer item">
 						<Carousel {...this.props.carousel} />
-					</div>
-					<div className="squarefaces item">
-						<div><a href="http://instagram.com/squarefaces" rel="noreferer nofollow" target="_blank"><Image src="./images/SquareFace.jpg" /></a></div>
-						<p className="caption">{this.props.captions.Squareface}</p>
-					</div>
-					<div className="calories item">
-						<a href="http://instagram.com/social_calories" rel="noreferer nofollow" target="_blank">
-							<div>
-								<Image className="calories-background" src="./images/SC_GIF.gif"/>
-								<p className="caption">{this.props.captions.Calories}</p>
-							</div>
-						</a>
 					</div>
 				</div>
 			</div>

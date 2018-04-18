@@ -72,32 +72,30 @@
 		]
 	},
 	{
-		"title": "Babsocks",
-		"iconSrc": "./images/Icon-Sock.svg",
-		"hoverSrc": "./images/Work-Babsocks-Hover.jpg",
+		"title": "Athletes\nGet Dirty",
+		"iconSrc": "./images/Icon-Laundry.svg",
+		"hoverSrc": "./images/Work-AthletesGetDirty-large-Hover.jpg",
 		"backgroundColor": "#04ce85",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": [
 			{
-				"contentType": "image",
-				"content": "./images/Work-Babsocks-Content.jpg",
-				"description": "110% cotton for diehard hockey fans. Not suitable for dusters. Get your pair ",
-				"cta": "here",
-				"link": "https://babsocks.ca/"
+				"contentType": "video",
+				"content": "https://www.youtube.com/embed/j0oMbLPB_X4",
+				"description": "Pan Am athletes give it their all when they’re training. When they’re done, they take it all off."
 			}
 		]
 	},
 	{
-		"title": "Instagram\nEscape Room",
-		"iconSrc": "./images/Icon-Door.svg",
-		"hoverSrc": "./images/Work-EscapeTheRoom-Hover.jpg",
+		"title": "Looking\nFor Something",
+		"iconSrc": "./images/Icon-Eye.svg",
+		"hoverSrc": "./images/Work-LookingForSomething-large-Hover.jpg",
 		"backgroundColor": "#2ec1c9",
 		"closeSrc": "./images/Icon-X.svg",
 		"content": [
 			{
 				"contentType": "video",
-				"content": "https://www.youtube.com/embed/y8ej9na683E",
-				"description": "Search for clues. Find hidden film reels. Unscramble the secret code. Can you escape the room?"
+				"content": "https://www.youtube.com/embed/ujt54wvc23A",
+				"description": "We’re all looking for something. Only those who dare, find it."
 			}
 		]
 	},
@@ -133,34 +131,6 @@
 				"contentType": "video",
 				"content": "https://www.youtube.com/embed/1ISm2ir2wHc",
 				"description": "To give everyone the chance to become a Brain Project artist, we turned Instagram into a colouring book."
-			}
-		]
-	},
-	{
-		"title": "Looking\nFor Something",
-		"iconSrc": "./images/Icon-Eye.svg",
-		"hoverSrc": "./images/Work-LookingForSomething-Hover.jpg",
-		"backgroundColor": "#a78aa8",
-		"closeSrc": "./images/Icon-X.svg",
-		"content": [
-			{
-				"contentType": "video",
-				"content": "https://www.youtube.com/embed/ujt54wvc23A",
-				"description": "We’re all looking for something. Only those who dare, find it."
-			}
-		]
-	},
-	{
-		"title": "Athletes\nGet Dirty",
-		"iconSrc": "./images/Icon-Laundry.svg",
-		"hoverSrc": "./images/Work-AthletesGetDirty-Hover.jpg",
-		"backgroundColor": "#fe777b",
-		"closeSrc": "./images/Icon-X.svg",
-		"content": [
-			{
-				"contentType": "video",
-				"content": "https://www.youtube.com/embed/j0oMbLPB_X4",
-				"description": "Pan Am athletes give it their all when they’re training. When they’re done, they take it all off."
 			}
 		]
 	},

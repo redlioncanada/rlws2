@@ -123,8 +123,9 @@
 
 	.carousel-outer {
 		width: 299px;
-		margin: 0 auto;
-		margin-top: 70px;
+		display: inline-block;
+		float: right;
+		margin: 40px 40px 60px 0;
 	}
 
 	.squarefaces {
@@ -133,7 +134,7 @@
 
 	.coin-icon-group {
 		width: 100%;
-		height: 254px;
+		height: 230px;
 		margin-bottom: 20px;
 
 		.coin1, .ec-logo {
@@ -201,7 +202,7 @@
 	.rl-sign {
 		position: relative;
 		width: 100%;
-		margin-top: 10px;
+		//margin-top: 10px;
 		cursor: pointer;
 
 		.sign {

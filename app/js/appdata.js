@@ -153,11 +153,6 @@ export class appdata {
 						link: undefined
 					},
 					{
-						name: 'Dynacare',
-						imageSrc: './images/Logo-Dynacare.svg',
-						link: undefined
-					},
-					{
 						name: 'Drake General Store',
 						imageSrc: './images/Logo-DrakeGeneralStore.svg',
 						link: undefined
@@ -185,21 +180,6 @@ export class appdata {
 					{
 						name: 'KitchenAid',
 						imageSrc: './images/Logo-KitchenAid.svg',
-						link: undefined
-					},
-					{
-						name: 'Toronto Silent Film Festival',
-						imageSrc: './images/Logo-TSFF.svg',
-						link: undefined
-					},
-					{
-						name: 'Babsocks',
-						imageSrc: './images/Logo-Babsocks.svg',
-						link: undefined
-					},
-					{
-						name: 'Italian by Night',
-						imageSrc: './images/Logo-ItalianByNight.svg',
 						link: undefined
 					},
 					{
